@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .addStory {
+            background: url("assets/images/group-story-1.svg");
+        }
+
+        #Story_1 {
+            background: url("https://s3-alpha-sig.figma.com/img/3230/8959/5c37dbd36d6c6a3fd5c5253d953bb3e0?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZLlSNcgWhKZkm~kf0Ex-iDfL3N6RdbENqFIjHvXpK3M8dM4lZJ3rSZcpLHexnVBs6SYIFcZvdNThKKMeNjjYpe~dFO33xylElrevplXr-ATUqwfLb2ivKWUIWrnh1hMOuMul3tgMeHFp3TNg8hJUGS0-ZSn84uPdJu7Mx31BvORKgS1YBvB~T1k~~8ITQF8q~hVWN1re-ONXJ3HPdeoM32lSk9lolbT~Ywgpl3OKdRfa9a9i8XRu7O10nA79kuPJTDIw0mLWDAotOqmtjQ8z3JCRHW1sSBqLCmSZ5Lv7HbclCx~0NpdaHLmlprDIJY8sQihmY~9d1FZ3o9Siu4SsxQ__");
+        }
+
+        #Story_2 {
+            background: url("https://s3-alpha-sig.figma.com/img/5055/c488/77d825ad3a0cde6898eb9a35c8271808?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DYQEAfizl-ru2QZLek6Wc8aiYzJhe71Qhziu8G6KKDLZaZwFc~L4MTmhNfit3-P39jBG0RpBOXB0KRpeSPg6wKkPU4Ud84IeDlP-8uTxzaoaw2priJ8RytYzsa02-4WPNOkfdRO1oIWaGpMmAQM3c9bhpxR2jXNE6hDmYAY~ET07hUjCf73DNcafkm7Yv50MpRbouWBtACJQ38E2IgilSqBcaB6pZ1WNCkHaFsYCPovHf2HuT2vKct~M-bZZizlGTeVj6wsu2VaxewfuHRPXU45QYkvQhaR~pEbvmwvdGacWzRobH-a6elCrikOhfNTjpCNP0Xg19-nrXEncrujzXg__");
+        }
+
+        #Story_3 {
+            background: url("https://s3-alpha-sig.figma.com/img/6ee9/d564/f404ea3e276d4fb383fd79bd4ce0d6fc?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hI-~EuVdMgmfy~l0e92-1pPf6S3KdziHA8atXayw13raZZeLw9xsCvfrjDllta8uJvQhKWj5cawh9Nl27zUoyPsNOIxbB7QckggDxNSAwAoKFIGLc8K3FxofoqRybmPGiOp18wyWZjAnljFKer7RqVlk4UvVP5fqB~Ux0Y5SIo0M6SPYREQ6NCv1x2tJE0vAUu4O91CbPyPUpb1kT4TwF7rKrE0aLXW68lobvw0IczDRJDXR6kItfL4r9APW3RjrF7jIy9fl5nzL66q5VUJRdRs5qzSsgCVbvpqj98VDmrDLoMtY-o3UKwE0wV3G56oMB20Fwc~1moTILcz9TNRPYA__");
+        }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white  flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px] ">
+
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full">
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <a href="#" class="#027884 ">
+                <img src="assets/icons/home.svg" alt="home" class=" h-6 w-[26.4px]">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class=" h-5 w-5">
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class=" h-5 w-[19px]">
+            </a>
+        </div>
+    </header>
+
+    <div class="px-8  flex h-full  pt-[100px] relative gap-4">
+
+        <!-- profile sidebar -->
+
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5  border-solid border-[#ECECEC] w-[248px]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
+                <!-- profile div -->
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full overflow-hidden bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full  object-cover object-center ">
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[##E4E4E4] w-[216px] "></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Socials
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full ">
+                            <div
+                                class="bg-white h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
+                                Feed
+                            </div>
+                            <div
+                                class="bg-white h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                My Posts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex w-full justify-center ">
+            <div
+                class=" flex flex-col justify-start items-center w-[63.5%] rounded-lg border border-[#E4E4E4] px-[48px] pt-[31px]">
+                <section class="w-full flex flex-col justify-start items-start ">
+                    <div class="w-full flex justify-between">
+                        <h5 class="text-[#00474D] font-medium text-[20px] leading-6">Dailies</h5>
+                        <h4 class="font-normal text-[#856A31] text-right leading-5 text-[14px]">View All ></h4>
+                    </div>
+                    <!-- start of the story cotnainers -->
+
+                    <div class="mt-5  w-full relative flex gap-2  overflow-x-scroll">
+                        <!-- add story   -->
+                        <div
+                            class="addStory h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <!-- story1 -->
+                        <div id="Story_1"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <!-- story2 -->
+                        <div id="Story_2"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <!-- story3 -->
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <!-- story3 -->
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <!-- story3 -->
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <div id="Story_3"
+                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                <img src="assets/icons/add-story.svg" alt="">
+                            </div>
+                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                        </div>
+                        <!-- end of the story containers  -->
+                    </div>
+
+                </section>
+
+                <section>
+
+                </section>
+            </div>
+        </main>
+
+        <aside
+            class="fixed right-8 bg-[#F3F2ED] top-[100px] bottom-5  border-solid border-[#ECECEC] w-[248px]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
+                <!-- profile div -->
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full overflow-hidden bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full  object-cover object-center ">
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[##E4E4E4] w-[216px] "></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Socials
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full ">
+                            <div
+                                class="bg-white h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
+                                Feed
+                            </div>
+                            <div
+                                class="bg-white h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                My Posts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
