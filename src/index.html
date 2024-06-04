@@ -81,7 +81,7 @@
         <!-- profile sidebar -->
 
         <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5  border-solid border-[#ECECEC] w-[248px]   rounded-lg  flex flex-col">
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col">
 
             <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
 
@@ -148,189 +148,531 @@
                     <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
                 </div>
             </div>
+
         </aside>
 
-        <main class="flex w-full justify-center ">
+        <main class="flex w-full justify-center pb-[22px]">
             <div
-                class=" flex flex-col justify-start items-center w-[63.5%] rounded-lg border border-[#E4E4E4] px-[48px] pt-[31px]">
-                <section class="w-full flex flex-col justify-start items-start ">
+                class=" flex flex-col justify-start items-center w-[59.9%] rounded-lg border border-[#E4E4E4]  pt-[31px] overflow-y-scroll no-scrollbar scroll-smooth">
+                <!-- Story Section -->
+                <section class="w-full flex flex-col justify-start items-start px-[48px]">
                     <div class="w-full flex justify-between">
                         <h5 class="text-[#00474D] font-medium text-[20px] leading-6">Dailies</h5>
                         <h4 class="font-normal text-[#856A31] text-right leading-5 text-[14px]">View All ></h4>
                     </div>
                     <!-- start of the story cotnainers -->
 
-                    <div class="mt-5  w-full relative flex gap-2  overflow-x-scroll">
-                        <!-- add story   -->
-                        <div
-                            class="addStory h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                    <div class="mt-5  w-full relative ">
+                        <div class="w-full flex gap-2  overflow-x-scroll cursor-pointer no-scrollbar  scroll-smooth">
+                            <!-- add story   -->
+                            <div
+                                class="addStory h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <!-- story1 -->
-                        <div id="Story_1"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <!-- story1 -->
+                            <div id="Story_1"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <!-- story2 -->
-                        <div id="Story_2"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <!-- story2 -->
+                            <div id="Story_2"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <!-- story3 -->
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <!-- story3 -->
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <!-- story3 -->
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <!-- story3 -->
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <!-- story3 -->
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <!-- story3 -->
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <div id="Story_3"
+                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                        </div>
-                        <div id="Story_3"
-                            class=" h-[160px] w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                            <div class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                <img src="assets/icons/add-story.svg" alt="">
+                            <div id="Story_3"
+                                class=" h-[160px] min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
+                                <div
+                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
+                                    <img src="assets/icons/add-story.svg" alt="">
+                                </div>
+                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                             </div>
-                            <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
                         </div>
                         <!-- end of the story containers  -->
+
+                        <!-- Scroll Arrow Icon -->
+                        <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
+                            <img src="assets/icons/swipearrow.svg" alt="">
+                        </div>
                     </div>
 
                 </section>
+                <!-- Post Section -->
+                <div class="border border-[#f5f5f5] w-full mt-8"></div>
+                <section class="w-full flex flex-col items-start justify-start h-full ">
+                    <!-- 1st Post -->
+                    <div class="w-full pt-[27px]">
+                        <div class="flex items-start gap-4 px-[48px] ">
+                            <!-- left side div -->
+                            <div class="h-[86px] w-[64px] rounded-[4px]">
+                                <img class="h-full w-full object-cover rounded-[4px]"
+                                    src="https://s3-alpha-sig.figma.com/img/9dda/94a6/ca3776e357996d054af068657a8f36d5?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Fh7MbgZ2K4nFu2MJt3QRQi5D~yl0U-cZsKR7mUjpvXcybakItGfEU8PF-5wlCQ-UO3xE6mYNxcJK4wJsuAFfqicYnG1J6LaFlyBUGuzQeLEtbnpuUaZvvyrfs6hAUYICYZV6yzA2j-eElEGE736po88Mz0HDev2svHaBL1hP6wRvqyzCjMxHAj83wULo6rCqB96xQBZpDFnciqrrPOPnFfkp5G8uVeKttAlxALTRUVbztwSW8W9p~vYQS8xlqW39CyIxd8UjoflW76lSRtjAOTLBFn9U8ldJeeQX6jEGfb2deXk3-zAKi5QufQKohbVF3ANGtGhw8cj8OaWgGk-kvw__"
+                                    alt="">
+                            </div>
+                            <!-- right side div -->
+                            <div class="w-full flex flex-col gap-4">
+                                <!-- this one is content div -->
+                                <div class="flex flex-col justify-start items-start h-[85px] ">
 
-                <section>
+                                    <h5 class="font-medium text-lg leading-5 text-black">Firstnameonly</h5>
+                                    <p class="text-[#313131] text-[13px] leading-4 font-normal mt-[6px] ">City, Country
+                                        <span class="text-[#027884] ml-[1px]">3:45pm</span>
+                                    </p>
+                                    <p class=" overflow-hidden text-[14px] text-[#313131] leading-[19px] mt-[8px]">
+                                        There is nothing more beautiful than watching the sun set behind the domes of
+                                        the majestic Badshahi Masjid in Lahore. Built by the Moghul Emperor of the Taj
+                                        Mahal, it stands in city known as the “heart of Pakistan”.
+                                    </p>
+                                </div>
+                                <!-- image div -->
+                                <div class="mt-1 w-full h-[450px]">
+                                    <img class="h-full w-full object-cover"
+                                        src="https://s3-alpha-sig.figma.com/img/614a/9b02/59c16c4a51f3480d24d1d3e904ae822d?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KKi336~IWyqNXXcj5p7VsCiu5E3SZGEKBeMUNZPRIVfBHOc-vy2ARsfhwJ-dgctWXVNXELEc2z2Aqrv5livK7a5pvKlVN9IYO1vBKAwYcSmWTrAy8~QpxYRv8s1Rz-hgG32LFH6OYMfw58iEizzF9l56juY4HQhTRazV~4Jgv0d-U8xDLIJkgY2LWJrZ-MnafNsTnpKNe0onT0aT10FKiyvWNRuSiYm5w71sJ1cTwWCguw~IZi5gS8se8x7EeNSxl3ukDFNJEEsfi0s1ur1L8ByazthwHALgsIa4osVhNnBoNU~TyMvcloR~ZOVGo6iAgVhj7qNenbE9tSmcZSA2pw__"
+                                        alt="">
+                                </div>
+                                <!-- comment and action div -->
+                                <div class="flex justify-between items-center ">
+                                    <h4 class="text-[#856A31] leading-[19px] text-[14px]"> Add a Comment > </h4>
+                                    <div class="flex justify-center items-center gap-[27px]">
+                                        <img src="assets/icons/like.svg" alt="like"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                        <img src="assets/icons/share.svg" alt="share"
+                                            class="h-[17px] w-[20px] text-[#616161] ">
+                                        <img src="assets/icons/bookmark.svg" alt="bookmark"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-[#f5f5f5]  border-solid  w-full mt-5"></div>
+                    </div>
+                    <!-- 2nd Post -->
+                    <div class="w-full pt-[27px]">
+                        <div class="flex items-start gap-4 px-[48px] ">
+                            <!-- left side div -->
+                            <div class="h-[86px] w-[64px] rounded-[4px] ">
+                                <img class="h-full w-full object-cover rounded-[4px]"
+                                    src="https://s3-alpha-sig.figma.com/img/9da2/13a3/d9f4241f87b0e89df8eb51125c1f7d77?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CPMlqCTCiIlONe8QUaiicJGczE4a1~bmjsYWKk3MQw7KmUs1rVF2vObm0d-5OGV5aUfgO2q2M9RmCMm69BKQzDRMbi6JupbT-vkYHey5KW8GYHvMTTgHKkyAfLj96-nc1FSID3tXAnq5E1qEjbNxCZYVhy-OrdQemJ59bsf0GTSvvnWbupoj7wwIoBe8TWRczPl-NlrRiT9DY~zbmr2QWwTCkqQ1SIZjp4E9Ip5q2RVJvVY7zegRZBVvmklP4Aylu50lxY1OLBCBgLdQC9oNCaxW0BXpsN7JcVqKKCsFuPg0OuD9fmMVUbu00BLp483Qzp6P7a8yJ98ZUGD0nAYD-A__"
+                                    alt="">
+                            </div>
+                            <!-- right side div -->
+                            <div class="w-full flex flex-col gap-4">
+                                <!-- this one is content div -->
+                                <div class="flex flex-col justify-start items-start h-[85px] ">
 
+                                    <h5 class="font-medium text-lg leading-5 text-black">Firstnameonly</h5>
+                                    <p class="text-[#313131] text-[13px] leading-4 font-normal mt-[6px] ">City, Country
+                                        <span class="text-[#027884] ml-[1px]">3:45pm</span>
+                                    </p>
+                                    <p class=" overflow-hidden text-[14px] text-[#313131] leading-[19px] mt-[8px]">
+                                        There is nothing more beautiful than watching the sun set behind the domes of
+                                        the majestic Badshahi Masjid in Lahore. Built by the Moghul Emperor of the Taj
+                                        Mahal, it stands in city known as the “heart of Pakistan”.
+                                    </p>
+                                </div>
+                                <!-- image div -->
+                                <div class="mt-1 w-full h-[450px]">
+                                    <img class="h-full w-full object-cover"
+                                        src="https://s3-alpha-sig.figma.com/img/de55/a7c7/bb37f4fe735b1ef7fea9470fb4d49f22?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qxlCxW13hGbvXwsmTTNGpD7bMeM9tBH4KSBLveBo5RUE3Q87mt~iELMQ6L0bDbba1nZh1P4g87zycxW9JAaKRbtSmd95XoXvu3jmmNtR1h-qZic1knU7SMtuKVu3bWuLDz9zdIynMZkepFPNGz~QW-5i5xHO2ERgOFJOcuN8GTPd-Ic8f0HSMjYBKv01fuHcarL0gPaP1BEpgP8JpZ6-fiIFR~zJGzY7HEEzF69lFf8Xh0pwFjwy8xM6qEqtHAMKKhGAWg1aZuh9yPRkxehnOSg8Kh1tYJUfPxc7SDYanZz1uUb0aPFf3TOghro8WatW65EF866i4Sw~zq4tEcilzw__"
+                                        alt="">
+                                </div>
+                                <!-- comment and action div -->
+                                <div class="flex justify-between items-center ">
+                                    <h4 class="text-[#856A31] leading-[19px] text-[14px]"> Add a Comment > </h4>
+                                    <div class="flex justify-center items-center gap-[27px]">
+                                        <img src="assets/icons/like.svg" alt="like"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                        <img src="assets/icons/share.svg" alt="share"
+                                            class="h-[17px] w-[20px] text-[#616161] ">
+                                        <img src="assets/icons/bookmark.svg" alt="bookmark"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-[#f5f5f5]  border-solid  w-full mt-5"></div>
+                    </div>
+                    <!-- 3rd Post -->
+                    <div class="w-full pt-[27px]">
+                        <div class="flex items-start gap-4 px-[48px] ">
+                            <!-- left side div -->
+                            <div class="h-[86px] w-[64px] rounded-[4px] ">
+                                <img class="h-full w-full object-cover rounded-[4px]"
+                                    src="https://s3-alpha-sig.figma.com/img/7b08/38ce/1f70c77c69454662185670612935d471?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YGHp5MO9pgUC6GsX1A7cXoiPTqTCPjPbYKBjY6V-ZKzuRUhnoh9u-Za89HjKE12wyoLPFQbKt2b~-I-B3zvOteT-~JgcVn~~qFTkNYNDOHpelHX3DJBbqxIAY4s17uO5rhKAcmPAHSUB5DjSYPw6-bd4eTqTHX3t~o3U2B6WCaxYeqecD6HtSMxfELdl2ZQU5rpUzvCX3-Ogk-MLHpUah6xLtfivyKIavl~zEHhQzsivSHmHha2uUiCq-bzr0oNeICYpbs~5aNCLwGx-y73IT31tHEGG7o5-Hw-mVb4BGFm-sN6QV8BNim2MQndmEXkQ3AwViTE1dSiacBfX2H2F7A__"
+                                    alt="">
+                            </div>
+                            <!-- right side div -->
+                            <div class="w-full flex flex-col gap-4">
+                                <!-- this one is content div -->
+                                <div class="flex flex-col justify-start items-start h-[85px] ">
+
+                                    <h5 class="font-medium text-lg leading-5 text-black">Firstnameonly</h5>
+                                    <p class="text-[#313131] text-[13px] leading-4 font-normal mt-[6px] ">City, Country
+                                        <span class="text-[#027884] ml-[1px]">3:45pm</span>
+                                    </p>
+                                    <p class=" overflow-hidden text-[14px] text-[#313131] leading-[19px] mt-[8px]">
+                                        There is nothing more beautiful than watching the sun set behind the domes of
+                                        the majestic Badshahi Masjid in Lahore. Built by the Moghul Emperor of the Taj
+                                        Mahal, it stands in city known as the “heart of Pakistan”.
+                                    </p>
+                                </div>
+                                <!-- image div -->
+                                <div class="mt-1 w-full h-[450px] ">
+                                    <img class="h-full w-full object-cover"
+                                        src="https://s3-alpha-sig.figma.com/img/e1f4/9837/f9e3ba7b964742a98e989dac1c53a325?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PfaavgsKwN8A8x1GST~tCY51y-1GbKw2EySYY4heaT72Rky47PD-46VcLAOIi1E3EvGXOQs8XtZ7jidUL6lLr~ah-0q71iayphS7VG15HaRlwcQnDzfN~TNYgrVPuA3Fk7kdFZXjSUypxjHpjArDv-GlTDFlUBNCubOmmzsuCy9Fv0NNJJwkb9y6MPfcWY8QMfXodHn1P7wlAfzEzYy9952Li5m~LtcZooE4dQBGsPr1wT~jF3tgIBysr766OHsGzmFno7TGLjcnSBsidj22O~UoReG4a1eSZzkGY6Ywhyk8l~sk5fjzxqK4mT9V5VORKZ3hYqAYFoGymAH2Fx4suA__"
+                                        alt="">
+                                </div>
+                                <!-- comment and action div -->
+                                <div class="flex justify-between items-center ">
+                                    <h4 class="text-[#856A31] leading-[19px] text-[14px]"> Add a Comment > </h4>
+                                    <div class="flex justify-center items-center gap-[27px]">
+                                        <img src="assets/icons/like.svg" alt="like"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                        <img src="assets/icons/share.svg" alt="share"
+                                            class="h-[17px] w-[20px] text-[#616161] ">
+                                        <img src="assets/icons/bookmark.svg" alt="bookmark"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-[#f5f5f5]  border-solid  w-full mt-5"></div>
+                    </div>
                 </section>
             </div>
         </main>
 
         <aside
-            class="fixed right-8 bg-[#F3F2ED] top-[100px] bottom-5  border-solid border-[#ECECEC] w-[248px]   rounded-lg  flex flex-col">
+            class="fixed right-8 bg-[#FFFFFF] top-[100px] bottom-5 border  border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col gap-4 ">
 
-            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
-
-                <!-- profile div -->
-                <div class=" absolute w-full top-10  flex justify-center items-center">
-                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
-                        <div class="w-24 h-24 border-[3px] border-white rounded-full overflow-hidden bg-center">
-                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
-                                alt="" class="h-full w-full  object-cover object-center ">
-                        </div>
-                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
-                    </div>
-                </div>
-
+            <div
+                class="h-16 pt-[32px] pb-[19px] w-full flex justify-center items-center bg-[#f5f5f5] border-b border-[#E4E4E4]">
+                <h5 class="text-[20px] leading-[24.18px] text-center font-medium text-[#00474D]">Messages</h5>
             </div>
 
-            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
-                <div class="flex flex-col items-center gap-6">
-                    <div class="flex justify-center items-center gap-6">
-                        <!-- icon 1  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                278
-                            </h4>
-                        </div>
-                        <!-- icon 2  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                630
-                            </h4>
-                        </div>
-                        <!-- icon 3  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                495
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="border border-[##E4E4E4] w-[216px] "></div>
-                    <div class="mt-1 w-full flex flex-col items-start px-4">
-                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
-                            Socials
-                        </h5>
-                        <div class="mt-[16px] flex flex-col gap-2 w-full ">
-                            <div
-                                class="bg-white h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
-                                Feed
+
+            <div class="flex flex-col justify-start items-start gap-3 overflow-y-scroll no-scrollbar  scroll-smooth">
+
+                <!-- Today -->
+                <div class="px-4">
+                    <!-- day text  -->
+                    <p class="text-[#616161] text-[12px] font-semibold leading-[16px]">Today</p>
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[64px]  rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
                             </div>
-                            <div
-                                class="bg-white h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
-                                My Posts
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
                             </div>
                         </div>
                     </div>
+
+                    <!-- Repetative Content Messages -->
+
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px]  rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px]  rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px]  rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div class="w-full flex gap-6 justify-center items-center ">
-                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
-                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
-                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
-                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
+                <!-- Yesterday -->
+                <div class="px-4">
+                    <!-- day text  -->
+                    <p class="text-[#616161] text-[12px] font-semibold leading-[16px]">YesterDay</p>
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px] rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repetative Content Messages -->
+
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px]  rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px] rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- message Container -->
+                    <div class=" flex flex-col justify-start items-start mt-3">
+                        <div
+                            class="h-[72px] w-full border-b border-[#F3F2ED] rounded-[4px] flex gap-2 items-start justify-start overflow-y-hidden">
+                            <!-- image -->
+                            <div class="min-w-12 h-[60px]  rounded-[4px]">
+                                <img src="https://s3-alpha-sig.figma.com/img/a264/159d/12dec7e8c096e2b5ddeef8cc803c4dd6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glweVnMgdoPTIrqbG-JjkMqoldfMwhNWxUKhbCuJdHOreDRjTw829tjWAKkicaRj9y8tJBQOLQAllvMOqOIVgsU-hRnlPg0bBv3kkAjEKY761uAJT779cBt2PR8RAzirx3pgImskPypbhqzNChuRjsaEBA4UNFeCQpHkbTpkA6Q5ovWZwA46a3iehmONjOcaXvKFDBViRC~1kcuFf~luz4liWf0KvrhVL1hgTWZwO8FUWJxZlSrDwThAAyqpCHNIQodln8ia0KbqcEntO4-YABY886tZjXDhay0ewpiplF4dwK~QmdEJ20K~YViAsuXlWGSG-QcmLUU53A3twbjjXQ__"
+                                    alt="" class="h-full w-full object-cover rounded-[4px]">
+                            </div>
+                            <!-- text and chat container-->
+                            <div class="flex flex-col gap-2 ">
+                                <div class=" flex justify-between">
+                                    <h6 class="text-[#000000] text-sm leading-[19px] font-semibold">Firstname</h6>
+                                    <h6 class="text-[#856A31] text-[12px] font-normal leading-4">Reply
+                                        <span class="ml-1"> >
+                                        </span>
+                                    </h6>
+                                </div>
+
+                                <p class="text-[#313131] text-[12px] font-normal leading-4 ">
+                                    What do you think about everything that’s going on with you know who.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
+
+
             </div>
+
+
         </aside>
+
     </div>
 
 
