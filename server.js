@@ -11,6 +11,21 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'index.html'));
 });
 
+app.get('/mypost', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'mypost.html'))
+})
+
+app.get('/nearby', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'nearby.html'))
+})
+
+app.get('/partnersearch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'partnersearch.html'))
+})
+
+app.get('/slider', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'slidertest.html'))
+})
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

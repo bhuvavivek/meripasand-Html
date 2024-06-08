@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #EFB75E 2.78%, #856A31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #FFFFFF;
+            border: 1px solid #E4E4E4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #027884 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 0px !important;
+        }
+
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-white flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white  flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px] ">
+
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full">
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <a href="/" class="#027884 ">
+                <img src="assets/icons/home.svg" alt="home" class=" h-6 w-[26.4px]">
+            </a>
+            <a href="/nearby" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="search" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class=" h-5 w-5">
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class=" h-5 w-[19px]">
+            </a>
+        </div>
+    </header>
+
+    <div class="px-8  flex h-full  pt-[100px] relative gap-4">
+
+        <!-- Profile Sidebar -->
+
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
+                <!-- profile div -->
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full  bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full  object-cover  rounded-full ">
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[##E4E4E4] w-[216px] "></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Socials
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+                            <a href="/"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
+                                Feed
+                            </a>
+                            <a href="/mypost"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                My Posts
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="flex w-full justify-center pb-[22px]">
+            <div
+                class=" flex flex-col justify-start items-center w-[59.9%] rounded-lg border border-[#E4E4E4]  pt-[31px] overflow-y-scroll no-scrollbar scroll-smooth px-[48px]">
+                <!-- Story Section -->
+                <section class="w-full flex flex-col justify-start items-start ">
+
+                    <div class="w-full flex justify-between">
+                        <h5 class="text-[#00474D] font-medium text-[20px] leading-6">Fresh Faces</h5>
+                        <h4 class="font-normal text-[#856A31] text-right leading-5 text-[14px]">View All ></h4>
+                    </div>
+
+
+                    <!-- start of the story cotnainers -->
+                    <div class="mt-5  w-full relative ">
+                        <div class="w-full flex gap-2  overflow-x-scroll cursor-pointer no-scrollbar  scroll-smooth">
+                            <!-- Matches container   -->
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+
+
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                        </div>
+                        <!-- end of the story containers  -->
+                        <!-- Scroll Arrow Icon -->
+                        <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
+                            <img src="assets/icons/swipearrow.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="border border-[#f5f5f5] w-full mt-4"></div>
+                </section>
+                <!-- Filter Section -->
+                <section class="w-full pt-[36px] h-full flex flex-col justify-start items-start gap-y-7 ">
+
+                    <div class="w-full  flex flex-col gap-5 justify-start items-start col-span-2">
+                        <h5 class="text-[#00474D] font-medium text-[20px] leading-7">Find Your Partner</h5>
+                        <p class="text-[#313131] text-[16px] font-normal leading-[22px]">Search for your matches from
+                            our
+                            global database
+                            of
+                            members.</p>
+                    </div>
+                    <!-- Filters -->
+                    <div class="grid  grid-cols-2 gap-x-2 gap-y-3 w-full mb-[53px]">
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Age</h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Height</h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Education</h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Family Background (Caste)
+                            </h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Marital Status</h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Family Background (Caste)
+                            </h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Family Background (Caste)
+                            </h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Family Background (Caste)
+                            </h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Location
+                            </h6>
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.05469 7.35938C9.05469 7.51562 9.02344 7.66406 8.96094 7.80469C8.90365 7.9401 8.8099 8.07031 8.67969 8.19531L2.67188 14.0781C2.46875 14.276 2.22135 14.375 1.92969 14.375C1.74219 14.375 1.56771 14.3281 1.40625 14.2344C1.24479 14.1406 1.11458 14.0156 1.01562 13.8594C0.921875 13.7031 0.875 13.526 0.875 13.3281C0.875 13.0417 0.984375 12.7865 1.20312 12.5625L6.55469 7.35938L1.20312 2.15625C0.984375 1.9375 0.875 1.68229 0.875 1.39062C0.875 1.19792 0.921875 1.02344 1.01562 0.867188C1.11458 0.705729 1.24479 0.578125 1.40625 0.484375C1.56771 0.390625 1.74219 0.34375 1.92969 0.34375C2.22135 0.34375 2.46875 0.442708 2.67188 0.640625L8.67969 6.52344C8.80469 6.64844 8.89844 6.77865 8.96094 6.91406C9.02344 7.04948 9.05469 7.19792 9.05469 7.35938Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Match Ratio
+                            </h6>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.9939 24C10.3457 24 8.79551 23.6857 7.34319 23.0571C5.89903 22.4367 4.62621 21.5755 3.52473 20.4735C2.42325 19.3714 1.55839 18.098 0.930138 16.6531C0.310046 15.2 0 13.649 0 12C0 10.351 0.310046 8.80408 0.930138 7.35918C1.55839 5.90612 2.42325 4.62857 3.52473 3.52653C4.62621 2.42449 5.89903 1.56327 7.34319 0.942857C8.79551 0.314286 10.3457 0 11.9939 0C13.642 0 15.1882 0.314286 16.6323 0.942857C18.0847 1.56327 19.3615 2.42449 20.463 3.52653C21.5645 4.62857 22.4294 5.90612 23.0576 7.35918C23.6859 8.80408 24 10.351 24 12C24 13.649 23.6859 15.2 23.0576 16.6531C22.4294 18.098 21.5645 19.3714 20.463 20.4735C19.3615 21.5755 18.0887 22.4367 16.6446 23.0571C15.2004 23.6857 13.6502 24 11.9939 24ZM11.9939 23.0694C13.5278 23.0694 14.9638 22.7837 16.3019 22.2122C17.64 21.6408 18.8149 20.849 19.8266 19.8367C20.8465 18.8163 21.642 17.6367 22.2132 16.298C22.7843 14.9592 23.0699 13.5265 23.0699 12C23.0699 10.4735 22.7843 9.04082 22.2132 7.70204C21.642 6.36327 20.8465 5.18367 19.8266 4.16327C18.8067 3.14286 17.6277 2.34694 16.2896 1.77551C14.9597 1.20408 13.5278 0.918367 11.9939 0.918367C10.4681 0.918367 9.03621 1.20408 7.69811 1.77551C6.36002 2.34694 5.18103 3.14286 4.16114 4.16327C3.14941 5.18367 2.35798 6.36327 1.78684 7.70204C1.21571 9.04082 0.930138 10.4735 0.930138 12C0.930138 13.5265 1.21571 14.9592 1.78684 16.298C2.35798 17.6367 3.14941 18.8163 4.16114 19.8367C5.18103 20.849 6.36002 21.6408 7.69811 22.2122C9.03621 22.7837 10.4681 23.0694 11.9939 23.0694ZM7.52677 16.9224V11.8286C7.52677 10.8898 7.96736 10.4122 8.84855 10.3959V8.65714C8.84855 7.63673 9.13819 6.81633 9.71749 6.19592C10.2968 5.56735 11.0556 5.25306 11.9939 5.25306C12.9403 5.25306 13.7032 5.56735 14.2825 6.19592C14.8618 6.81633 15.1515 7.63673 15.1515 8.65714V10.3959C16.0326 10.4122 16.4732 10.8898 16.4732 11.8286V16.9224C16.4732 17.8857 16.0204 18.3673 15.1147 18.3673H8.87302C7.97552 18.3673 7.52677 17.8857 7.52677 16.9224ZM9.60734 10.3959H14.3927V8.62041C14.3927 7.83673 14.1724 7.20408 13.7318 6.72245C13.2912 6.24082 12.7119 6 11.9939 6C11.2759 6 10.6966 6.24082 10.256 6.72245C9.82356 7.20408 9.60734 7.83673 9.60734 8.62041V10.3959Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Keyword
+                            </h6>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.9939 24C10.3457 24 8.79551 23.6857 7.34319 23.0571C5.89903 22.4367 4.62621 21.5755 3.52473 20.4735C2.42325 19.3714 1.55839 18.098 0.930138 16.6531C0.310046 15.2 0 13.649 0 12C0 10.351 0.310046 8.80408 0.930138 7.35918C1.55839 5.90612 2.42325 4.62857 3.52473 3.52653C4.62621 2.42449 5.89903 1.56327 7.34319 0.942857C8.79551 0.314286 10.3457 0 11.9939 0C13.642 0 15.1882 0.314286 16.6323 0.942857C18.0847 1.56327 19.3615 2.42449 20.463 3.52653C21.5645 4.62857 22.4294 5.90612 23.0576 7.35918C23.6859 8.80408 24 10.351 24 12C24 13.649 23.6859 15.2 23.0576 16.6531C22.4294 18.098 21.5645 19.3714 20.463 20.4735C19.3615 21.5755 18.0887 22.4367 16.6446 23.0571C15.2004 23.6857 13.6502 24 11.9939 24ZM11.9939 23.0694C13.5278 23.0694 14.9638 22.7837 16.3019 22.2122C17.64 21.6408 18.8149 20.849 19.8266 19.8367C20.8465 18.8163 21.642 17.6367 22.2132 16.298C22.7843 14.9592 23.0699 13.5265 23.0699 12C23.0699 10.4735 22.7843 9.04082 22.2132 7.70204C21.642 6.36327 20.8465 5.18367 19.8266 4.16327C18.8067 3.14286 17.6277 2.34694 16.2896 1.77551C14.9597 1.20408 13.5278 0.918367 11.9939 0.918367C10.4681 0.918367 9.03621 1.20408 7.69811 1.77551C6.36002 2.34694 5.18103 3.14286 4.16114 4.16327C3.14941 5.18367 2.35798 6.36327 1.78684 7.70204C1.21571 9.04082 0.930138 10.4735 0.930138 12C0.930138 13.5265 1.21571 14.9592 1.78684 16.298C2.35798 17.6367 3.14941 18.8163 4.16114 19.8367C5.18103 20.849 6.36002 21.6408 7.69811 22.2122C9.03621 22.7837 10.4681 23.0694 11.9939 23.0694ZM7.52677 16.9224V11.8286C7.52677 10.8898 7.96736 10.4122 8.84855 10.3959V8.65714C8.84855 7.63673 9.13819 6.81633 9.71749 6.19592C10.2968 5.56735 11.0556 5.25306 11.9939 5.25306C12.9403 5.25306 13.7032 5.56735 14.2825 6.19592C14.8618 6.81633 15.1515 7.63673 15.1515 8.65714V10.3959C16.0326 10.4122 16.4732 10.8898 16.4732 11.8286V16.9224C16.4732 17.8857 16.0204 18.3673 15.1147 18.3673H8.87302C7.97552 18.3673 7.52677 17.8857 7.52677 16.9224ZM9.60734 10.3959H14.3927V8.62041C14.3927 7.83673 14.1724 7.20408 13.7318 6.72245C13.2912 6.24082 12.7119 6 11.9939 6C11.2759 6 10.6966 6.24082 10.256 6.72245C9.82356 7.20408 9.60734 7.83673 9.60734 8.62041V10.3959Z"
+                                    fill="#856A31" />
+                            </svg>
+
+
+                        </div>
+
+
+
+                        <div
+                            class='h-[56px] rounded-[8px] px-5 bg-white border border-[#E4E4E4] flex justify-between items-center'>
+                            <h6 class='text-[#313131] leading-[22px] text-base font-normal'>Profile ID
+                            </h6>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.9939 24C10.3457 24 8.79551 23.6857 7.34319 23.0571C5.89903 22.4367 4.62621 21.5755 3.52473 20.4735C2.42325 19.3714 1.55839 18.098 0.930138 16.6531C0.310046 15.2 0 13.649 0 12C0 10.351 0.310046 8.80408 0.930138 7.35918C1.55839 5.90612 2.42325 4.62857 3.52473 3.52653C4.62621 2.42449 5.89903 1.56327 7.34319 0.942857C8.79551 0.314286 10.3457 0 11.9939 0C13.642 0 15.1882 0.314286 16.6323 0.942857C18.0847 1.56327 19.3615 2.42449 20.463 3.52653C21.5645 4.62857 22.4294 5.90612 23.0576 7.35918C23.6859 8.80408 24 10.351 24 12C24 13.649 23.6859 15.2 23.0576 16.6531C22.4294 18.098 21.5645 19.3714 20.463 20.4735C19.3615 21.5755 18.0887 22.4367 16.6446 23.0571C15.2004 23.6857 13.6502 24 11.9939 24ZM11.9939 23.0694C13.5278 23.0694 14.9638 22.7837 16.3019 22.2122C17.64 21.6408 18.8149 20.849 19.8266 19.8367C20.8465 18.8163 21.642 17.6367 22.2132 16.298C22.7843 14.9592 23.0699 13.5265 23.0699 12C23.0699 10.4735 22.7843 9.04082 22.2132 7.70204C21.642 6.36327 20.8465 5.18367 19.8266 4.16327C18.8067 3.14286 17.6277 2.34694 16.2896 1.77551C14.9597 1.20408 13.5278 0.918367 11.9939 0.918367C10.4681 0.918367 9.03621 1.20408 7.69811 1.77551C6.36002 2.34694 5.18103 3.14286 4.16114 4.16327C3.14941 5.18367 2.35798 6.36327 1.78684 7.70204C1.21571 9.04082 0.930138 10.4735 0.930138 12C0.930138 13.5265 1.21571 14.9592 1.78684 16.298C2.35798 17.6367 3.14941 18.8163 4.16114 19.8367C5.18103 20.849 6.36002 21.6408 7.69811 22.2122C9.03621 22.7837 10.4681 23.0694 11.9939 23.0694ZM7.52677 16.9224V11.8286C7.52677 10.8898 7.96736 10.4122 8.84855 10.3959V8.65714C8.84855 7.63673 9.13819 6.81633 9.71749 6.19592C10.2968 5.56735 11.0556 5.25306 11.9939 5.25306C12.9403 5.25306 13.7032 5.56735 14.2825 6.19592C14.8618 6.81633 15.1515 7.63673 15.1515 8.65714V10.3959C16.0326 10.4122 16.4732 10.8898 16.4732 11.8286V16.9224C16.4732 17.8857 16.0204 18.3673 15.1147 18.3673H8.87302C7.97552 18.3673 7.52677 17.8857 7.52677 16.9224ZM9.60734 10.3959H14.3927V8.62041C14.3927 7.83673 14.1724 7.20408 13.7318 6.72245C13.2912 6.24082 12.7119 6 11.9939 6C11.2759 6 10.6966 6.24082 10.256 6.72245C9.82356 7.20408 9.60734 7.83673 9.60734 8.62041V10.3959Z"
+                                    fill="#856A31" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <!-- submit button -->
+                    <div class="w-full flex justify-center items-center pb-10">
+                        <button
+                            class="w-[280px] h-[48px] rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">
+                            Search
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+
+        <aside
+            class="fixed right-8 bg-[#F5F5F5] top-[100px] bottom-5 border  border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col  ">
+
+            <div class=" pt-[32px] pb-[19px] w-full flex justify-center items-center bg-[#f5f5f5] ">
+                <h5 class="text-[20px] leading-[24.18px] text-center font-medium text-[#00474D]">Link Up Requests</h5>
+            </div>
+
+
+            <div
+                class="flex flex-col justify-start items-start gap-1 overflow-y-scroll no-scrollbar  scroll-smooth px-2">
+
+                <!-- Request Container -->
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+
+                <!-- Repetative Content Messages -->
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div
+                    class=" w-full h-[80px] bg-white rounded-lg border border-[#E4E4E4] flex  justify-between items-center py-2 pl-2 pr-4 ">
+                    <div class="w-full flex justify-start items-center gap-2">
+                        <div class="w-12 h-16"><img
+                                src="https://s3-alpha-sig.figma.com/img/c024/7f87/e41bf1bc73b2cf3889391a0885bb2533?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H-OS9LpurVjxOjWI8NXim5Rp86o3DNioUD5QOS6SKwQo6fsw205V0I0sSRKcCRM08axwioLgY1QpVUeQbX0~ufs9KO7GtJoFvSLvIvDQmlcnUvSwEXXBcEibCPg8CPpn6yaG8cRf-7hwlrupAEX0NHnS7x2LY4dx3w7P9N7RB0JJ-docxi-985EpY0JoBrd4rQjuRLizZv40L3o61PokdLFspdj3XEUwzwFfRzMQsqiJStlCchCVahmcCV~bPwpitq9JeSKNsqYuJaw-vU9S~cKnG0E~~4HZdLOt6RGCKv041doFfWjdFy99AC-DYKHkb3FyrGrNsyr2NJl2gIBbfw__"
+                                alt="" class="h-full w-full object-cover"></div>
+                        <div class="flex flex-col justify-center items-start gap-[6px]">
+                            <h6 class="font-semibold text-[14px] text-black leading-[19px]">Firstname</h6>
+                            <h6 class="text-start font-normal text-[12px] leading-[16px] text-[#313131]">Chandigarh <br>
+                                India</h6>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-[10px]  h-full items-end  ">
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM8.90329 14.8156C9.02958 14.8156 9.1459 14.7856 9.25224 14.7258C9.35859 14.666 9.45164 14.5763 9.53141 14.4566L14.4666 6.73978C14.5131 6.66667 14.553 6.58691 14.5862 6.5005C14.6261 6.41409 14.6461 6.32768 14.6461 6.24128C14.6461 6.06846 14.5796 5.92888 14.4467 5.82253C14.3137 5.71618 14.1675 5.66301 14.008 5.66301C13.7886 5.66301 13.6058 5.77933 13.4596 6.01196L8.87338 13.2802L6.52044 10.3888C6.42738 10.2692 6.33433 10.1861 6.24128 10.1396C6.15487 10.0931 6.05517 10.0698 5.94217 10.0698C5.77601 10.0698 5.6331 10.1329 5.51346 10.2592C5.39382 10.3855 5.334 10.5351 5.334 10.7079C5.334 10.7943 5.35061 10.8807 5.38385 10.9671C5.41708 11.0469 5.46361 11.1266 5.52343 11.2064L8.23529 14.4566C8.33499 14.5829 8.43802 14.676 8.54437 14.7358C8.65071 14.789 8.77036 14.8156 8.90329 14.8156Z"
+                                fill="#00474D" />
+                        </svg>
+
+
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20C8.63077 20 7.34131 19.7375 6.13161 19.2124C4.92855 18.6939 3.86507 17.9761 2.94118 17.0588C2.02393 16.1349 1.30276 15.0715 0.777667 13.8684C0.259222 12.6587 0 11.3692 0 10C0 8.63077 0.259222 7.34463 0.777667 6.14157C1.30276 4.93187 2.02393 3.86839 2.94118 2.95115C3.85842 2.02725 4.91858 1.30608 6.12163 0.787637C7.33134 0.262546 8.6208 0 9.99003 0C11.3593 0 12.6487 0.262546 13.8584 0.787637C15.0681 1.30608 16.1316 2.02725 17.0489 2.95115C17.9661 3.86839 18.6873 4.93187 19.2124 6.14157C19.7375 7.34463 20 8.63077 20 10C20 11.3692 19.7375 12.6587 19.2124 13.8684C18.6873 15.0715 17.9661 16.1349 17.0489 17.0588C16.1316 17.9761 15.0681 18.6939 13.8584 19.2124C12.6554 19.7375 11.3692 20 10 20ZM6.64008 14.008C6.82619 14.008 6.98571 13.9415 7.11864 13.8086L10 10.9172L12.8913 13.8086C13.0176 13.9415 13.1738 14.008 13.3599 14.008C13.5394 14.008 13.6889 13.9448 13.8086 13.8185C13.9349 13.6923 13.998 13.5427 13.998 13.3699C13.998 13.1771 13.9349 13.0243 13.8086 12.9113L10.9073 10.01L13.8185 7.10867C13.9448 6.97574 14.008 6.81954 14.008 6.64008C14.008 6.46726 13.9448 6.32104 13.8185 6.2014C13.6989 6.07511 13.5494 6.01196 13.3699 6.01196C13.1971 6.01196 13.0475 6.07843 12.9212 6.21137L10 9.11266L7.0987 6.22134C6.96577 6.09505 6.81289 6.0319 6.64008 6.0319C6.46062 6.0319 6.30774 6.09172 6.18146 6.21137C6.06181 6.33101 6.00199 6.47723 6.00199 6.65005C6.00199 6.82286 6.06514 6.97574 6.19143 7.10867L9.10269 10.01L6.19143 12.9113C6.06514 13.0442 6.00199 13.1971 6.00199 13.3699C6.00199 13.5427 6.06181 13.6923 6.18146 13.8185C6.30774 13.9448 6.46062 14.008 6.64008 14.008Z"
+                                fill="#E4E4E4" />
+                        </svg>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+
+    <!-- Modal -->
+
+    <!--Age Modal  -->
+    <div class="customModal p-4 mt-[29px] !hidden">
+        <div class="w-full flex justify-end items-center">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                    fill="#856A31" />
+            </svg>
+        </div>
+
+        <div class="w-full flex justify-center items-center mt-[9px]">
+            <h5 class="text-[#00474D] font-medium text-xl leading-6">Age</h5>
+        </div>
+
+        <div class="border border-[#E4E4E4] w-full mt-4"></div>
+
+        <div class="flex flex-col items-center justify-center w-full mt-7 gap-6">
+            <input type="text" id="agerangeValue" readonly
+                class="font-normal leading-[22px] text-[#313131] text-center text-base" />
+            <div id="slider-age-range" class="w-full"></div>
+        </div>
+
+        <div class="mt-[46px] w-full flex justify-center items-center">
+            <h4 class="font-normal leading-[19px] text-[14px] text-[#616161]">Drag to Adjust Age Range</h4>
+        </div>
+
+
+        <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+            <button
+                class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+        </div>
+
+    </div>
+
+
+    <!--Height Modal -->
+    <div class="customModal p-4 mt-[29px] !hidden">
+
+        <div class="w-full flex justify-end items-center">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                    fill="#856A31" />
+            </svg>
+        </div>
+
+        <div class="w-full flex justify-center items-center mt-[9px]">
+            <h5 class="text-[#00474D] font-medium text-xl leading-6">Height</h5>
+        </div>
+
+        <div class="border border-[#E4E4E4] w-full mt-4"></div>
+
+        <div class="flex flex-col items-center justify-center w-full mt-7 gap-6">
+            <input type="text" id="heightrangeValue" readonly
+                class="font-normal leading-[22px] text-[#313131] text-center text-base" />
+            <div id="slider-height-range" class="w-full"></div>
+        </div>
+
+        <div class="mt-[46px] w-full flex justify-center items-center">
+            <h4 class="font-normal leading-[19px] text-[14px] text-[#616161]">Drag to Adjust Height Range</h4>
+        </div>
+
+
+        <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+            <button
+                class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+        </div>
+
+    </div>
+
+    <!-- Education -->
+
+    <div class="customModal p-4 mt-[29px] !hidden h-[560px] !z-50 ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Education</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Secondary School/ GCSE
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    A Levels
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Diploma
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    International Baccalaureate
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    BTech
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Associate Degree
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Bachelor's Degree
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Master's Degree
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    PHD
+                </label>
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Work Sector -->
+    <div class="customModal p-4 mt-[29px] !hidden h-[560px] !z-50 ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Work Sector</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Work Sector
+                </label>
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Profession -->
+    <div class="customModal p-4 mt-[29px] !hidden h-[560px] !z-50 !hidd ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Profession</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Profession
+                </label>
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Marital Status -->
+    <div class="customModal p-4 mt-[29px] !hidden  !z-50 !hidd ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Marital Status</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Single, Never Married
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Divorced, No Children
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Divorced, No Children
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Widowed, No Children
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Widowed, No Children
+                </label>
+
+
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Religion -->
+    <div class="customModal p-4 mt-[29px] !hidden h-[560px] !z-50 ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Religion</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Religion
+                </label>
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Ethnicity -->
+    <div class="customModal p-4 mt-[29px] !hidden h-[560px] !z-50 ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Ethnicity</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Ethnicity
+                </label>
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Family Background (Caste) -->
+    <div class="customModal p-4 mt-[29px] !hidden h-[560px] !z-50 ">
+        <div class="overflow-y-scroll  no-scrollbar">
+            <div class="w-full flex justify-end items-center">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.25684 11.3145C1.1748 11.237 1.12012 11.1458 1.09277 11.041C1.06999 10.9362 1.07227 10.8314 1.09961 10.7266C1.12695 10.6217 1.17936 10.5306 1.25684 10.4531L5.63184 6.07129L1.25684 1.69629C1.17936 1.61882 1.12695 1.52767 1.09961 1.42285C1.07682 1.31803 1.07682 1.21322 1.09961 1.1084C1.12695 1.00358 1.17936 0.912435 1.25684 0.834961C1.33431 0.75293 1.42546 0.700521 1.53027 0.677734C1.63509 0.650391 1.73991 0.650391 1.84473 0.677734C1.9541 0.700521 2.04753 0.75293 2.125 0.834961L6.5 5.20996L10.875 0.834961C10.9525 0.75293 11.0436 0.700521 11.1484 0.677734C11.2533 0.650391 11.3581 0.650391 11.4629 0.677734C11.5677 0.700521 11.6611 0.75293 11.7432 0.834961C11.8206 0.912435 11.873 1.00358 11.9004 1.1084C11.9277 1.21322 11.9277 1.31803 11.9004 1.42285C11.873 1.52767 11.8206 1.61882 11.7432 1.69629L7.36816 6.07129L11.7432 10.4531C11.8206 10.5306 11.8708 10.6217 11.8936 10.7266C11.9209 10.8314 11.9209 10.9362 11.8936 11.041C11.8708 11.1458 11.8206 11.237 11.7432 11.3145C11.6657 11.3965 11.5723 11.4489 11.4629 11.4717C11.3581 11.499 11.2533 11.499 11.1484 11.4717C11.0436 11.4443 10.9525 11.3919 10.875 11.3145L6.5 6.93945L2.125 11.3145C2.04753 11.3919 1.95638 11.4443 1.85156 11.4717C1.74674 11.499 1.64193 11.499 1.53711 11.4717C1.43229 11.4443 1.33887 11.3919 1.25684 11.3145Z"
+                        fill="#856A31" />
+                </svg>
+            </div>
+            <div class="w-full flex justify-center items-center mt-[9px]">
+                <h5 class="text-[#00474D] font-medium text-xl leading-6">Family Background (Caste)</h5>
+            </div>
+            <div class="border border-[#E4E4E4] w-full mt-4"></div>
+            <div class="flex flex-col justify-start items-start mt-3">
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+                <label
+                    class="w-full gap-3 p-4 flex justify-start items-center text-[#313131] leading-[22px] text-base font-normal">
+                    <input type="radio" class='h-3 w-3'>
+                    Family Background (Caste)
+                </label>
+            </div>
+            <div class="mt-[20px] w-full flex justify-center items-center pb-2">
+                <button
+                    class="w-[200px] h-11 rounded-[24px] custombutton text-white font-medium leading-7 text-[20px] text-center">confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

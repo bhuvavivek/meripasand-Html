@@ -21,20 +21,8 @@
             background-size: cover;
         }
 
-        .addStory {
-            background: url("assets/images/group-story-1.svg");
-        }
-
-        #Story_1 {
-            background: url("https://s3-alpha-sig.figma.com/img/3230/8959/5c37dbd36d6c6a3fd5c5253d953bb3e0?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZLlSNcgWhKZkm~kf0Ex-iDfL3N6RdbENqFIjHvXpK3M8dM4lZJ3rSZcpLHexnVBs6SYIFcZvdNThKKMeNjjYpe~dFO33xylElrevplXr-ATUqwfLb2ivKWUIWrnh1hMOuMul3tgMeHFp3TNg8hJUGS0-ZSn84uPdJu7Mx31BvORKgS1YBvB~T1k~~8ITQF8q~hVWN1re-ONXJ3HPdeoM32lSk9lolbT~Ywgpl3OKdRfa9a9i8XRu7O10nA79kuPJTDIw0mLWDAotOqmtjQ8z3JCRHW1sSBqLCmSZ5Lv7HbclCx~0NpdaHLmlprDIJY8sQihmY~9d1FZ3o9Siu4SsxQ__");
-        }
-
-        #Story_2 {
-            background: url("https://s3-alpha-sig.figma.com/img/5055/c488/77d825ad3a0cde6898eb9a35c8271808?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DYQEAfizl-ru2QZLek6Wc8aiYzJhe71Qhziu8G6KKDLZaZwFc~L4MTmhNfit3-P39jBG0RpBOXB0KRpeSPg6wKkPU4Ud84IeDlP-8uTxzaoaw2priJ8RytYzsa02-4WPNOkfdRO1oIWaGpMmAQM3c9bhpxR2jXNE6hDmYAY~ET07hUjCf73DNcafkm7Yv50MpRbouWBtACJQ38E2IgilSqBcaB6pZ1WNCkHaFsYCPovHf2HuT2vKct~M-bZZizlGTeVj6wsu2VaxewfuHRPXU45QYkvQhaR~pEbvmwvdGacWzRobH-a6elCrikOhfNTjpCNP0Xg19-nrXEncrujzXg__");
-        }
-
-        #Story_3 {
-            background: url("https://s3-alpha-sig.figma.com/img/6ee9/d564/f404ea3e276d4fb383fd79bd4ce0d6fc?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hI-~EuVdMgmfy~l0e92-1pPf6S3KdziHA8atXayw13raZZeLw9xsCvfrjDllta8uJvQhKWj5cawh9Nl27zUoyPsNOIxbB7QckggDxNSAwAoKFIGLc8K3FxofoqRybmPGiOp18wyWZjAnljFKer7RqVlk4UvVP5fqB~Ux0Y5SIo0M6SPYREQ6NCv1x2tJE0vAUu4O91CbPyPUpb1kT4TwF7rKrE0aLXW68lobvw0IczDRJDXR6kItfL4r9APW3RjrF7jIy9fl5nzL66q5VUJRdRs5qzSsgCVbvpqj98VDmrDLoMtY-o3UKwE0wV3G56oMB20Fwc~1moTILcz9TNRPYA__");
+        .matchFilterCard {
+            box-shadow: 0px 3px 6px 0px #0000001A;
         }
     </style>
 </head>
@@ -79,7 +67,6 @@
     <div class="px-8  flex h-full  pt-[100px] relative gap-4">
 
         <!-- profile sidebar -->
-
         <aside
             class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col">
 
@@ -154,121 +141,133 @@
         <main class="flex w-full justify-center pb-[22px]">
             <div
                 class=" flex flex-col justify-start items-center w-[59.9%] rounded-lg border border-[#E4E4E4]  pt-[31px] overflow-y-scroll no-scrollbar scroll-smooth">
-                <!-- Story Section -->
+
+                <!-- New Matches Section -->
                 <section class="w-full flex flex-col justify-start items-start px-[48px]">
+
                     <div class="w-full flex justify-between">
-                        <h5 class="text-[#00474D] font-medium text-[20px] leading-6">Dailies</h5>
+                        <h5 class="text-[#00474D] font-medium text-[20px] leading-6">New Matches</h5>
                         <h4 class="font-normal text-[#856A31] text-right leading-5 text-[14px]">View All ></h4>
                     </div>
-                    <!-- start of the story cotnainers -->
+
+                    <!-- start of the new matches cotnainers -->
 
                     <div class="mt-5  w-full relative ">
                         <div class="w-full flex gap-2  overflow-x-scroll cursor-pointer no-scrollbar  scroll-smooth">
-                            <!-- add story   -->
+                            <!-- Matches container   -->
                             <div
-                                class="addStory h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <!-- story1 -->
-                            <div id="Story_1"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+
+
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <!-- story2 -->
-                            <div id="Story_2"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <!-- story3 -->
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <!-- story3 -->
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <!-- story3 -->
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                            </div>
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
-                                </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                            </div>
-                            <div id="Story_3"
-                                class=" h-[160px]  min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
-                                </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
-                            </div>
-                            <div id="Story_3"
-                                class=" h-[160px] min-w-[90px] flex flex-col justify-end items-center rounded-lg bg-cover gap-2 pb-2">
-                                <div
-                                    class="border-[#FFFFFF] border-2 rounded-full h-8 w-8 object-cover overflow-hidden">
-                                    <img src="assets/icons/add-story.svg" alt="">
-                                </div>
-                                <h6 class="font-normal text-center text-white leading-4 text-[12px]">Sheema</h6>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
                             </div>
                         </div>
                         <!-- end of the story containers  -->
-
                         <!-- Scroll Arrow Icon -->
                         <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
                             <img src="assets/icons/swipearrow.svg" alt="">
@@ -281,11 +280,11 @@
                 <section class="w-full flex flex-col items-start justify-start h-full ">
                     <!-- 1st Post -->
                     <div class="w-full pt-[27px]">
-                        <div class="flex items-start gap-4 px-[48px] ">
+                        <div class="flex items-start gap-4 px-[48px] w-full ">
                             <!-- left side div -->
-                            <div class="h-[86px] w-[64px] rounded-[4px]">
+                            <div class="h-[86px] w-[64px] rounded-[4px] ">
                                 <img class="h-full w-full object-cover rounded-[4px]"
-                                    src="https://s3-alpha-sig.figma.com/img/9dda/94a6/ca3776e357996d054af068657a8f36d5?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Fh7MbgZ2K4nFu2MJt3QRQi5D~yl0U-cZsKR7mUjpvXcybakItGfEU8PF-5wlCQ-UO3xE6mYNxcJK4wJsuAFfqicYnG1J6LaFlyBUGuzQeLEtbnpuUaZvvyrfs6hAUYICYZV6yzA2j-eElEGE736po88Mz0HDev2svHaBL1hP6wRvqyzCjMxHAj83wULo6rCqB96xQBZpDFnciqrrPOPnFfkp5G8uVeKttAlxALTRUVbztwSW8W9p~vYQS8xlqW39CyIxd8UjoflW76lSRtjAOTLBFn9U8ldJeeQX6jEGfb2deXk3-zAKi5QufQKohbVF3ANGtGhw8cj8OaWgGk-kvw__"
+                                    src="https://s3-alpha-sig.figma.com/img/1ef0/0a10/1670006a0f0abce48396f8e450edc548?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nz8zxsdordaywXO9i1gNWE5vpb9-88IE3gToG7GLgMpvSuax~xXS6RDaoWtnx-9bre1rts-smAe1P9VnLW6afSwZbavtjBBuMQp9gaQghi5vu0z80rVnGwdO0BS9RlhC8qg5UGYSug59zcGnlXvf7DsR97fojVr5BsnZ002go81SuL6MvfRXsJJct2aC7R9JkJswKofxcZ--z~qio3VTrUP0cqRcroaA4WhvOGTBOjlO0v2-2dfY-Sh93M7yEGMtDLX-zBPgHwHA7vhWAkNAA73RkKRLLdl2b1f5H5B5fWFszkgayKl2g37n9oumn0aWL-WLNabS0GFhUVBQc~uEww__"
                                     alt="">
                             </div>
                             <!-- right side div -->
@@ -310,28 +309,40 @@
                                         alt="">
                                 </div>
                                 <!-- comment and action div -->
-                                <div class="flex justify-between items-center ">
-                                    <h4 class="text-[#856A31] leading-[19px] text-[14px]"> Add a Comment > </h4>
-                                    <div class="flex justify-center items-center gap-[27px]">
+                                <div class="flex justify-center items-center gap-[64.47px]">
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/like.svg" alt="like"
                                             class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/share.svg" alt="share"
                                             class="h-[17px] w-[20px] text-[#616161] ">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
+                                        <img src="assets/icons/bookmark.svg" alt="bookmark"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/bookmark.svg" alt="bookmark"
                                             class="h-[17px] w-[20px] text-[#616161]">
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="border border-[#f5f5f5]  border-solid  w-full mt-5"></div>
                     </div>
                     <!-- 2nd Post -->
                     <div class="w-full pt-[27px]">
-                        <div class="flex items-start gap-4 px-[48px] ">
+                        <div class="flex items-start gap-4 px-[48px] w-full ">
                             <!-- left side div -->
                             <div class="h-[86px] w-[64px] rounded-[4px] ">
                                 <img class="h-full w-full object-cover rounded-[4px]"
-                                    src="https://s3-alpha-sig.figma.com/img/9da2/13a3/d9f4241f87b0e89df8eb51125c1f7d77?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CPMlqCTCiIlONe8QUaiicJGczE4a1~bmjsYWKk3MQw7KmUs1rVF2vObm0d-5OGV5aUfgO2q2M9RmCMm69BKQzDRMbi6JupbT-vkYHey5KW8GYHvMTTgHKkyAfLj96-nc1FSID3tXAnq5E1qEjbNxCZYVhy-OrdQemJ59bsf0GTSvvnWbupoj7wwIoBe8TWRczPl-NlrRiT9DY~zbmr2QWwTCkqQ1SIZjp4E9Ip5q2RVJvVY7zegRZBVvmklP4Aylu50lxY1OLBCBgLdQC9oNCaxW0BXpsN7JcVqKKCsFuPg0OuD9fmMVUbu00BLp483Qzp6P7a8yJ98ZUGD0nAYD-A__"
+                                    src="https://s3-alpha-sig.figma.com/img/1ef0/0a10/1670006a0f0abce48396f8e450edc548?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nz8zxsdordaywXO9i1gNWE5vpb9-88IE3gToG7GLgMpvSuax~xXS6RDaoWtnx-9bre1rts-smAe1P9VnLW6afSwZbavtjBBuMQp9gaQghi5vu0z80rVnGwdO0BS9RlhC8qg5UGYSug59zcGnlXvf7DsR97fojVr5BsnZ002go81SuL6MvfRXsJJct2aC7R9JkJswKofxcZ--z~qio3VTrUP0cqRcroaA4WhvOGTBOjlO0v2-2dfY-Sh93M7yEGMtDLX-zBPgHwHA7vhWAkNAA73RkKRLLdl2b1f5H5B5fWFszkgayKl2g37n9oumn0aWL-WLNabS0GFhUVBQc~uEww__"
                                     alt="">
                             </div>
                             <!-- right side div -->
@@ -352,32 +363,44 @@
                                 <!-- image div -->
                                 <div class="mt-1 w-full h-[450px]">
                                     <img class="h-full w-full object-cover"
-                                        src="https://s3-alpha-sig.figma.com/img/de55/a7c7/bb37f4fe735b1ef7fea9470fb4d49f22?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qxlCxW13hGbvXwsmTTNGpD7bMeM9tBH4KSBLveBo5RUE3Q87mt~iELMQ6L0bDbba1nZh1P4g87zycxW9JAaKRbtSmd95XoXvu3jmmNtR1h-qZic1knU7SMtuKVu3bWuLDz9zdIynMZkepFPNGz~QW-5i5xHO2ERgOFJOcuN8GTPd-Ic8f0HSMjYBKv01fuHcarL0gPaP1BEpgP8JpZ6-fiIFR~zJGzY7HEEzF69lFf8Xh0pwFjwy8xM6qEqtHAMKKhGAWg1aZuh9yPRkxehnOSg8Kh1tYJUfPxc7SDYanZz1uUb0aPFf3TOghro8WatW65EF866i4Sw~zq4tEcilzw__"
+                                        src="https://s3-alpha-sig.figma.com/img/614a/9b02/59c16c4a51f3480d24d1d3e904ae822d?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KKi336~IWyqNXXcj5p7VsCiu5E3SZGEKBeMUNZPRIVfBHOc-vy2ARsfhwJ-dgctWXVNXELEc2z2Aqrv5livK7a5pvKlVN9IYO1vBKAwYcSmWTrAy8~QpxYRv8s1Rz-hgG32LFH6OYMfw58iEizzF9l56juY4HQhTRazV~4Jgv0d-U8xDLIJkgY2LWJrZ-MnafNsTnpKNe0onT0aT10FKiyvWNRuSiYm5w71sJ1cTwWCguw~IZi5gS8se8x7EeNSxl3ukDFNJEEsfi0s1ur1L8ByazthwHALgsIa4osVhNnBoNU~TyMvcloR~ZOVGo6iAgVhj7qNenbE9tSmcZSA2pw__"
                                         alt="">
                                 </div>
                                 <!-- comment and action div -->
-                                <div class="flex justify-between items-center ">
-                                    <h4 class="text-[#856A31] leading-[19px] text-[14px]"> Add a Comment > </h4>
-                                    <div class="flex justify-center items-center gap-[27px]">
+                                <div class="flex justify-center items-center gap-[64.47px]">
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/like.svg" alt="like"
                                             class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/share.svg" alt="share"
                                             class="h-[17px] w-[20px] text-[#616161] ">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
+                                        <img src="assets/icons/bookmark.svg" alt="bookmark"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/bookmark.svg" alt="bookmark"
                                             class="h-[17px] w-[20px] text-[#616161]">
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="border border-[#f5f5f5]  border-solid  w-full mt-5"></div>
                     </div>
                     <!-- 3rd Post -->
                     <div class="w-full pt-[27px]">
-                        <div class="flex items-start gap-4 px-[48px] ">
+                        <div class="flex items-start gap-4 px-[48px] w-full ">
                             <!-- left side div -->
                             <div class="h-[86px] w-[64px] rounded-[4px] ">
                                 <img class="h-full w-full object-cover rounded-[4px]"
-                                    src="https://s3-alpha-sig.figma.com/img/7b08/38ce/1f70c77c69454662185670612935d471?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YGHp5MO9pgUC6GsX1A7cXoiPTqTCPjPbYKBjY6V-ZKzuRUhnoh9u-Za89HjKE12wyoLPFQbKt2b~-I-B3zvOteT-~JgcVn~~qFTkNYNDOHpelHX3DJBbqxIAY4s17uO5rhKAcmPAHSUB5DjSYPw6-bd4eTqTHX3t~o3U2B6WCaxYeqecD6HtSMxfELdl2ZQU5rpUzvCX3-Ogk-MLHpUah6xLtfivyKIavl~zEHhQzsivSHmHha2uUiCq-bzr0oNeICYpbs~5aNCLwGx-y73IT31tHEGG7o5-Hw-mVb4BGFm-sN6QV8BNim2MQndmEXkQ3AwViTE1dSiacBfX2H2F7A__"
+                                    src="https://s3-alpha-sig.figma.com/img/1ef0/0a10/1670006a0f0abce48396f8e450edc548?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nz8zxsdordaywXO9i1gNWE5vpb9-88IE3gToG7GLgMpvSuax~xXS6RDaoWtnx-9bre1rts-smAe1P9VnLW6afSwZbavtjBBuMQp9gaQghi5vu0z80rVnGwdO0BS9RlhC8qg5UGYSug59zcGnlXvf7DsR97fojVr5BsnZ002go81SuL6MvfRXsJJct2aC7R9JkJswKofxcZ--z~qio3VTrUP0cqRcroaA4WhvOGTBOjlO0v2-2dfY-Sh93M7yEGMtDLX-zBPgHwHA7vhWAkNAA73RkKRLLdl2b1f5H5B5fWFszkgayKl2g37n9oumn0aWL-WLNabS0GFhUVBQc~uEww__"
                                     alt="">
                             </div>
                             <!-- right side div -->
@@ -396,27 +419,40 @@
                                     </p>
                                 </div>
                                 <!-- image div -->
-                                <div class="mt-1 w-full h-[450px] ">
+                                <div class="mt-1 w-full h-[450px]">
                                     <img class="h-full w-full object-cover"
-                                        src="https://s3-alpha-sig.figma.com/img/e1f4/9837/f9e3ba7b964742a98e989dac1c53a325?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PfaavgsKwN8A8x1GST~tCY51y-1GbKw2EySYY4heaT72Rky47PD-46VcLAOIi1E3EvGXOQs8XtZ7jidUL6lLr~ah-0q71iayphS7VG15HaRlwcQnDzfN~TNYgrVPuA3Fk7kdFZXjSUypxjHpjArDv-GlTDFlUBNCubOmmzsuCy9Fv0NNJJwkb9y6MPfcWY8QMfXodHn1P7wlAfzEzYy9952Li5m~LtcZooE4dQBGsPr1wT~jF3tgIBysr766OHsGzmFno7TGLjcnSBsidj22O~UoReG4a1eSZzkGY6Ywhyk8l~sk5fjzxqK4mT9V5VORKZ3hYqAYFoGymAH2Fx4suA__"
+                                        src="https://s3-alpha-sig.figma.com/img/614a/9b02/59c16c4a51f3480d24d1d3e904ae822d?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KKi336~IWyqNXXcj5p7VsCiu5E3SZGEKBeMUNZPRIVfBHOc-vy2ARsfhwJ-dgctWXVNXELEc2z2Aqrv5livK7a5pvKlVN9IYO1vBKAwYcSmWTrAy8~QpxYRv8s1Rz-hgG32LFH6OYMfw58iEizzF9l56juY4HQhTRazV~4Jgv0d-U8xDLIJkgY2LWJrZ-MnafNsTnpKNe0onT0aT10FKiyvWNRuSiYm5w71sJ1cTwWCguw~IZi5gS8se8x7EeNSxl3ukDFNJEEsfi0s1ur1L8ByazthwHALgsIa4osVhNnBoNU~TyMvcloR~ZOVGo6iAgVhj7qNenbE9tSmcZSA2pw__"
                                         alt="">
                                 </div>
                                 <!-- comment and action div -->
-                                <div class="flex justify-between items-center ">
-                                    <h4 class="text-[#856A31] leading-[19px] text-[14px]"> Add a Comment > </h4>
-                                    <div class="flex justify-center items-center gap-[27px]">
+                                <div class="flex justify-center items-center gap-[64.47px]">
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/like.svg" alt="like"
                                             class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/share.svg" alt="share"
                                             class="h-[17px] w-[20px] text-[#616161] ">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
+                                        <img src="assets/icons/bookmark.svg" alt="bookmark"
+                                            class="h-[17px] w-[20px] text-[#616161]">
+                                    </div>
+                                    <div class="flex gap-[6px] items-center ">
+                                        <h4 class="text-[15px] text-[#313131] leading-[21px] font-normal">27</h4>
                                         <img src="assets/icons/bookmark.svg" alt="bookmark"
                                             class="h-[17px] w-[20px] text-[#616161]">
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="border border-[#f5f5f5]  border-solid  w-full mt-5"></div>
                     </div>
+
                 </section>
             </div>
         </main>

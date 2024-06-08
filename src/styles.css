@@ -16,3 +16,7 @@
         /* Firefox */
     }
 }
+
+.filterCardShadow {
+    box-shadow: 0px 3px 6px 0px #0000001A;
+}
