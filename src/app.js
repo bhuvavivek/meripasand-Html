@@ -47,7 +47,7 @@ $(document).ready(function () {
         max: 100,
         values: [18, 100],
         slide: function (event, ui) {
-            $("#rangeValue").val(ui.values[0] + " - " + ui.values[1]);
+            $("#agerangeValue").val(ui.values[0] + " - " + ui.values[1]);
         }
     });
     $("#agerangeValue").val($("#slider-age-range").slider("values", 0) +
