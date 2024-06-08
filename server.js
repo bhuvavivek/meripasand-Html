@@ -27,6 +27,18 @@ app.get('/partnersearch-filter', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'partnersearch-filter.html'))
 })
 
+app.get('/connect-everyone', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'connect-everyone.html'))
+})
+
+app.get('/connect-favourite', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'connect-favourite.html'))
+})
+
+app.get('/connect-archived', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'connect-archived.html'))
+})
+
 app.get('/slider', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'slidertest.html'))
 })
