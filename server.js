@@ -23,6 +23,10 @@ app.get('/partnersearch', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'partnersearch.html'))
 })
 
+app.get('/partnersearch-filter', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'partnersearch-filter.html'))
+})
+
 app.get('/slider', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'slidertest.html'))
 })
