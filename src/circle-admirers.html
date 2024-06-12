@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #EFB75E 2.78%, #856A31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #FFFFFF;
+            border: 1px solid #E4E4E4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #C2C2C2 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 4px !important;
+        }
+
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+
+        .ui-slider .ui-slider-range {
+            background-color: #014d55 !important;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-white flex flex-col">
+    <!-- Header -->
+    <header class="bg-white  flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px] ">
+
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full">
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <a href="/" class="#027884 ">
+                <img src="assets/icons/home.svg" alt="home" class=" h-6 w-[26.4px]">
+            </a>
+            <a href="/nearby" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="search" class=" h-5 w-5">
+            </a>
+            <a href="/connect-everyone" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="/circle-activity" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class=" h-5 w-5">
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class=" h-5 w-[19px]">
+            </a>
+        </div>
+    </header>
+
+
+    <div class="px-8  flex h-full  pt-[100px] relative gap-4">
+
+
+        <!-- Profile Sidebar -->
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
+                <!-- profile div -->
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full  bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full  object-cover  rounded-full ">
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[##E4E4E4] w-[216px] "></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Connect
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+                            <a href="/circle-activity"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
+                                Activity
+                            </a>
+                            <a href="/circle-links"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                Links
+                            </a>
+                            <a href="/circle-admirers"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                Admirers
+                            </a>
+                            <a href="/circle-favourites"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                Favourites
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
+                </div>
+            </div>
+
+        </aside>
+
+
+
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #EFB75E 2.78%, #856A31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #FFFFFF;
+            border: 1px solid #E4E4E4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #C2C2C2 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 4px !important;
+        }
+
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+
+        .ui-slider .ui-slider-range {
+            background-color: #014d55 !important;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-white flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white  flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px] ">
+
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full">
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <a href="/" class="#027884 ">
+                <img src="assets/icons/home.svg" alt="home" class=" h-6 w-[26.4px]">
+            </a>
+            <a href="/nearby" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="search" class=" h-5 w-5">
+            </a>
+            <a href="/connect-everyone" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="/circle-activity" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class=" h-5 w-5">
+            </a>
+            <a href="#" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class=" h-5 w-5">
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class=" h-5 w-[19px]">
+            </a>
+        </div>
+    </header>
+
+    <div class="px-8  flex h-full  pt-[100px] relative gap-4">
+
+        <!-- Profile Sidebar -->
+
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
+                <!-- profile div -->
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full  bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full  object-cover  rounded-full ">
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[##E4E4E4] w-[216px] "></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Connect
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+                            <a href="/connect-everyone"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
+                                Everyone
+                            </a>
+                            <a href="/connect-favourite"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                Favourites
+                            </a>
+                            <a href="/connect-archived"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                Archived
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="flex w-full justify-center pb-[22px] overflow-y-hidden">
+            <div class=" flex   w-[59.9%]   justify-between ">
+
+                <!-- search and message section -->
+                <section class="w-[31.2%]  flex flex-col items-start justify-start gap-2">
+                    <!-- search box -->
+                    <div class="w-full h-14 border rounded-lg border-[#E4E4E4] flex items-center justify-start">
+                        <input type="text" placeholder="Search"
+                            class="w-full h-full pl-3 palceholder:text-[#919191] text-base font-normal leading-[22px] outline-none">
+                    </div>
+
+                    <!-- message box -->
+                    <div
+                        class=" border rounded-lg border-[#E4E4E4] w-full h-full flex flex-col  px-4 overflow-y-scroll no-scrollbar">
+
+                        <!-- main message div -->
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- repitative content -->
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="flex items-start justify-start py-[14px] gap-[6px] border-b border-[#E4E4E4]">
+                            <!-- for image -->
+                            <div class="min-h-11 min-w-11 h-11 w-11 rounded-full relative">
+                                <img src="https://s3-alpha-sig.figma.com/img/4dc0/29d0/afb5213aa71869721fac1c3643fa22ec?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yg6JuavfNJpTcw6DVr3UkpNP8ii8JJrQwCCYC3VfQnowBvWUCFa1oMYvK-GyAYJk95Y4N-0eaXsRUD9WGd4qXxbjnmdw1Z7iIqbYKd3BPW7rF6eje4cYPDGNeL9oU61vjMUTfWDZOmxQxQaG7Vuy-3FolVchB3xNZwyTbWjq1pbJ8jlMFRUfQxmlY2bc95LHXgmwa1ZzokJ6V4vkBJHDEk-GyId9DrBbOrAqA3ILH~kS3CWm397dSLzfQPRaQMFvblcOKuzGBL6rdmHYstpTL9Xr2eG1KxN4dTXd-7vLPHHt0z3yxtu9aRopAGsXGdkUElmnprM1FHLQLydvlhUC~g__"
+                                    alt="" class="h-full w-full rounded-full object-cover">
+                                <div
+                                    class="h-[10px] w-[10px] rounded-full border-[2px] bg-[#027884] border-white absolute bottom-[2px]">
+                                </div>
+                            </div>
+                            <!-- for message -->
+                            <div class="w-full flex justify-between items-start">
+                                <div class="flex flex-col items-start justify-start gap-2 overflow-hidden h-full">
+                                    <h3 class="text-black leading-5 text-[16px] font-semibold ">Firstname
+                                    </h3>
+                                    <p class="text-[#616161] text-[14px] font-normal leading-[19px] tracking-[0.24%]">
+                                        What do you thi...
+                                    </p>
+                                </div>
+                                <div class='flex flex-col h-full gap-2 items-star justify-start'>
+                                    <div
+                                        class="w-6 h-[18px] rounded-xl bg-[#027884] text-white text-center tracking-[-0.08%]  leading-[16px] text-[12px] font-semibold">
+                                        10
+                                    </div>
+                                    <h6
+                                        class="font-normal text-sm leading-4 tracking-[-0.08%] text-[#313131] text-right">
+                                        3:30pm</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- message full view -->
+                <section
+                    class="w-[67.4%]   flex flex-col items-start justify-start border border-[#E4E4E4] rounded-lg ">
+                    <div
+                        class='rounded-t-lg h-[63.9px] pl-[17px] w-full flex px-[13.98px] items-center justify-start gap-3 border-b border-[#E4E4E4]'>
+                        <div class='w-[36px] h-[36px] rounded-full'>
+                            <img src="https://s3-alpha-sig.figma.com/img/2100/3e1c/51c737d838bb2607b639ad137845d9bd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QaujJFkxCFpXZupNMbBaA-tWccB82ZBR0DJlPNVL8FnRU95dhQfpu48jsqBrEbQiEN0bL3HXmk-a6J0PL~G01U4~1Ri3uLxBPfsyK4lxwWMuUnrVIU0KOjY~tqnqNpkYeQzZtqBBcJdLN6NftwmvaB-eN0ohKM2HEWf1LNIB9T292BTOWj9gawU9pJFnhcvBLTiU1ipBMKVrv31ZzVc9x~Cfm0CG2331PSSfcV1rCmmig~kcy9xrBKLaONtmzEiXpNmb8u9PWvuKli61l2ziwvl0vfvKNxqSslKcXD4kM3y31cMJT4K3BZtJpf62BZvOJU7rdFKaoN2pZl3fIom~UA__"
+                                alt="" class='h-full w-full object-cover rounded-full'>
+                        </div>
+
+                        <h6 class='text-[32px] leading-[36.81px] font-normal'>
+                            Sonakshi
+                        </h6>
+
+                    </div>
+
+                    <div
+                        class="flex flex-col justify-between h-full w-full bg-[#F5F5F580] overflow-y-scroll no-scrollbar">
+
+                        <div class="mt-5 flex flex-col px-6 w-full gap-[21.97px] h-full overflow-y-scroll no-scrollbar">
+
+                            <!-- message 1 -->
+                            <div class='w-full flex justify-between'>
+                                <div class="gap-4 flex items-center justify-start">
+                                    <!-- image -->
+                                    <div class='h-6 w-6 rounded-full border border-white'>
+                                        <img src="https://s3-alpha-sig.figma.com/img/2100/3e1c/51c737d838bb2607b639ad137845d9bd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QaujJFkxCFpXZupNMbBaA-tWccB82ZBR0DJlPNVL8FnRU95dhQfpu48jsqBrEbQiEN0bL3HXmk-a6J0PL~G01U4~1Ri3uLxBPfsyK4lxwWMuUnrVIU0KOjY~tqnqNpkYeQzZtqBBcJdLN6NftwmvaB-eN0ohKM2HEWf1LNIB9T292BTOWj9gawU9pJFnhcvBLTiU1ipBMKVrv31ZzVc9x~Cfm0CG2331PSSfcV1rCmmig~kcy9xrBKLaONtmzEiXpNmb8u9PWvuKli61l2ziwvl0vfvKNxqSslKcXD4kM3y31cMJT4K3BZtJpf62BZvOJU7rdFKaoN2pZl3fIom~UA__"
+                                            alt="" class="h-full w-full rounded-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h2 class='font-normal text-base leading-[22px] tracking-[-0.41%] text-[#313131]'>I
+                                        am
+                                        just saying I
+                                        would date you</h2>
+                                </div>
+                                <div class='flex items-center'>
+                                    <h6
+                                        class='font-normal text-[12px] leading-[16px] tracking-[-0.08%] text-right text-[#616161]'>
+                                        12:50pm
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <!-- repetative content -->
+
+                            <!-- message 2 -->
+                            <div class='w-full flex justify-between'>
+                                <div class="gap-4 flex items-center justify-start">
+                                    <!-- image -->
+                                    <div class='h-6 w-6 rounded-full border border-white'>
+                                        <img src="https://s3-alpha-sig.figma.com/img/2100/3e1c/51c737d838bb2607b639ad137845d9bd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QaujJFkxCFpXZupNMbBaA-tWccB82ZBR0DJlPNVL8FnRU95dhQfpu48jsqBrEbQiEN0bL3HXmk-a6J0PL~G01U4~1Ri3uLxBPfsyK4lxwWMuUnrVIU0KOjY~tqnqNpkYeQzZtqBBcJdLN6NftwmvaB-eN0ohKM2HEWf1LNIB9T292BTOWj9gawU9pJFnhcvBLTiU1ipBMKVrv31ZzVc9x~Cfm0CG2331PSSfcV1rCmmig~kcy9xrBKLaONtmzEiXpNmb8u9PWvuKli61l2ziwvl0vfvKNxqSslKcXD4kM3y31cMJT4K3BZtJpf62BZvOJU7rdFKaoN2pZl3fIom~UA__"
+                                            alt="" class="h-full w-full rounded-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h2 class='font-normal text-base leading-[22px] tracking-[-0.41%] text-[#313131]'>I
+                                        am
+                                        just saying I
+                                        would date you</h2>
+                                </div>
+                                <div class='flex items-center'>
+                                    <h6
+                                        class='font-normal text-[12px] leading-[16px] tracking-[-0.08%] text-right text-[#616161]'>
+                                        12:50pm
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <!-- divider -->
+
+                            <div class="w-full flex justify-center items-center gap-[11.5px]">
+                                <div class="border border-[#E4E4E4] w-full"></div>
+                                <h6
+                                    class="font-semibold text-[12px] text-[#919191] tracking-[-0.08%] text-center leading-[16px]">
+                                    Today</h6>
+                                <div class="border border-[#E4E4E4] w-full"></div>
+                            </div>
+
+                            <div class='w-full flex justify-between'>
+                                <div class="gap-4 flex items-center justify-start">
+                                    <!-- image -->
+                                    <div class='h-6 w-6 rounded-full border border-white'>
+                                        <img src="https://s3-alpha-sig.figma.com/img/2100/3e1c/51c737d838bb2607b639ad137845d9bd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QaujJFkxCFpXZupNMbBaA-tWccB82ZBR0DJlPNVL8FnRU95dhQfpu48jsqBrEbQiEN0bL3HXmk-a6J0PL~G01U4~1Ri3uLxBPfsyK4lxwWMuUnrVIU0KOjY~tqnqNpkYeQzZtqBBcJdLN6NftwmvaB-eN0ohKM2HEWf1LNIB9T292BTOWj9gawU9pJFnhcvBLTiU1ipBMKVrv31ZzVc9x~Cfm0CG2331PSSfcV1rCmmig~kcy9xrBKLaONtmzEiXpNmb8u9PWvuKli61l2ziwvl0vfvKNxqSslKcXD4kM3y31cMJT4K3BZtJpf62BZvOJU7rdFKaoN2pZl3fIom~UA__"
+                                            alt="" class="h-full w-full rounded-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h2 class='font-normal text-base leading-[22px] tracking-[-0.41%] text-[#313131]'>I
+                                        am
+                                        just saying I
+                                        would date you</h2>
+                                </div>
+                                <div class='flex items-center'>
+                                    <h6
+                                        class='font-normal text-[12px] leading-[16px] tracking-[-0.08%] text-right text-[#616161]'>
+                                        12:50pm
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <div class='w-full flex justify-between'>
+                                <div class="gap-4 flex items-center justify-start">
+                                    <!-- image -->
+                                    <div class='h-6 w-6 rounded-full border border-white'>
+                                        <img src="https://s3-alpha-sig.figma.com/img/2100/3e1c/51c737d838bb2607b639ad137845d9bd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QaujJFkxCFpXZupNMbBaA-tWccB82ZBR0DJlPNVL8FnRU95dhQfpu48jsqBrEbQiEN0bL3HXmk-a6J0PL~G01U4~1Ri3uLxBPfsyK4lxwWMuUnrVIU0KOjY~tqnqNpkYeQzZtqBBcJdLN6NftwmvaB-eN0ohKM2HEWf1LNIB9T292BTOWj9gawU9pJFnhcvBLTiU1ipBMKVrv31ZzVc9x~Cfm0CG2331PSSfcV1rCmmig~kcy9xrBKLaONtmzEiXpNmb8u9PWvuKli61l2ziwvl0vfvKNxqSslKcXD4kM3y31cMJT4K3BZtJpf62BZvOJU7rdFKaoN2pZl3fIom~UA__"
+                                            alt="" class="h-full w-full rounded-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h2 class='font-normal text-base leading-[22px] tracking-[-0.41%] text-[#313131]'>I
+                                        am
+                                        just saying I
+                                        would date you</h2>
+                                </div>
+                                <div class='flex items-center'>
+                                    <h6
+                                        class='font-normal text-[12px] leading-[16px] tracking-[-0.08%] text-right text-[#616161]'>
+                                        12:50pm
+                                    </h6>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="h-[47.93px] bg-transparent w-full px-5 mb-2">
+                            <div class="w-full flex justify-between items-center">
+                                <img src="assets/icons/emoji.svg" alt="" class="ml-1">
+                                <div
+                                    class="w-[73.41%] h-[47.93px] border border-[#E4E4E4] bg-white flex items-center justify-start pl-5 rounded-3xl">
+                                    <input type="text" placeholder="Type your message here"
+                                        class="placeholder:text-[#919191] text-[17px] leading-6 tracking-[-0.41%]">
+                                </div>
+                                <img src="assets/icons/mic.svg" alt="">
+                                <img src="assets/icons/add-gif.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+            </div>
+        </main>
+
+        <aside
+            class="fixed right-8 bg-[#F5F5F5] top-[100px] bottom-5 border  border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col  ">
+
+            <div class=" pt-[32px] pb-[19px] w-full flex justify-center items-center bg-[#f5f5f5] ">
+                <h5 class="text-[20px] leading-[24.18px] text-center font-medium text-[#00474D]">Dailies</h5>
+            </div>
+
+
+            <div class="w-full  h-full bg-transparent px-4 mb-5">
+                <div class="w-full h-full flex flex-col items-center justify-start  bg-white border border-[#E4E4E4] rounded-lg p-3"
+                    style="box-shadow: 0px 3px 6px 0px #00000008;">
+
+                    <div class="w-full  max-h-[320px] rounded-lg">
+                        <img src="https://s3-alpha-sig.figma.com/img/d6c6/1977/6e4ee0dc8fbedd4d8c8f5d3937a89f47?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P8~kazU0Uf4WLzjeoep6pDPS9wTs9Cuq99Pru7d-hFVYDOpb4oH~TdZdI0~C3GskBVrOIWwfR8FMcJx5~Jh~ZVCm6TDLX16LQVrV2hUYRmu16qElrYUTagFD3J4pIEtkK~O38lPt-EUWVL4MtqgX-a9KAsV0almwAObBwEHdF0FfJvlpqvOyq0nhWeO2Qv6NKxWkHRGl6W8Z0Y4Hy7xIGgeLazpDwLcuizYCSa9B7iewWZEFVSvhWewXbCxSHYWl720ZM2Wd5S1r7c-O7YbNZZ2eystThdzWCxUN9DZ7zpnB0~mS~YNIKBMnsOMncvRDw~rS7L1klRGjzdIocDoY0w__"
+                            alt="" class="w-full h-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- content  -->
+                    <div class="h-full w-full flex-col items-center justify-start pl-1  mt-4">
+
+                        <div class="w-full flex justify-start items-center gap-3">
+                            <div class="rounded-full h-11 w-11">
+                                <img src="https://s3-alpha-sig.figma.com/img/b4fa/7933/cca0d3a6417185e288b78ab8ea91e173?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b0~nekP78JpjhB8c2DxpVQKlWQI-PuX~3MHFZDQ8Y~dbnP0~fU9r5K50xErwzKbBfozHCJp5Waj7kLxFHiL1335I~QM6VS3HMOkpm-eoTAUIdD9KFrbiTlYsQIelMzmPOgiaxOilfAN92vL-hE2Ga77rbQo1B6eytlzHAIpOTIlcmm46SqjBHPQCEvl-H2oaU-McWpI6Ps3rCi1tY2qxhjz6augw~AJUgrNl45NEKSFi3yIGduRtJ9W~akiaoUIOHq~Tu5LAwK1yqPCTOlkERz4EDoCIum8j9Y0dVFmoz9kMMNAw-IHMp9oxrDpfdIYocqHAEmPB0mDrp5NcF0kZ8Q__"
+                                    alt="" class="rounded-full h-full w-full object-cover">
+                            </div>
+                            <h5 class="text=[#313131] text-[28px] font-normal">
+                                Bushra
+                            </h5>
+                        </div>
+
+                        <div class="mt-5 text-[#313131] w-full text-center leading-[16px] text-[12px] font-normal">
+                            27, 5’7 (1.56m) <br>
+                            B Eng., Marine Engineer, <br>
+                            Ethnicity, Religion, <br>
+                            City, Country <br>
+                        </div>
+
+
+                        <div class="mt-4 w-full border border-[#E4E4E4]"></div>
+
+                        <div class="mt-2  w-full text-center flex flex-col items-center justify-start">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.0458 20C11.767 20 11.5514 19.9038 11.3987 19.7113C11.2527 19.5188 11.1233 19.2301 11.0105 18.8452L8.78049 11.1996L1.14485 8.97959C0.753277 8.86677 0.464576 8.73735 0.278746 8.59134C0.0929152 8.43869 0 8.22631 0 7.95421C0 7.71528 0.08296 7.50954 0.24888 7.33698C0.421437 7.16443 0.670317 7.0151 0.99552 6.889L18.6959 0.129418C18.822 0.08296 18.9381 0.049776 19.0443 0.0298656C19.1505 0.0099552 19.2467 0 19.333 0C19.5454 0 19.708 0.0564128 19.8208 0.169238C19.9403 0.282064 20 0.447984 20 0.666999C20 0.753277 19.99 0.849511 19.9701 0.955699C19.9502 1.06189 19.917 1.17803 19.8706 1.30413L13.121 18.9945C12.9882 19.3264 12.8356 19.5752 12.663 19.7412C12.4905 19.9137 12.2847 20 12.0458 20ZM8.9995 10.5027L17.8895 1.59283C17.989 1.49992 18.1483 1.36718 18.3673 1.19462C18.5864 1.02207 18.7589 0.886013 18.885 0.786461C18.7656 0.839555 18.6162 0.905923 18.437 0.985565C18.2645 1.06521 18.0886 1.13821 17.9094 1.20458L1.32404 7.52613C1.14485 7.5925 1.02207 7.65887 0.955699 7.72524C0.889331 7.78497 0.856147 7.85134 0.856147 7.92434C0.856147 7.99734 0.89265 8.06039 0.965655 8.11349C1.03866 8.16658 1.18799 8.22631 1.41364 8.29268L8.9995 10.5027ZM12.0757 19.1439C12.1487 19.1439 12.215 19.1107 12.2748 19.0443C12.3411 18.9779 12.4075 18.8552 12.4739 18.676L18.7954 2.09059C18.8684 1.90476 18.9447 1.72889 19.0244 1.56297C19.104 1.39041 19.1737 1.24108 19.2334 1.11498C19.1206 1.25436 18.9779 1.43355 18.8054 1.65256C18.6328 1.86494 18.5001 2.01759 18.4072 2.1105L9.48731 11.0105L11.7073 18.5864C11.7737 18.812 11.8334 18.9613 11.8865 19.0343C11.9396 19.1074 12.0027 19.1439 12.0757 19.1439Z"
+                                    fill="#00474D" />
+                            </svg>
+                            <h6 class="mt-2 text-[#313131] leading-[16px] text-[10px] font-normal">Message</h6>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

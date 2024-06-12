@@ -39,6 +39,24 @@ app.get('/connect-archived', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'connect-archived.html'))
 })
 
+app.get('/circle-activity', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'circle-activity.html'))
+})
+
+
+app.get('/circle-admirers', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'circle-admirers.html'))
+})
+
+app.get('/circle-favourites', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'circle-favourites.html'))
+})
+
+app.get('/circle-links', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'circle-links.html'))
+})
+
+
 app.get('/slider', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'slidertest.html'))
 })
