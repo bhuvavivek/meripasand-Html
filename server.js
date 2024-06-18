@@ -52,9 +52,10 @@ app.get('/circle-favourites', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'circle-favourites.html'))
 })
 
-app.get('/circle-links', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'circle-links.html'))
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'profile.html'))
 })
+
 
 
 app.get('/slider', (req, res) => {
