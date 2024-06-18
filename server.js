@@ -69,5 +69,5 @@ app.get('/account-profile', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'account-profile.html'))
 })
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
