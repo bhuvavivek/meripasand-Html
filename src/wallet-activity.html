@@ -187,16 +187,391 @@
         <main class="flex w-full justify-center pb-[22px]">
             <div
                 class="flex flex-col justify-start items-center w-[59.9%] rounded-lg overflow-y-scroll no-scrollbar scroll-smooth">
-                <div class="border border-solid border-[#ECECEC] bg-gradient-to-r from-[#00474D] to-[#00A5B3] rounded-lg py-8 px-12 w-full flex justify-between">
-                    <h5
-                        class="text-[20px] font-[500] leading-[24.18px] text-center text-[#fff]">
+                <div
+                    class="border border-solid border-[#ECECEC] bg-gradient-to-r from-[#00474D] to-[#00A5B3] rounded-lg py-8 px-12 mb-3 w-full flex justify-between">
+                    <h5 class="text-[20px] font-[500] leading-[24.18px] text-center text-[#fff]">
                         Wallet Activity
                     </h5>
                     <ul class="flex items-center">
-                        <li><a href="#" class="text-[14px] font-[590]">VIEW ALL</a></li>
-                        <li><a href="#" class="text-[14px] font-[590] mx-5">PURCHASES</a></li>
-                        <li><a href="#" class="text-[14px] font-[590]">REFERRAL EARNINGS</a></li>
+                        <li><a href="#" class="text-[14px] text-white font-[590]">VIEW ALL</a></li>
+                        <li><a href="#" class="text-[14px] text-white font-[590] mx-4">PURCHASES</a></li>
+                        <li><a href="#" class="text-[14px] text-white font-[590]">REFERRAL EARNINGS</a></li>
                     </ul>
+                </div>
+                <div class="w-full border border-solid border-[#ECECEC] rounded-lg overflow-y-scroll no-scrollbar scroll-smooth">
+                    <div>
+                        <div class="bg-[#F3F2ED] py-4 ps-8 pe-12 border border-solid border-[#ECECEC] w-full flex">
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%]">Yesterday</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[60%]"></span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money Out</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money In</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Balance</span>
+                        </div>
+                        <div class="py-3">
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">30 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Inward Transfer</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]">Account <span>AE 1234 5678 9010 1234 16</span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">1,000.00</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">28 Apr</span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3">1,950.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#F3F2ED] py-4 ps-8 pe-12 border border-solid border-[#ECECEC] w-full flex">
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%]">Last Week</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[60%]"></span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money Out</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money In</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Balance</span>
+                        </div>
+                        <div class="py-3">
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">26 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">24 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">23 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">22 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Referral Joy Alukas</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">10.00</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Referral Abishek Gupta</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">10.00</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">20 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3">1,950.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#F3F2ED] py-4 ps-8 pe-12 border border-solid border-[#ECECEC] w-full flex">
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%]">Two Weeks Ago</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[60%]"></span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money Out</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money In</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Balance</span>
+                        </div>
+                        <div class="py-3">
+                            <div class="mx-12">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">18 Apr</span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3">1,950.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#F3F2ED] py-4 ps-8 pe-12 border border-solid border-[#ECECEC] w-full flex">
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%]">Three Weeks Ago</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[60%]"></span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money Out</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money In</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Balance</span>
+                        </div>
+                        <div class="py-3">
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">8 Apr</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Referral Sherry Siwal</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">10.00</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.99</span>
+                                </div>
+                            </div>
+                            <div class="mx-12">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">3 Apr</span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3">1,950.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#F3F2ED] py-4 ps-8 pe-12 border border-solid border-[#ECECEC] w-full flex">
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%]">Last Month</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[60%]"></span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money Out</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money In</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Balance</span>
+                        </div>
+                        <div class="py-3">
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">31 Mar</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Inward Transfer</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]">Account <span>AE 1234 5678 9010 1234 16 </span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">16 Mar</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">12 Mar</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Referral Mohammed Arfan</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">10.00</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.99</span>
+                                </div>
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3"></span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">2 Mar</span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3">1,950.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#F3F2ED] py-4 ps-8 pe-12 border border-solid border-[#ECECEC] w-full flex">
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%]">February</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[60%]"></span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money Out</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Money In</span>
+                            <span class="text-[14px] font-[590] leading-[19px] w-[10%] text-end">Balance</span>
+                        </div>
+                        <div class="py-3">
+                            <div class="mx-12 border-b border-solid border-[#ECECEC]">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">22 Feb</span>
+                                    <div class="w-[60%] border-b border-solid border-[#ECECEC] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end border-b border-solid border-[#ECECEC] py-3">1,950.00</span>
+                                </div>
+                            </div>
+                            <div class="mx-12">                            
+                                <div class="flex">
+                                    <span class="text-[14px] font-[590] leading-[19px] w-[10%] py-3">10 Feb</span>
+                                    <div class="w-[60%] py-3">
+                                        <span class="text-[16px] font-[590]">Boost</span>
+                                        <p class="text-[14px] font-[400] text-[#313131]"> <span></span></p>
+                                        <p class="text-[14px] font-[400] text-[#616161]">Ref : <span>1213456789</span></p>
+                                    </div>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1">0.99</span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3 pe-1"></span>
+                                    <span class="text-[14px] font-[400] leading-[19px] w-[10%] text-end py-3">1,950.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -212,10 +587,12 @@
                 <div class="flex flex-col justify-start items-start gap-1">
                     <ul class="px-5 py-6 w-full bg-[#fff]">
                         <li class="pb-[12px] border-b border-[#E4E4E4] w-full">
-                            <a href="account-wallet" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet Dashboard</a>
+                            <a href="account-wallet" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet
+                                Dashboard</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
-                            <a href="wallet-activity" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet Activity</a>
+                            <a href="wallet-activity" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet
+                                Activity</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
                             <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Add Money to Your Wallet</a>
