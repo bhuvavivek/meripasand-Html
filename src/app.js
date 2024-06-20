@@ -66,6 +66,116 @@ $(document).ready(function () {
     });
     $("#heightrangeValue").val($("#slider-height-range").slider("values", 0) +
         " - " + $("#slider-height-range").slider("values", 1) + 'cm');
-
-
 });
+
+var options1 = {
+    series: [{
+    name: 'series1',
+    data: [30,70,55,40,70,85,100,80,75]
+  }],
+    chart: {
+    height: 350,
+    type: 'area'
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    type: 'datetime',
+    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z", "2018-09-19T07:30:00.000Z", "2018-09-19T08:30:00.000Z"]
+  },
+  tooltip: {
+    x: {
+      format: 'dd/MM/yy HH:mm'
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart1"), options1);
+chart.render();
+
+var options = {
+  series: [{
+  name: 'Inflation',
+  data: [3.5, 3.1, 5.4, 10.1, 7.0, 5.6, 4.8, 4.3, 6.4, 3.8, 5.5, 4.2]
+}],
+  chart: {
+  height: 350,
+  type: 'bar',
+},
+plotOptions: {
+  bar: {
+    borderRadius: 10,
+    dataLabels: {
+      position: 'top', // top, center, bottom
+    },
+  }
+},
+dataLabels: {
+  enabled: true,
+  formatter: function (val) {
+    return val + "%";
+  },
+  offsetY: -20,
+  style: {
+    fontSize: '12px',
+    colors: ["#304758"]
+  }
+},
+
+xaxis: {
+  categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  position: 'top',
+  axisBorder: {
+    show: false
+  },
+  axisTicks: {
+    show: false
+  },
+  crosshairs: {
+    fill: {
+      type: 'gradient',
+      gradient: {
+        colorFrom: '#D8E3F0',
+        colorTo: '#BED1E6',
+        stops: [0, 100],
+        opacityFrom: 0.4,
+        opacityTo: 0.5,
+      }
+    }
+  },
+  tooltip: {
+    enabled: true,
+  }
+},
+yaxis: {
+  axisBorder: {
+    show: false
+  },
+  axisTicks: {
+    show: false,
+  },
+  labels: {
+    show: false,
+    formatter: function (val) {
+      return val + "%";
+    }
+  }
+
+},
+title: {
+  text: 'Monthly Inflation in Argentina, 2002',
+  floating: true,
+  offsetY: 330,
+  align: 'center',
+  style: {
+    color: '#444'
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();

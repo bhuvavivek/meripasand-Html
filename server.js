@@ -68,6 +68,12 @@ app.get('/account-you', (req, res) => {
 app.get('/account-profile', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'account-profile.html'))
 })
+app.get('/account-wallet', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'account-wallet.html'))
+})
+app.get('/wallet-activity', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'wallet-activity.html'))
+})
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

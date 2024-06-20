@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #efb75e 2.78%, #856a31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #ffffff;
+            border: 1px solid #e4e4e4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #c2c2c2 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 4px !important;
+        }
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+
+        .ui-slider .ui-slider-range {
+            background-color: #014d55 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col">
+    <!-- Header -->
+    <header class="bg-white flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px]">
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full" />
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <a href="/" class="#027884">
+                <img src="assets/icons/home.svg" alt="home" class="h-6 w-[26.4px]" />
+            </a>
+            <a href="/nearby" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="search" class="h-5 w-5" />
+            </a>
+            <a href="/connect-everyone" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class="h-5 w-5" />
+            </a>
+            <a href="/circle-activity" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class="h-5 w-5" />
+            </a>
+            <a href="/account-profile" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class="h-5 w-5" />
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class="h-5 w-[19px]" />
+            </a>
+        </div>
+    </header>
+
+    <div class="px-8 flex h-full pt-[100px] relative gap-4">
+        <!-- Profile Sidebar -->
+
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%] rounded-lg flex flex-col">
+            <div class="profileCover h-[100px] bg-cover bg-center w-full rounded-t-lg relative">
+                <!-- profile div -->
+                <div class="absolute w-full top-10 flex justify-center items-center">
+                    <div class="h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full object-cover rounded-full" />
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">
+                            Muhammed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-[110px] h-full w-full rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[#E4E4E4] w-[216px]"></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Socials
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+                            <a href="/"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                You
+                            </a>
+                            <a href="/profile"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Profile
+                            </a>
+                            <a href="/account-wallet"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Wallet
+                            </a>
+                            <a href="#"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Shop
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6" />
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex w-full justify-center pb-[22px]">
+            <div
+                class="flex flex-col justify-start items-center bg-[#f5f5f5] w-[59.9%] rounded-lg border border-[#E4E4E4] overflow-y-scroll no-scrollbar scroll-smooth">
+                <div class="pt-[31px] px-12 w-full">
+                    <div class="mb-7 flex justify-between items-center">
+                        <h2 class="text-[20px] font-[500] text-[#00474D]">Fresh Faces</h2>
+                        <a href="#" class="">
+                            <div class="flex items-center gap-1">
+                                <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-5 w-full relative">
+                        <div class="responsive w-full">
+                            <!-- Matches container   -->
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/084f/d592/b98f23db218d6fb136bd8b84c0ee5fa1?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Gif23~sWVc9-XpmmZMnmC7VMBjMbDOQn2HxHg0kHWLwNsbkkvqANV4Myfvi14egbvo9EqCJk0ktjN5S8Ofbqc6DC3pEK4I6W6BZXaFVhEEAf0m5F1UJezLooOpWmYhrT2WYW~uR-O4qp79FQ-Xv0sIzOwEpEQP85ItXzDkZXzaAvqFYbUCXfmZJcgOGLjXIWP3EQTw6PZ7lOCFQ5JYfCqVpcT-MdElSJtUWZ8p8cidbvwPHVdnhzV3xnNr-QLgLpFexdsrZs95l5ZhHvxHW5LqHZyoo1Z-d~ULqm2WP5DOou6low0cZ7Zoz4Lgy33P32iU~aQhOgDy48ldNkz9ya0g__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fsOAp2bK-eJQFh5iYhB7RG054FQcKl389GMo8y9t~rAWx4W8A6Tn81f4j8wvjdh7~lFpUdltIOG6aLAhVcwFKFXcQdiJsatSztvAtUFR53-8UH22LmJ~nWiqSVAiUI7vrV6W~y4-adrFYsHxFC87nxdhjm~EYi5XotJzqvpnCpi0Svshvc9E2ZfFVLBe-XMXbG4qfVuJJh-H8nwAxXSS8VHbJmQ8hBRFAjF45wBBKRe~GdzdJkEnr5kNQgN23Brl0XFxD69Dcg-aswWqxWvRV-t5yDHfdTuytmKfDK6G-wHn3H34pOCbr8aXGhNpvhg9cf7p7LKkd-Yso0ODrv8Tnw__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/396b/fb3b/910f5b7ed1085e9eef58edc006ce4446?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf-tYawj6~fBqn2TjjYNSyJduMV1CE6eMJs15iaSNxeOBQAC2wsWuFTMCOTgzSFpYedDWiNX3NNJuZlmEF~J3dcL-x4nWyydKuHFWi2qPKIuuVNlEufTnO3ymyXOy736OIVwkstfbeKqF5fz1oxX9B5IEYYFZWf2NNy52Uw0dLyr3XfZwfbbFh5x-F4WBfC-22AQz~QfNMkBJ0Th7wbaPT336Del7UTS8xNygWowqNZ54rbXB62Fm8YEN2MTNK~htGacm4A~J4NoHc1axcyt5O3P8NZpjpV-byz~23okEdUoEOoYA19Uw7BXuSGX~nnS0gMos3q17XVUJG-k9e2d9A__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/9182/903f/15f3de0ab774e1fdbfc71e79c4af7313?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hPlCtoQUlRionUqbaCJXJ5ebUPzT1iG7Emt7xJEQ~FLIXqfU1QpBYD4UaKR19~h2SziSNVc4BAaL7eBiAFXD-32y7~TFrezah3fmejJ2oxncOWhGQhUHQ2EBHZJxW6xj4jHp~qYXKzByj9k6uT2UhVmfAcePOUlhE6638emanYbwALO-ZCh6Q4ZicbMXW2ByNoQoigPrUzHkLWLAGfKqtGP57fp4206F709UGZKApJciN9NvUQ1mQM8xgoI502nGrGtfpxnlz6Pin6PW1f6OcaOEfonVLWSUVc3TGcGx4B5~N9tuktXQl0sX0XwaELPu4aG3uyKaHDIfM0quk3rqFA__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/360b/ec57/3401ddb254a8e179e7253b34f9701438?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WkgMQTymhO0nv5gXZFr9D3Htk~62RKSWozxlA0FnDCZIG1O8CoDWJctSlGF884PvGMp16ZX7BYa-Irdl~rJwH-wUGamV7icN-j5FpZUUlkibGWRX8emr5am2cSsM1fL1sM9C1jnmFjlS1WHhrYmY0PYghiKxqqTYXG9jMbr26hrX-d9FJgsJdFQDcr2X~paQzkEgm~87XUvg3DUGd4PtO95tUbUGBcYk88M6qxhzEbdYPbJB9sf~wfl86Wo-jqclcPZEG1g2ni3zmx5guYuB7VyXubE87ik6wreXNSdlyjt036tU6ClgHwtOP4queG8jgzW-rNQiUaDNLe5WdsuZ3w__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/ce8f/f6f4/3ed59c64f870a1df56a226fe746f19b4?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W2vTwF-sVw6BMTJTvltRe5khDut~FTXgsCA~KkUu3gKif-vyfnNqXxKaIOxXOrPadq0soIF4H4YoBjdfeFULW6aovzWNIf2TR4EcYg2hd6xF6WbNBdq4i5Nrub0Va6DDTBqt3BhzO37QLEW7jrb1toiVjblNr~tDNjk8YjjNliXSZN0cmZ3mbjjfbp6OUQjhLJ-yfEM7dGONC9bkvSOn2-fXqYpq0NWmzHd--Nvw-VIpk~cNYwE3USp~xx~2h9zoQ9doFtvwWt0H2OL6jDqtdyGyO32gIwGmrDH7u7MIdwFoUjdEsKtrKRM~OEjCYNSv~BUJHWYwCSUjhAVON1FOEA__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/7390/04a6/c1698b2e332548b54fea2a164622f316?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Km3ErNofc~~5ZjzpoElBnrcf~J-k2zz3WAiC2URyHvSiTZ7uiA0GMkzWfbKFEt7TqsP6E2y9IRGBBuffbO-ZLGJyJ8QqTDROgTPusEqfY2fvyRrdKHHrXf0Z3Iz3-6fdxJMYgF811Gm8h7Np5DNji2dmLumc0ugYZ~-zWXms6GikfA-a25ptpnbEQClLNhfOkUOgpEfZeQot8kfGG0VgTz0B82m8-4YFPOu5LXiJtfc1p0~HbbI8s8t1D43i7IWmI~QfPzvGSKsgvAdRzR2XPe11XYg2VXabbVSI2UwUhaviBfkVOV-tf6cp0J3HjvwROCb8uTwDAgyp8f7cXZSK9A__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fsOAp2bK-eJQFh5iYhB7RG054FQcKl389GMo8y9t~rAWx4W8A6Tn81f4j8wvjdh7~lFpUdltIOG6aLAhVcwFKFXcQdiJsatSztvAtUFR53-8UH22LmJ~nWiqSVAiUI7vrV6W~y4-adrFYsHxFC87nxdhjm~EYi5XotJzqvpnCpi0Svshvc9E2ZfFVLBe-XMXbG4qfVuJJh-H8nwAxXSS8VHbJmQ8hBRFAjF45wBBKRe~GdzdJkEnr5kNQgN23Brl0XFxD69Dcg-aswWqxWvRV-t5yDHfdTuytmKfDK6G-wHn3H34pOCbr8aXGhNpvhg9cf7p7LKkd-Yso0ODrv8Tnw__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                            <div
+                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/396b/fb3b/910f5b7ed1085e9eef58edc006ce4446?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf-tYawj6~fBqn2TjjYNSyJduMV1CE6eMJs15iaSNxeOBQAC2wsWuFTMCOTgzSFpYedDWiNX3NNJuZlmEF~J3dcL-x4nWyydKuHFWi2qPKIuuVNlEufTnO3ymyXOy736OIVwkstfbeKqF5fz1oxX9B5IEYYFZWf2NNy52Uw0dLyr3XfZwfbbFh5x-F4WBfC-22AQz~QfNMkBJ0Th7wbaPT336Del7UTS8xNygWowqNZ54rbXB62Fm8YEN2MTNK~htGacm4A~J4NoHc1axcyt5O3P8NZpjpV-byz~23okEdUoEOoYA19Uw7BXuSGX~nnS0gMos3q17XVUJG-k9e2d9A__"
+                                        alt="" class="h-full w-full object-cover" />
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
+                            <img class="" src="assets/icons/swipearrow.svg" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center my-9">
+                            <h2 class="text-[20px] font-[500] text-[#00474D]">Balance Trend</h2>
+                            <ul class="list-none flex justify-between items-center">
+                                <li id="today" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
+                                    Today
+                                </li>
+                                <li id="this_week"
+                                    class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75] mx-5">This Week
+                                </li>
+                                <li id="one_month" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
+                                    This Month
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[15px] font-[400] me-3 pt-[2px]">USD</span>
+                                <span class="text-[20px] font-[590]">425.50</span>
+                            </div>
+                        </div>
+                        <div id="chart1"></div>
+                        <div class="mt-12">
+                            <div class="w-[280px] mx-auto">
+                                <h5
+                                    class="rounded-[48px] py-[18px] text-[20px] font-[500] leading-[28px] text-center text-[#fff] bg-gradient-to-r from-[#EFB75E] to-[#856A31]">
+                                    Add Funds
+                                </h5>
+                                <p class="text-[#856A31] text-[15px] font-[400] mt-6 flex justify-center items-center">
+                                    Linked Bank Accounts and Cards
+                                    <img class="ms-3" src="assets/icons/right-arrow.svg" alt="">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-8 mb-5 py-4 px-5 bg-[#F3F2ED] rounded-[8px]">
+                            <div class="flex justify-between items-center py-5 border-b border-[#E4E4E4]">
+                                <h2 class="text-[20px] font-[500] text-[#00474D]">Wallet Summery</h2>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">View Activity</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
+                                <div class="w-4/5">
+                                    <p class="text-[#313131] text-[16px] font-[327] flex items-center">
+                                        Money credited from bank account #12345678
+                                    </p>
+                                </div>
+                                <div class="w-[10%] text-[#616161] text-end">USD</div>
+                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
+                            </div>
+                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
+                                <div class="w-4/5">
+                                    <p class="text-[#313131] text-[16px] font-[327]">
+                                        Money credited from bank account #87865432
+                                    </p>
+
+                                </div>
+                                <div class="w-[10%] text-[#616161] text-end">USD</div>
+                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
+                            </div>
+                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
+                                <div class="w-4/5">
+                                    <p class="text-[#313131] text-[16px] font-[327]">
+                                        Money credited from credit card 0000
+                                    </p>
+
+                                </div>
+                                <div class="w-[10%] text-[#616161] text-end">USD</div>
+                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
+                            </div>
+                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
+                                <div class="w-4/5 flex items-center gap-2">
+                                    <p class="text-[#313131] text-[16px] font-[327]">
+                                        Referral earnings
+                                    </p>
+                                    <a href="#" class="">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[14px] font-[400] text-[#9E0811]">View All</span>
+                                            <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow-red.svg"
+                                                alt="" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="w-[10%] text-[#616161] text-end">USD</div>
+                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
+                            </div>
+                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
+                                <div class="w-4/5 flex items-center gap-2">
+                                    <p class="text-[#313131] text-[16px] font-[327]">
+                                        In-App purchases
+                                    </p>
+                                    <a href="#" class="">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[14px] font-[400] text-[#9E0811]">View All</span>
+                                            <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow-red.svg"
+                                                alt="" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="w-[10%] text-[#616161] text-end">USD</div>
+                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
+                            </div>
+                            <div class="w-full py-6 flex items-center">
+                                <div class="w-4/5 flex items-center gap-2">
+                                    <p class="text-[#313131] text-[16px] font-[327]">
+                                        Available balance to spend
+                                    </p>
+                                    <a href="#" class="">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[14px] font-[400] text-[#9E0811]">Add Funds</span>
+                                            <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow-red.svg"
+                                                alt="" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="w-[10%] text-[#616161] text-end">USD</div>
+                                <div class="w-[10%] text-[#313131] text-end font-[590]">680.50</div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img src="https://s3-alpha-sig.figma.com/img/c380/dbf4/b6a8223bf9f8b2e515aedcbc74ac0d1a?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OPfNU337xcdhc8HpzqMm2ln7a7VVzoznaeAiBx8anx5j7Sbw80i-St8VgBBebcmk-75hl8JqPNemNLblnzCVdiUqH6GXVHpODYU1dBRxDw4N3lrKrFvWNG~9RoULG64lBYcCfDwca1Dc-77wZ9i5Oasp5kUngk3GRyLiQRSfK6oc34TAyUAcWwkHsFHyx-bc-TX2ymkzXFvIaxqgA8SChCbTlXpWBKvymYVqeeLxgB2k6CFoAbhWNJXznsYauizfXSRXVrA6EgjbXT9a0F1UvLVDK1ffiM36lS7-D6sy4VO7nbWvr8ssvpbcTKHWKEdjyUJ9ZftUHXbEQhJDguM7XA__" alt="" class="rounded-[8px] h-[228px] w-full">
+                        </div>
+                        <div class="flex justify-between items-center my-9">
+                            <h2 class="text-[20px] font-[500] text-[#00474D]">Referral Earnings</h2>
+                            <ul class="list-none flex justify-between items-center">
+                                <li id="today" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
+                                    Today
+                                </li>
+                                <li id="this_week"
+                                    class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75] mx-5">This Week
+                                </li>
+                                <li id="one_month" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
+                                    This Month
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[15px] font-[400] me-3 pt-[2px]">USD</span>
+                                <span class="text-[20px] font-[590]">150.00</span>
+                            </div>
+                        </div>
+                        <div id="chart" class="pb-8"></div>
+                        <div class="border border-[#E4E4E4]"></div>
+                        <div class="flex justify-between items-center pt-[32px]">
+                            <h2 class="text-[20px] font-[500] text-[#00474D]">Recent Referrals</h2>
+                            <a href="#" class="">
+                                <div class="flex items-center gap-1">
+                                    <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                    <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex flex-col gap-3 my-5">
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1c9b/9e5c/9c2c0082539ae29088b3bc6c85f2ac04?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b-iQdXkN4sKEMlUl9tpLQbpfa3zADTYmWw6ubW2UASrfg34VfSk3wOOKUXiNPXXA~taGRh4JkQO3hrDBDnraXNd4y4SMsQZvvVWaAmTm4r8DU4neuEsRLbUgmfXQs5fEXVOHsSTj5ozGvY24y1nN5g6jpdIEYYMOSOPE0EgQfH7lmt78WK9FXixj-u~hsGbC9hSYhMiWtESd35rcFKdxq8xccxkunm9tiXHWi~3NMX0Z3nhIFiGfoh56jH6amSiSo516Ly2bHbIT2o8qIpKqp3g8CziloNW~O1lW7R8ixK3JjcK-RzlCobCT4uykF0b9ZM1CBw6I0ifqduuAr0Qbfg__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/e6bd/7822/caa778713740fd383b4991a859eb4d92?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MmgiyGLwCmtwRPiAjcwdZriKRNnV76FJzo5j-PbeL37O5gJX9aIY5HJcQGXubIunPAmLFN4XlGrb9bt94iIE8f6ddSE9F58NcBz8L9AOkZGL98Kx0U0amjcXtXDf2Rb54-rsr36rwc~e0H7f9ErzTIqCIuyeN~7AVURJqC6mDACdVRVKMK~IJTg7ErzVMvyliNtLGCZSQkb-s9Qi4UiAv4cZJwwEk01yahWmQQOoFBxIiwQYk5qFtyelsnkDZKJQmcVVL5JLZA6IRSZ3eQxDpbk11N5X5eFpp8LlZAYuLgoDHKmNu0OyW3ASRMfTLM8Dub9jDFNJh-583gVkFL5EGA__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1247/9099/e4889cb156f78f1edce33b9138941eff?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DlxWSUf1p0JRjD3CV0KiKce6K-7q0IQXV~WYyyddcSZdDWCr-xQXWv1yV9H6YBHqfIsOYodlvmndsKxN5MflONFfG~RrFv2fNXEekPBS1aq4icBZLR0IpfA8hJzcWddeB4avD4j~wWZtuzMtFh3DaMQBUK9F3yEG9Zrt-Y4HF-Hq2OfdGD~IHLs~8wIRqOukr1pnjpeKSpXssk5lIRZHepzZcHC17PVplbX2Plwsq-3fdIu~E-mgmRLw8uPGJat~Bt3gGO0~cLWm5gtQ3eQ6ukcI~GPdk1g993LF0UgXwok3itX0dMgZPWdZJdEc~b9S3Q~QsXsBoEHORd7vDVbTew__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1f48/867b/6ba9b7fb9ffaf2ce01955c93d587e908?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RRGW-Mf3w1gyBwu~h~EjBS5vVrwHbSpiKtsBTtVBveDgFLaIpcve9Hb0x8rm3zT95agpSSaWklxkanD2BfrYxe8q2Zteoje5bnEubqD5IXpvb9yC~w9mAU2JQtF90YBufUztnLatl36hllLzEcmo6xARcrgy9pWKrSIrsuMHwLlpCkfyekL64GcjGBV54y5WLAv-Sb7AKBNOmUv~ATmMrQMGWQ1n0oYvdDQh2zIH-~0JVjNMaHQdpq1Uu8qDSN3IN2vwtBhz-RwYMIdqSw3KGh2RYm04PvQjtVPNAlNnD~-~d5Xt5m35vovJUgwSsNFBr5KHderKB3uFFfnVShqetw__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/85e3/19ff/7b795efeb5ba2f80324f3230abb1422e?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkd4NbE78Z0GuJp1g-ZDMEJA6J6sVKT79OktCn2VJhbl5y8~KPzzfWcN-lnKb6EkPN5CUC8JyVHwAMHiLSTQEqPNI9ZziH~5wa-aTU55roG7zqsHZyEstxOkkEKwIFg7milbSB0M9UN2Pf4a26lQtbGCkIttufTzGyKlMeOziNrWix4Zth2yqVazy5Re84vjukUif1sUrs733pFGc7q43ZyikwlglBvynOvE4nsyaVGc0s6jSyPXlJ9JJ2zenIdgeFvTOLicQRENxlAwk79QL4tlDphZqbP9~baabo5NWElXD5lrJ7P6StnDV6kRjET0ojAToc1u7KkCE1beUqGf6Q__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img src="https://s3-alpha-sig.figma.com/img/a62c/77c0/d246f4ea786b40db46fc6e734a8b64a0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ok2gABOGUnhj2egF5tU64z7INB~VoLNqToj0EzHIhZSJlIZHK~6j0k-TN51X1qCc5LXEvaBbgX9utLlX3xLfojPrPZL2-jSDLdXduDpjLezCYMNgAwmimlF~G9VYWk-gISxf9WSUPISppyRk0fMl0CiP04-SnVhmHJhf937zhOdoBuOwQpROXzdxshQgbikb-FuX~zxvpLEiXIzFntL8oALrkWOniv3wxOxJ0BAYo4NBOiJ69IxuIJmA4wmNY3sxhWHdQM2NtpGPaE-aolae6~zS1rpdIHMb9vxVunpHoJcvEKT3kxHn0SU~-~VOubqqgIlOfXj0xFi~IhxNHtwN8Q__" alt="" class="h-56 w-full object-cover">
+                </div>
+            </div>
+        </main>
+
+        <aside
+            class="fixed right-8 bg-[#F5F5F5] top-[100px] bottom-5 w-[18.4%] rounded-lg flex flex-col overflow-hidden">
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden mb-2">
+                <h5
+                    class="pt-[32px] pb-[20px] text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
+                    Wallet Menu
+                </h5>
+                <div class="border border-[#E4E4E4] w-full"></div>
+
+                <div class="flex flex-col justify-start items-start gap-1">
+                    <ul class="px-5 py-6 w-full bg-[#fff]">
+                        <li class="pb-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="account-wallet" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet Dashboard</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="wallet-activity" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet Activity</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Add Money to Your Wallet</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Linked Accounts and Cards</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Link a New Bank Account</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Link a New Payment Card</a>
+                        </li>
+                        <li class="pt-[12px] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Referrals</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden">
+                <h5
+                    class="py-6 text-[20px] leading-[24.18px] text-center font-medium text-[#fff] bg-gradient-to-r from-[#00474D] to-[#00A5B3]">
+                    Refer and Earn
+                </h5>
+                <div class="bg-[#F3F2ED] px-4 pt-5 pb-4">
+                    <p class="text-[14px] font-[400px] leading-[19px]">
+                        Refer a friend and earn USD 10</br> for each successful referral.
+                    </p>
+                    <div class="pt-5 pb-3">
+                        <div class="h-full bg-[#fff] rounded-[32px] p-[6px] flex justify-between items-center">
+                            <p class=" text-[14px] font-[400px] ps-[11px] py-[13px] leading-[19px]">
+                                6 H S D 9 2
+                            </p>
+                            <div
+                                class="w-[56px] py-[13px] bg-[#027884] rounded-[30px] flex justify-center items-center">
+                                <img class="h-[16px]" src="assets/icons/navigate_to.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[12px] font-[400px] leading-[16px] text-center">Your Exclusive Referral Code</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="./app.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".responsive").slick({
+                dots: false,
+                infinite: true,
+                speed: 200,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+            });
+        });
+    </script>
+    <script></script>
+</body>
+
+</html>
