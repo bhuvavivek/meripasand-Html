@@ -80,6 +80,12 @@ app.get('/accounts_and_cards', (req, res) => {
 app.get('/wallet-referrals', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'wallet-referrals.html'))
 })
+app.get('/shop', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'shop.html'))
+})
+app.get('/buy_boost', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'buy_boost.html'))
+})
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
