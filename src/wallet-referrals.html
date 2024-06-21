@@ -313,157 +313,324 @@
                             <img class="" src="assets/icons/swipearrow.svg" alt="" />
                         </div>
                     </div>
-                    <div>
+                    <div>                        
                         <div class="flex justify-between items-center my-9">
-                            <h2 class="text-[20px] font-[500] text-[#00474D]">Balance Trend</h2>
-                            <ul class="list-none flex justify-between items-center">
-                                <li id="today" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
-                                    Today
-                                </li>
-                                <li id="this_week"
-                                    class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75] mx-5">This Week
-                                </li>
-                                <li id="one_month" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
-                                    This Month
-                                </li>
-                            </ul>
+                            <h2 class="text-[20px] font-[500] text-[#00474D]">Referrals</h2>
                             <div class="flex justify-between items-center">
-                                <span class="text-[15px] font-[400] me-3 pt-[2px]">USD</span>
-                                <span class="text-[20px] font-[590]">425.50</span>
+                                <img src="./assets/icons/filter_setting.svg" alt="">
                             </div>
                         </div>
-                        <div id="chart1"></div>
-                        <div class="mt-12">
-                            <div class="w-[280px] mx-auto">
-                                <h5
-                                    class="rounded-[48px] py-[18px] text-[20px] font-[500] leading-[28px] text-center text-[#fff] bg-gradient-to-r from-[#EFB75E] to-[#856A31]">
-                                    Add Funds
-                                </h5>
-                                <p class="text-[#856A31] text-[15px] font-[400] mt-6 flex justify-center items-center">
-                                    Linked Bank Accounts and Cards
-                                    <img class="ms-3" src="assets/icons/right-arrow.svg" alt="">
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mt-8 mb-5 py-4 px-5 bg-[#F3F2ED] rounded-[8px]">
-                            <div class="flex justify-between items-center py-5 border-b border-[#E4E4E4]">
-                                <h2 class="text-[20px] font-[500] text-[#00474D]">Wallet Summery</h2>
-                                <a href="#" class="">
-                                    <div class="flex items-center gap-1">
-                                        <span class="text-[14px] font-[400] text-[#856A31]">View Activity</span>
-                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
-                                <div class="w-4/5">
-                                    <p class="text-[#313131] text-[16px] font-[327] flex items-center">
-                                        Money credited from bank account #12345678
-                                    </p>
+                        <div class="flex flex-col gap-3 my-5">
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1c9b/9e5c/9c2c0082539ae29088b3bc6c85f2ac04?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b-iQdXkN4sKEMlUl9tpLQbpfa3zADTYmWw6ubW2UASrfg34VfSk3wOOKUXiNPXXA~taGRh4JkQO3hrDBDnraXNd4y4SMsQZvvVWaAmTm4r8DU4neuEsRLbUgmfXQs5fEXVOHsSTj5ozGvY24y1nN5g6jpdIEYYMOSOPE0EgQfH7lmt78WK9FXixj-u~hsGbC9hSYhMiWtESd35rcFKdxq8xccxkunm9tiXHWi~3NMX0Z3nhIFiGfoh56jH6amSiSo516Ly2bHbIT2o8qIpKqp3g8CziloNW~O1lW7R8ixK3JjcK-RzlCobCT4uykF0b9ZM1CBw6I0ifqduuAr0Qbfg__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
-                                <div class="w-[10%] text-[#616161] text-end">USD</div>
-                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
-                            </div>
-                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
-                                <div class="w-4/5">
-                                    <p class="text-[#313131] text-[16px] font-[327]">
-                                        Money credited from bank account #87865432
-                                    </p>
-
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
                                 </div>
-                                <div class="w-[10%] text-[#616161] text-end">USD</div>
-                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
-                            </div>
-                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
-                                <div class="w-4/5">
-                                    <p class="text-[#313131] text-[16px] font-[327]">
-                                        Money credited from credit card 0000
-                                    </p>
-
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
                                 </div>
-                                <div class="w-[10%] text-[#616161] text-end">USD</div>
-                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
-                            </div>
-                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
-                                <div class="w-4/5 flex items-center gap-2">
-                                    <p class="text-[#313131] text-[16px] font-[327]">
-                                        Referral earnings
-                                    </p>
-                                    <a href="#" class="">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-[14px] font-[400] text-[#9E0811]">View All</span>
-                                            <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow-red.svg"
-                                                alt="" />
-                                        </div>
-                                    </a>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
                                 </div>
-                                <div class="w-[10%] text-[#616161] text-end">USD</div>
-                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
-                            </div>
-                            <div class="w-full py-6 flex items-center border-b border-[#E4E4E4]">
-                                <div class="w-4/5 flex items-center gap-2">
-                                    <p class="text-[#313131] text-[16px] font-[327]">
-                                        In-App purchases
-                                    </p>
-                                    <a href="#" class="">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-[14px] font-[400] text-[#9E0811]">View All</span>
-                                            <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow-red.svg"
-                                                alt="" />
-                                        </div>
-                                    </a>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
                                 </div>
-                                <div class="w-[10%] text-[#616161] text-end">USD</div>
-                                <div class="w-[10%] text-[#313131] text-end">680.50</div>
                             </div>
-                            <div class="w-full py-6 flex items-center">
-                                <div class="w-4/5 flex items-center gap-2">
-                                    <p class="text-[#313131] text-[16px] font-[327]">
-                                        Available balance to spend
-                                    </p>
-                                    <a href="#" class="">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-[14px] font-[400] text-[#9E0811]">Add Funds</span>
-                                            <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow-red.svg"
-                                                alt="" />
-                                        </div>
-                                    </a>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/e6bd/7822/caa778713740fd383b4991a859eb4d92?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MmgiyGLwCmtwRPiAjcwdZriKRNnV76FJzo5j-PbeL37O5gJX9aIY5HJcQGXubIunPAmLFN4XlGrb9bt94iIE8f6ddSE9F58NcBz8L9AOkZGL98Kx0U0amjcXtXDf2Rb54-rsr36rwc~e0H7f9ErzTIqCIuyeN~7AVURJqC6mDACdVRVKMK~IJTg7ErzVMvyliNtLGCZSQkb-s9Qi4UiAv4cZJwwEk01yahWmQQOoFBxIiwQYk5qFtyelsnkDZKJQmcVVL5JLZA6IRSZ3eQxDpbk11N5X5eFpp8LlZAYuLgoDHKmNu0OyW3ASRMfTLM8Dub9jDFNJh-583gVkFL5EGA__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
-                                <div class="w-[10%] text-[#616161] text-end">USD</div>
-                                <div class="w-[10%] text-[#313131] text-end font-[590]">680.50</div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1247/9099/e4889cb156f78f1edce33b9138941eff?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DlxWSUf1p0JRjD3CV0KiKce6K-7q0IQXV~WYyyddcSZdDWCr-xQXWv1yV9H6YBHqfIsOYodlvmndsKxN5MflONFfG~RrFv2fNXEekPBS1aq4icBZLR0IpfA8hJzcWddeB4avD4j~wWZtuzMtFh3DaMQBUK9F3yEG9Zrt-Y4HF-Hq2OfdGD~IHLs~8wIRqOukr1pnjpeKSpXssk5lIRZHepzZcHC17PVplbX2Plwsq-3fdIu~E-mgmRLw8uPGJat~Bt3gGO0~cLWm5gtQ3eQ6ukcI~GPdk1g993LF0UgXwok3itX0dMgZPWdZJdEc~b9S3Q~QsXsBoEHORd7vDVbTew__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1f48/867b/6ba9b7fb9ffaf2ce01955c93d587e908?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RRGW-Mf3w1gyBwu~h~EjBS5vVrwHbSpiKtsBTtVBveDgFLaIpcve9Hb0x8rm3zT95agpSSaWklxkanD2BfrYxe8q2Zteoje5bnEubqD5IXpvb9yC~w9mAU2JQtF90YBufUztnLatl36hllLzEcmo6xARcrgy9pWKrSIrsuMHwLlpCkfyekL64GcjGBV54y5WLAv-Sb7AKBNOmUv~ATmMrQMGWQ1n0oYvdDQh2zIH-~0JVjNMaHQdpq1Uu8qDSN3IN2vwtBhz-RwYMIdqSw3KGh2RYm04PvQjtVPNAlNnD~-~d5Xt5m35vovJUgwSsNFBr5KHderKB3uFFfnVShqetw__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/85e3/19ff/7b795efeb5ba2f80324f3230abb1422e?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkd4NbE78Z0GuJp1g-ZDMEJA6J6sVKT79OktCn2VJhbl5y8~KPzzfWcN-lnKb6EkPN5CUC8JyVHwAMHiLSTQEqPNI9ZziH~5wa-aTU55roG7zqsHZyEstxOkkEKwIFg7milbSB0M9UN2Pf4a26lQtbGCkIttufTzGyKlMeOziNrWix4Zth2yqVazy5Re84vjukUif1sUrs733pFGc7q43ZyikwlglBvynOvE4nsyaVGc0s6jSyPXlJ9JJ2zenIdgeFvTOLicQRENxlAwk79QL4tlDphZqbP9~baabo5NWElXD5lrJ7P6StnDV6kRjET0ojAToc1u7KkCE1beUqGf6Q__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
                             </div>
                         </div>
                         <div class="">
-                            <img src="https://s3-alpha-sig.figma.com/img/c380/dbf4/b6a8223bf9f8b2e515aedcbc74ac0d1a?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OPfNU337xcdhc8HpzqMm2ln7a7VVzoznaeAiBx8anx5j7Sbw80i-St8VgBBebcmk-75hl8JqPNemNLblnzCVdiUqH6GXVHpODYU1dBRxDw4N3lrKrFvWNG~9RoULG64lBYcCfDwca1Dc-77wZ9i5Oasp5kUngk3GRyLiQRSfK6oc34TAyUAcWwkHsFHyx-bc-TX2ymkzXFvIaxqgA8SChCbTlXpWBKvymYVqeeLxgB2k6CFoAbhWNJXznsYauizfXSRXVrA6EgjbXT9a0F1UvLVDK1ffiM36lS7-D6sy4VO7nbWvr8ssvpbcTKHWKEdjyUJ9ZftUHXbEQhJDguM7XA__" alt="" class="rounded-[8px] h-[228px] w-full">
+                            <img src="https://s3-alpha-sig.figma.com/img/7a7f/0868/d7c7b29dce7d0b9e60011953006b4db3?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Apq4dlmPIRkZjJvn1h~3CekxMsuggdtAksIL9tTRmPharuSUrhaZuFtuvo7zMqa-miCqBXCFIQ86JKVLkW-EfQj5oczr-vnoVjbRba3fxaI1AZJ4KDsnfD-ph6nr90ISylRKcSzgkujm5T6DdByK5OSErqkq-ub2aHZVlMM2FZdutFHBCOA3iN2qu8kCwWTbzAD6fInQvcVOA2z1Q1jDEodbmIhQCDiOwGK0vNbcN8sGqzhtrHKKHqaO-sSjTWR~z2O5fVD~blp6xinglDZJRI8ZzarJjP~HhalykCWi664HlKUIGtZk1Q-Un4NpQeaAZoaQWGQnRHc9zqi92DfS7w__" alt="" class="rounded-[8px] h-[228px] w-full">
                         </div>
-                        <div class="flex justify-between items-center my-9">
-                            <h2 class="text-[20px] font-[500] text-[#00474D]">Referral Earnings</h2>
-                            <ul class="list-none flex justify-between items-center">
-                                <li id="today" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
-                                    Today
-                                </li>
-                                <li id="this_week"
-                                    class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75] mx-5">This Week
-                                </li>
-                                <li id="one_month" class="cursor-pointer text-[15px] font-[500] hover:text-[#AA4D75]">
-                                    This Month
-                                </li>
-                            </ul>
-                            <div class="flex justify-between items-center">
-                                <span class="text-[15px] font-[400] me-3 pt-[2px]">USD</span>
-                                <span class="text-[20px] font-[590]">150.00</span>
+                        <div class="flex flex-col gap-3 my-5">
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1c9b/9e5c/9c2c0082539ae29088b3bc6c85f2ac04?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b-iQdXkN4sKEMlUl9tpLQbpfa3zADTYmWw6ubW2UASrfg34VfSk3wOOKUXiNPXXA~taGRh4JkQO3hrDBDnraXNd4y4SMsQZvvVWaAmTm4r8DU4neuEsRLbUgmfXQs5fEXVOHsSTj5ozGvY24y1nN5g6jpdIEYYMOSOPE0EgQfH7lmt78WK9FXixj-u~hsGbC9hSYhMiWtESd35rcFKdxq8xccxkunm9tiXHWi~3NMX0Z3nhIFiGfoh56jH6amSiSo516Ly2bHbIT2o8qIpKqp3g8CziloNW~O1lW7R8ixK3JjcK-RzlCobCT4uykF0b9ZM1CBw6I0ifqduuAr0Qbfg__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/e6bd/7822/caa778713740fd383b4991a859eb4d92?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MmgiyGLwCmtwRPiAjcwdZriKRNnV76FJzo5j-PbeL37O5gJX9aIY5HJcQGXubIunPAmLFN4XlGrb9bt94iIE8f6ddSE9F58NcBz8L9AOkZGL98Kx0U0amjcXtXDf2Rb54-rsr36rwc~e0H7f9ErzTIqCIuyeN~7AVURJqC6mDACdVRVKMK~IJTg7ErzVMvyliNtLGCZSQkb-s9Qi4UiAv4cZJwwEk01yahWmQQOoFBxIiwQYk5qFtyelsnkDZKJQmcVVL5JLZA6IRSZ3eQxDpbk11N5X5eFpp8LlZAYuLgoDHKmNu0OyW3ASRMfTLM8Dub9jDFNJh-583gVkFL5EGA__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1247/9099/e4889cb156f78f1edce33b9138941eff?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DlxWSUf1p0JRjD3CV0KiKce6K-7q0IQXV~WYyyddcSZdDWCr-xQXWv1yV9H6YBHqfIsOYodlvmndsKxN5MflONFfG~RrFv2fNXEekPBS1aq4icBZLR0IpfA8hJzcWddeB4avD4j~wWZtuzMtFh3DaMQBUK9F3yEG9Zrt-Y4HF-Hq2OfdGD~IHLs~8wIRqOukr1pnjpeKSpXssk5lIRZHepzZcHC17PVplbX2Plwsq-3fdIu~E-mgmRLw8uPGJat~Bt3gGO0~cLWm5gtQ3eQ6ukcI~GPdk1g993LF0UgXwok3itX0dMgZPWdZJdEc~b9S3Q~QsXsBoEHORd7vDVbTew__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1f48/867b/6ba9b7fb9ffaf2ce01955c93d587e908?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RRGW-Mf3w1gyBwu~h~EjBS5vVrwHbSpiKtsBTtVBveDgFLaIpcve9Hb0x8rm3zT95agpSSaWklxkanD2BfrYxe8q2Zteoje5bnEubqD5IXpvb9yC~w9mAU2JQtF90YBufUztnLatl36hllLzEcmo6xARcrgy9pWKrSIrsuMHwLlpCkfyekL64GcjGBV54y5WLAv-Sb7AKBNOmUv~ATmMrQMGWQ1n0oYvdDQh2zIH-~0JVjNMaHQdpq1Uu8qDSN3IN2vwtBhz-RwYMIdqSw3KGh2RYm04PvQjtVPNAlNnD~-~d5Xt5m35vovJUgwSsNFBr5KHderKB3uFFfnVShqetw__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/85e3/19ff/7b795efeb5ba2f80324f3230abb1422e?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkd4NbE78Z0GuJp1g-ZDMEJA6J6sVKT79OktCn2VJhbl5y8~KPzzfWcN-lnKb6EkPN5CUC8JyVHwAMHiLSTQEqPNI9ZziH~5wa-aTU55roG7zqsHZyEstxOkkEKwIFg7milbSB0M9UN2Pf4a26lQtbGCkIttufTzGyKlMeOziNrWix4Zth2yqVazy5Re84vjukUif1sUrs733pFGc7q43ZyikwlglBvynOvE4nsyaVGc0s6jSyPXlJ9JJ2zenIdgeFvTOLicQRENxlAwk79QL4tlDphZqbP9~baabo5NWElXD5lrJ7P6StnDV6kRjET0ojAToc1u7KkCE1beUqGf6Q__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
                             </div>
                         </div>
-                        <div id="chart" class="pb-8"></div>
-                        <div class="border border-[#E4E4E4]"></div>
-                        <div class="flex justify-between items-center pt-[32px]">
-                            <h2 class="text-[20px] font-[500] text-[#00474D]">Recent Referrals</h2>
-                            <a href="#" class="">
-                                <div class="flex items-center gap-1">
-                                    <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
-                                    <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                        <div class="flex flex-col gap-3 my-5">
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1c9b/9e5c/9c2c0082539ae29088b3bc6c85f2ac04?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b-iQdXkN4sKEMlUl9tpLQbpfa3zADTYmWw6ubW2UASrfg34VfSk3wOOKUXiNPXXA~taGRh4JkQO3hrDBDnraXNd4y4SMsQZvvVWaAmTm4r8DU4neuEsRLbUgmfXQs5fEXVOHsSTj5ozGvY24y1nN5g6jpdIEYYMOSOPE0EgQfH7lmt78WK9FXixj-u~hsGbC9hSYhMiWtESd35rcFKdxq8xccxkunm9tiXHWi~3NMX0Z3nhIFiGfoh56jH6amSiSo516Ly2bHbIT2o8qIpKqp3g8CziloNW~O1lW7R8ixK3JjcK-RzlCobCT4uykF0b9ZM1CBw6I0ifqduuAr0Qbfg__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
-                            </a>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/e6bd/7822/caa778713740fd383b4991a859eb4d92?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MmgiyGLwCmtwRPiAjcwdZriKRNnV76FJzo5j-PbeL37O5gJX9aIY5HJcQGXubIunPAmLFN4XlGrb9bt94iIE8f6ddSE9F58NcBz8L9AOkZGL98Kx0U0amjcXtXDf2Rb54-rsr36rwc~e0H7f9ErzTIqCIuyeN~7AVURJqC6mDACdVRVKMK~IJTg7ErzVMvyliNtLGCZSQkb-s9Qi4UiAv4cZJwwEk01yahWmQQOoFBxIiwQYk5qFtyelsnkDZKJQmcVVL5JLZA6IRSZ3eQxDpbk11N5X5eFpp8LlZAYuLgoDHKmNu0OyW3ASRMfTLM8Dub9jDFNJh-583gVkFL5EGA__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1247/9099/e4889cb156f78f1edce33b9138941eff?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DlxWSUf1p0JRjD3CV0KiKce6K-7q0IQXV~WYyyddcSZdDWCr-xQXWv1yV9H6YBHqfIsOYodlvmndsKxN5MflONFfG~RrFv2fNXEekPBS1aq4icBZLR0IpfA8hJzcWddeB4avD4j~wWZtuzMtFh3DaMQBUK9F3yEG9Zrt-Y4HF-Hq2OfdGD~IHLs~8wIRqOukr1pnjpeKSpXssk5lIRZHepzZcHC17PVplbX2Plwsq-3fdIu~E-mgmRLw8uPGJat~Bt3gGO0~cLWm5gtQ3eQ6ukcI~GPdk1g993LF0UgXwok3itX0dMgZPWdZJdEc~b9S3Q~QsXsBoEHORd7vDVbTew__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1f48/867b/6ba9b7fb9ffaf2ce01955c93d587e908?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RRGW-Mf3w1gyBwu~h~EjBS5vVrwHbSpiKtsBTtVBveDgFLaIpcve9Hb0x8rm3zT95agpSSaWklxkanD2BfrYxe8q2Zteoje5bnEubqD5IXpvb9yC~w9mAU2JQtF90YBufUztnLatl36hllLzEcmo6xARcrgy9pWKrSIrsuMHwLlpCkfyekL64GcjGBV54y5WLAv-Sb7AKBNOmUv~ATmMrQMGWQ1n0oYvdDQh2zIH-~0JVjNMaHQdpq1Uu8qDSN3IN2vwtBhz-RwYMIdqSw3KGh2RYm04PvQjtVPNAlNnD~-~d5Xt5m35vovJUgwSsNFBr5KHderKB3uFFfnVShqetw__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Success:</b> <span>12/03/2004</span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b>Ref:</b> <span>123456789</span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
+                                <div class="">
+                                    <img src="https://s3-alpha-sig.figma.com/img/85e3/19ff/7b795efeb5ba2f80324f3230abb1422e?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkd4NbE78Z0GuJp1g-ZDMEJA6J6sVKT79OktCn2VJhbl5y8~KPzzfWcN-lnKb6EkPN5CUC8JyVHwAMHiLSTQEqPNI9ZziH~5wa-aTU55roG7zqsHZyEstxOkkEKwIFg7milbSB0M9UN2Pf4a26lQtbGCkIttufTzGyKlMeOziNrWix4Zth2yqVazy5Re84vjukUif1sUrs733pFGc7q43ZyikwlglBvynOvE4nsyaVGc0s6jSyPXlJ9JJ2zenIdgeFvTOLicQRENxlAwk79QL4tlDphZqbP9~baabo5NWElXD5lrJ7P6StnDV6kRjET0ojAToc1u7KkCE1beUqGf6Q__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                </div>
+                                <div class="w-3/12">
+                                    <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
+                                    <h2 class="text-[16px] font-[590]">Firstname</h2>
+                                    <p class="text-[14px] font-[400] text-[#616161]">United Kingdom</p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#616161]">Pending..<b></b><span></span></p>
+                                </div>
+                                <div class="w-3/12">
+                                    <p class="text-[#00474D]"><b></b><span></span></p>
+                                </div>
+                                <div class="w-2/12 flex items-center">
+                                    <div class="w-[40%] text-[#616161]">USD</div>
+                                    <div class="w-[60%] text-[#313131] text-end">10.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img src="https://s3-alpha-sig.figma.com/img/5344/eb63/d35ebccf6f36144dcee1e3e8dd12ccd7?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SSlHF74hnAOGpqXxMwngFqhvGw8qbjg~e26yONtcBr6CHqcTkGD~KR8fkv1UGoBIqi~SmD4VShvTPEqe454iD5H842qPimu-z6eOqW8YF4HC34KvmcBQ9GwKPgeLLpmQ65odLnOUbPk8piIr4sGTPVFyVtiVx0dqe~7F1ucXhcrAfLpv-ZhJCEWBwOSisHLnRKYyMhDXMowuMtezrDeWRym0jUtAS8y5QiXN6wZfIRDB0LeZ3kGxAY7IplaEiqvvfoYyUHU~WnyAanrGS4gVdle8wj4eaMt-mNlVb4s0WsHwLhkbIdiNVQ9IoCIMJttJPLKFjASvXSaJh07cvGTUag__" alt="" class="rounded-[8px] h-[228px] w-full">
                         </div>
                         <div class="flex flex-col gap-3 my-5">
                             <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
@@ -570,7 +737,7 @@
                     </div>
                 </div>
                 <div class="w-full">
-                    <img src="https://s3-alpha-sig.figma.com/img/a62c/77c0/d246f4ea786b40db46fc6e734a8b64a0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ok2gABOGUnhj2egF5tU64z7INB~VoLNqToj0EzHIhZSJlIZHK~6j0k-TN51X1qCc5LXEvaBbgX9utLlX3xLfojPrPZL2-jSDLdXduDpjLezCYMNgAwmimlF~G9VYWk-gISxf9WSUPISppyRk0fMl0CiP04-SnVhmHJhf937zhOdoBuOwQpROXzdxshQgbikb-FuX~zxvpLEiXIzFntL8oALrkWOniv3wxOxJ0BAYo4NBOiJ69IxuIJmA4wmNY3sxhWHdQM2NtpGPaE-aolae6~zS1rpdIHMb9vxVunpHoJcvEKT3kxHn0SU~-~VOubqqgIlOfXj0xFi~IhxNHtwN8Q__" alt="" class="h-56 w-full object-cover">
+                    <img src="https://s3-alpha-sig.figma.com/img/bd57/1c48/2444ade7f59894833d9380bc592724a2?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=M1E6OvODUnrSBPE~4vMbqgVeC-mHud2JWQXg2UE31-vWVuCMf9RIANyH-tQYHjH9FR4OtSHAe7Homrgok9pGwu4osrGy7NSTBRj6Nq0NMF9AlEMHWdt0-UX-uEgri9E~Z2eBwc3FkUitF01Fyk2BlfuyQdC5U94qzJiRLSfmIa5J0Ce3NtTrfGjUHtzOdCCogxbo6JDNs2OpzVJrM8QOFPBjY5P8CHPQ~8rYXRuMT8bE-1aGL6B~TCld-6yYGI23F10vR9Q5C85~wLOPnRc3Ol1J6xJ8LpzWifLN9f08yV6PpCIGr55dvfOD9Xa86egOSNFjcu4h6iTBWDukEdIPKQ__" alt="" class="h-56 w-full object-cover">
                 </div>
             </div>
         </main>

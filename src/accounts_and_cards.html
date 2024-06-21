@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #efb75e 2.78%, #856a31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #ffffff;
+            border: 1px solid #e4e4e4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #c2c2c2 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 4px !important;
+        }
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+
+        .ui-slider .ui-slider-range {
+            background-color: #014d55 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col">
+    <!-- Header -->
+    <header class="bg-white flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px]">
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full" />
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <a href="/" class="#027884">
+                <img src="assets/icons/home.svg" alt="home" class="h-6 w-[26.4px]" />
+            </a>
+            <a href="/nearby" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="search" class="h-5 w-5" />
+            </a>
+            <a href="/connect-everyone" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class="h-5 w-5" />
+            </a>
+            <a href="/circle-activity" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class="h-5 w-5" />
+            </a>
+            <a href="/account-profile" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class="h-5 w-5" />
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class="h-5 w-[19px]" />
+            </a>
+        </div>
+    </header>
+
+    <div class="px-8 flex h-full pt-[100px] relative gap-4">
+        <!-- Profile Sidebar -->
+
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%] rounded-lg flex flex-col">
+            <div class="profileCover h-[100px] bg-cover bg-center w-full rounded-t-lg relative">
+                <!-- profile div -->
+                <div class="absolute w-full top-10 flex justify-center items-center">
+                    <div class="h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full object-cover rounded-full" />
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">
+                            Muhammed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-[110px] h-full w-full rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[#E4E4E4] w-[216px]"></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Socials
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+                            <a href="/"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                You
+                            </a>
+                            <a href="/profile"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Profile
+                            </a>
+                            <a href="/account-wallet"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Wallet
+                            </a>
+                            <a href="#"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Shop
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6" />
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex w-full justify-center pb-[22px]">
+            <div
+                class="flex flex-col justify-start items-center w-[59.9%] rounded-lg overflow-y-scroll no-scrollbar scroll-smooth">
+                <div
+                    class="border border-solid border-[#ECECEC] bg-[#00474D] rounded-lg py-8 px-12 mb-3 w-full flex justify-between items-center">
+                    <h5 class="text-[20px] font-[500] leading-[24.18px] text-center text-[#fff]">
+                        Linked Accounts
+                    </h5>
+                    <div class="flex justify-between">
+                        <p class="text-[#EFB75E] text-[15px] font-[400] me-7 flex justify-center items-center">
+                            Link Your Bank Account
+                            <img class="ms-3" src="assets/icons/right-arrow-golden.svg" alt="">
+                        </p>
+                        <p class="text-[#EFB75E] text-[15px] font-[400] flex justify-center items-center">
+                            Link New Payment Card
+                            <img class="ms-3" src="assets/icons/right-arrow-golden.svg" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full px-10 border border-solid border-[#ECECEC] rounded-lg overflow-y-scroll no-scrollbar scroll-smooth">
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-8 flex border-b border-solid border-[#ECECEC]">
+                        <div class="w-[5%]">
+                            <img class="h-[24px] w-[24px]" src="./assets/icons/pin.svg" alt="">
+                        </div>
+                        <div class="w-[50%]">
+                            <h3 class="text-[16px] font-[590]">Bank Account</h3>
+                            <span class="text-[16px] font-[327] leading-5">Mohammed Akbar Khan</span>
+                            <p class="text-[16px] font-[327] leading-5">Al Asghari Bank,<br>143 Town Square, Cantt Branch,<br>Lahore 123456, Pakistan</p>
+                        </div>
+                        <div class="w-[45%] flex flex-col justify-center gap-2">
+                            <div>
+                                <p><span class="inline-block w-[80px]">IBAN</span>PK 1234 **** **** 1213-1</p>
+                                <p><span class="inline-block w-[80px]">SWIFT</span>12345678 PKCLH</p>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Edit</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="" />
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[14px] font-[400] text-[#856A31]">Delete Account</span>
+                                        <img class="h-[10px] mt-[2px]" src="assets/icons/close.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside
+            class="fixed right-8 bg-[#F5F5F5] top-[100px] bottom-5 w-[18.4%] rounded-lg flex flex-col overflow-hidden">
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden mb-2">
+                <h5
+                    class="pt-[32px] pb-[20px] text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
+                    Wallet Menu
+                </h5>
+                <div class="border border-[#E4E4E4] w-full"></div>
+
+                <div class="flex flex-col justify-start items-start gap-1">
+                    <ul class="px-5 py-6 w-full bg-[#fff]">
+                        <li class="pb-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="account-wallet" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet
+                                Dashboard</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="wallet-activity" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet
+                                Activity</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Add Money to Your Wallet</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="accounts_and_cards" class="text-[14px] px-3 font-[400] text-[#856A31]">Linked Accounts and Cards</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Link a New Bank Account</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Link a New Payment Card</a>
+                        </li>
+                        <li class="pt-[12px] w-full">
+                            <a href="wallet-referrals" class="text-[14px] px-3 font-[400] text-[#856A31]">Referrals</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden">
+                <h5
+                    class="py-6 text-[20px] leading-[24.18px] text-center font-medium text-[#fff] bg-gradient-to-r from-[#00474D] to-[#00A5B3]">
+                    Refer and Earn
+                </h5>
+                <div class="bg-[#F3F2ED] px-4 pt-5 pb-4">
+                    <p class="text-[14px] font-[400px] leading-[19px]">
+                        Refer a friend and earn USD 10</br> for each successful referral.
+                    </p>
+                    <div class="pt-5 pb-3">
+                        <div class="h-full bg-[#fff] rounded-[32px] p-[6px] flex justify-between items-center">
+                            <p class=" text-[14px] font-[400px] ps-[11px] py-[13px] leading-[19px]">
+                                6 H S D 9 2
+                            </p>
+                            <div
+                                class="w-[56px] py-[13px] bg-[#027884] rounded-[30px] flex justify-center items-center">
+                                <img class="h-[16px]" src="assets/icons/navigate_to.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[12px] font-[400px] leading-[16px] text-center">Your Exclusive Referral Code</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="./app.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".responsive").slick({
+                dots: false,
+                infinite: true,
+                speed: 200,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+            });
+        });
+    </script>
+    <script></script>
+</body>
+
+</html>
