@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cwh~j~DzU2eAHPveKE7FdytepEw2qVB1y27KMyuH41fC0GIX48wVa2khCcAnTmf7~g5eWaL2XiCyUpUOO9ZoG3dHrX0tYWItDwjCdlGofKKOZGQAGj6g4LQFifJ2Oc47KCx-3usyR1h-45tjkKIAkoWJXykr9bHRwX0ROz0-jDZByki5XExBc7rB-cY5x8E4exaKexwjrcOJ~427LoipVt433Nw4DInXb~5lwkwNp7jc3UDWH~ifna8WFyVX2W0R3umYmqlob59JA52Be9S2Mk2bSePgxIalb2Jz1axWz9oaQAjZkPWEKSnmhE6akXsVt3qWiHtqDrHopbI01UZChA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #efb75e 2.78%, #856a31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #ffffff;
+            border: 1px solid #e4e4e4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #c2c2c2 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 4px !important;
+        }
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+
+        .ui-slider .ui-slider-range {
+            background-color: #014d55 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col">
+    <!-- Header -->
+    <header class="bg-white flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px]">
+        <div class="flex items-center h-12 w-[224px]">
+            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full" />
+        </div>
+
+        <!-- Notification imaege icon div  -->
+        <div
+            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <a href="/" class="#027884">
+                <img src="assets/icons/home.svg" alt="home" class="h-6 w-[26.4px]" />
+            </a>
+            <a href="/nearby" class="text-[#313131]">
+                <img src="assets/icons/search.svg" alt="search" class="h-5 w-5" />
+            </a>
+            <a href="/connect-everyone" class="text-[#313131]">
+                <img src="assets/icons/blog.svg" alt="home" class="h-5 w-5" />
+            </a>
+            <a href="/circle-activity" class="text-[#313131]">
+                <img src="assets/icons/circle.svg" alt="home" class="h-5 w-5" />
+            </a>
+            <a href="/account-profile" class="text-[#313131]">
+                <img src="assets/icons/contact.svg" alt="home" class="h-5 w-5" />
+            </a>
+        </div>
+
+        <!-- notification icon -->
+        <div>
+            <a href="#" class="">
+                <img src="assets/icons/notification.svg" alt="notification" class="h-5 w-[19px]" />
+            </a>
+        </div>
+    </header>
+
+    <div class="px-8 flex h-full pt-[100px] relative gap-4">
+        <!-- Profile Sidebar -->
+
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%] rounded-lg flex flex-col">
+            <div class="profileCover h-[100px] bg-cover bg-center w-full rounded-t-lg relative">
+                <!-- profile div -->
+                <div class="absolute w-full top-10 flex justify-center items-center">
+                    <div class="h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                                alt="" class="h-full w-full object-cover rounded-full" />
+                        </div>
+                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">
+                            Muhammed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-[110px] h-full w-full rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- icon 1  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                278
+                            </h4>
+                        </div>
+                        <!-- icon 2  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                630
+                            </h4>
+                        </div>
+                        <!-- icon 3  -->
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px" />
+                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                                495
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="border border-[#E4E4E4] w-[216px]"></div>
+                    <div class="mt-1 w-full flex flex-col items-start px-4">
+                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
+                            Socials
+                        </h5>
+                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+                            <a href="/"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                You
+                            </a>
+                            <a href="/profile"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Profile
+                            </a>
+                            <a href="/account-wallet"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Wallet
+                            </a>
+                            <a href="/shop"
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
+                                Shop
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex gap-6 justify-center items-center">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6" />
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6" />
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex w-full justify-center pb-[22px]">
+            <div
+                class="flex flex-col justify-start items-center w-[59.9%] rounded-lg border border-[#E4E4E4] overflow-y-scroll no-scrollbar scroll-smooth">
+                <div class="pt-[32px] pb-[20px] px-12 w-full flex justify-between border-b border-[#E4E4E4]">
+                    <h5 class="text-[20px] font-[500] leading-[24.18px] text-center text-[#00474D]">
+                        Wallet Activity
+                    </h5>
+                    <ul class="flex items-center">
+                        <li><a href="buy_boost" class="text-[14px] text-[#00474D] font-[400]">VIEW ALL</a></li>
+                        <li><a href="popular_boosts" class="text-[14px] text-[#00474D] font-[400] mx-4">POPULAR</a></li>
+                        <li><a href="previous_purchase" class="text-[14px] text-[#00474D] font-[590]">PURCHASED PREVIOUSLY</a></li>
+                    </ul>
+                </div>
+                <div class="w-full overflow-y-scroll no-scrollbar scroll-smooth">
+                    <div class="pt-[11px] px-12 w-full">
+                        <div class="grid grid-cols-4 gap-3 py-5">
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#856A31] to-[#EFB75E] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#00474D] to-[#00A5B3] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#00474D] to-[#00A5B3] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                    BUY AGAIN
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#856A31] to-[#EFB75E] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#00474D] to-[#00A5B3] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#00474D] to-[#00A5B3] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#856A31] to-[#EFB75E] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                    BUY AGAIN
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#00474D] to-[#00A5B3] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#856A31] to-[#EFB75E] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                            <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
+                                <!-- Progress Circle -->
+                                <div class="flex justify-center items-center mb-4 relative">
+                                    <img src="assets/icons/rocket.svg" alt="">
+                                </div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
+    
+                                <!-- Call Info -->
+                                <div class="text-center">
+                                    <div class="text-[13px] font-[590]">10 Minutes</div>
+                                    <div class="text-[13px] font-[590]">Audio Call</div>
+                                </div>
+    
+                                <!-- Rate Info -->
+                                <p class="text-[16px] font-[590] text-center py-3 border-b border-[#E4E4E4] border-dashed">
+                                    <span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
+    
+                                <!-- Buy Button -->
+                                <button
+                                    class="mt-3 text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#00474D] to-[#00A5B3] py-3 rounded-full">
+                                    BUY
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full mt-5">
+                        <img src="https://s3-alpha-sig.figma.com/img/040e/2066/1cbcd3686b9a640fa370557373119e63?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CXxr9bcu3eR7zr1mQPKPTmhsyIgbcqfiUL5ngZsGo8QbLoZA2bjz40l5KxVfwWFxmtPZ9kBh2PmhmckLOfr~PcaFodfpQTHHK9YKf8qFO2Lrkz~B4B7u57nrjzdGfCjomtL6H4-ZqZSfAvYUQ0ddZdFllTdyMcoQk~Vj7WZ78SAsGwx9lDHPNITO0cPVVd1Gi2aurJxmg4xuJrlOjFUIgugQgJCKQc78q0N8QNthMbxMUWVK41q-TA5iHtn9qJcv1e2xZYa-Vcv1pQHiwMOA2~MXGbMJvmzrClTGluxv3sERgzn~RMqzYZ1zOVZWd504E-P79ZkssZ1goboKYsLX4w__"
+                            alt="" class="h-56 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="fixed right-8 bg-[#fff] top-[100px] bottom-5 w-[18.4%] rounded-lg flex flex-col overflow-hidden">
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden mb-2">
+                <h5
+                    class="pt-[32px] pb-[20px] text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
+                    Shop Menu
+                </h5>
+                <div class="border border-[#E4E4E4] w-full"></div>
+
+                <div class="flex flex-col justify-start items-start gap-1">
+                    <ul class="px-5 py-6 w-full bg-[#fff]">
+                        <li class="pb-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="shop" class="text-[14px] px-3 font-[400] text-[#856A31]">Shop Dashboard</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="buy_boost" class="text-[14px] px-3 font-[400] text-[#856A31]">Buy Boosts</a>
+                        </li>
+                        <li class="py-[12px] border-b border-[#E4E4E4] w-full">
+                            <a href="popular_boosts" class="text-[14px] px-3 font-[400] text-[#856A31]">Popular Boosts</a>
+                        </li>
+                        <li class="py-[12px] w-full">
+                            <a href="previous_purchase" class="text-[14px] px-3 font-[400] text-[#856A31]">Previously Purchased Boosts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden">
+                <h5 class="py-6 text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
+                    Add Money
+                </h5>
+                <div class="bg-[#00474D] text-white p-4">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <div class="text-[12px] font-[400]">Wallet Balance</div>
+                            <div class="text-[12px] font-[590] text-[#EFB75E] ">USD 0.50</div>
+                        </div>
+                        <div class="text-end text-[34px] font-[274]">00.00</div>
+                    </div>
+                    <div class="text-[12px] font-[400] mb-1">Enter Amount to Add in USD</div>
+
+                    <div class="grid grid-cols-4 gap-1">
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">7</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">8</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">9</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">100</button>
+
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">4</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">5</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">6</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">50</button>
+
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">1</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">2</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">3</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">25</button>
+
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">.</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">0</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">Clear</button>
+                        <button class="bg-[#027884] hover:bg-[#39909a] text-white h-10  py-2 rounded">10</button>
+                    </div>
+                </div>
+                <button class="bg-gradient-to-r from-[#856A31] to-[#EFB75E] text-white font-semibold py-2 w-full">
+                    CONTINUE
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

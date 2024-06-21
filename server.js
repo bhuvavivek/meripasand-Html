@@ -86,6 +86,12 @@ app.get('/shop', (req, res) => {
 app.get('/buy_boost', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'buy_boost.html'))
 })
+app.get('/popular_boosts', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'popular_boosts.html'))
+})
+app.get('/previous_purchase', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'previous_purchase.html'))
+})
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
