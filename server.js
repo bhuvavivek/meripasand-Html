@@ -10,6 +10,9 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'index.html'));
 });
+app.get('/feed-popup', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'feed-popup.html'));
+});
 
 app.get('/mypost', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'mypost.html'))
@@ -43,6 +46,9 @@ app.get('/circle-activity', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'circle-activity.html'))
 })
 
+app.get('/circle-links', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'circle-links.html'))
+})
 
 app.get('/circle-admirers', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'circle-admirers.html'))
