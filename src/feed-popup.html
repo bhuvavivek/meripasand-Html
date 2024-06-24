@@ -1,15 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <style>
+        .fixed-p {
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            overflow: hidden;
+            /* font-size: 18px; */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+
+
 </head>
+
 <body>
-    <section>
-        <div class="w-[1040px] bg-red-700"> 
-                
+    <section class="flex justify-center">
+        <div class="w-[1040px] flex border gap-8 pl-9 pr-4 py-9 rounded-[8px]">
+            <div class="w-[680px] flex gap-x-4  ">
+                <div class="w-[70px] h-[84px]">
+                    <img src="https://s3-alpha-sig.figma.com/img/9dda/94a6/ca3776e357996d054af068657a8f36d5?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jyEPKyTMfqzX-xM6wa7FpLafsarLLNdGJp8x7WwAea1IHuBe~91cdXTeNrkl3iRAwWfFP9gzxqy4UBChAQSG3VGgF82JxhjpEeVUqG7m0FGpl9euppnMoH6DnHwI7x4xQ-C6GLBS9rPnWubGVCUEnOZ4pYAgT-ZDuqGt4QdRwMXAIP2Ik5SfJINPbNvKXyppT78YFadIok7PqpWvojFdgPyPTXNfcbZ4unfBbWDq4ixn4oa~ImmTPXdDABzq8EOe3AiJnmHS9GRVwcpd2ZLwtxWX-IW8U7OE4-GeDcb~lNPMwbiNpww0TlrDRbVjGGolFD6lHswmYDVr9tOAeCHykg__"
+                        alt="" class="object-cover w-full h-full">
+                </div>
+                <div class="w-full bg-white">
+                    <div class="w-full flex justify-between">
+                        <h5 class="text-lg font-[500] ">Sameera</h5>
+                        <img src="./assets/icons/pofile-menu.svg" alt="">
+                    </div>
+                    <p class="text-[13px] font-normal text-[#313131] pb-2">City, Country <span
+                            class="text-[#027884]">3:45pm</span></p>
+                    <p class="text-sm font-normal text-[#313131] mb-5 fixed-p">There is nothing more beautiful than
+                        watching
+                        the sun set behind the domes of the majestic Badshahi Masjid in Lahore. Built by the Moghul
+                        Emperor of the Taj Mahal, it stands in city known as the “heart of Pakistan”.
+                    </p>
+                    <div class="w-full h-[450px]">
+                        <img src="https://s3-alpha-sig.figma.com/img/614a/9b02/59c16c4a51f3480d24d1d3e904ae822d?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hKLByDopPgzn7pvqNA8QSUKNdsjZAwOAyS9F2rkAI5XA~liq3Vf0AsT0myz1micoggpmdNa1DUEP4t7gB40gQ8rbN1dIKnSsID3gb0v5~YNnl-JAVRb74qKvjeban2rWSWG7viJcwOkFeEHP1yiLW7qMQx3kah~l0~Bg33wFBFIfsH1FvTSJdQ6uXFHEr1eimOdqmSJ4B6xVDTxJ3Imo~b6GzfalFGx92DhPrEh2NBLbQOVimpSxYCCJ4e0iChsxR7bTgqQIA6BeBUW6vh737yMYu8zzhgogAEyDDDDqYYaVgm9s3KtNq9oidfjp0h6dYa-ijKsHsZU4Mfv-iZGIrA__" alt="hello" class="w-full h-full">
+                    </div>
+                    <div class="flex justify-end pt-4">
+                        <img src="./assets/icons/like.svg" alt="">
+                        <img src="./assets/icons/share.svg" alt="" class="mx-4">
+                        <img src="./assets/icons/save.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="w-[280px] flex flex-col justify-between border rounded-[8px] ">
+                <div class="comments pt-4 px-4">
+                    <h5 class="text-base text-[#616161] pb-3">05 Apr 2024</h5>
+                    <div class="caption flex items-start gap-[8px]">
+                        <div class="w-[28px] h-[28px]">
+                            <img src="https://s3-alpha-sig.figma.com/img/1ef0/0a10/1670006a0f0abce48396f8e450edc548?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jhI~Owe59REwHWbsl8zBrm1oX6JScZyQzBlbW7q~I5CNLUeZ-ASKl01N5L9X0hWUlRLYKKbzihGXDoFvbIV4VXuCnjeoA3CqFSsvcIJFLDAyUKVVqJU4QKZ-I8zB682Dq3IpJiUumy741-LwX4RR5~MuC8c9iE87nEECfs2yy~9QHAckqrjBro7alcZTw8MIg0Yj-NXH4LUfGaADAT8rwn51gnignh7JLhUTPedX9CaOQQol4FWYlidkrguqVioswSwymvRdLVBlSObtOYufqXLSQ5I2wntHtRHoWIgh3uuJtSxwXiaRe6lwiXGTB2syhavPohCVVaHw1pJbHD4IoQ__" 
+                            alt="" class="object-cover rounded-full w-full h-full">
+                        </div>
+                        <div class="w-full">
+                            <div class="flex justify-between">
+                                <h5 class="text-sm font-medium">You</h5>
+                                <img src="./assets/icons/like.svg" alt="" class="w-[12px]">
+                            </div>
+                            <p class="text-sm font-normal">Lorem ipsum dolor sit amet, consectet adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <h5 class="text-base text-[#616161] pt-2 pb-2">Yesterday</h5>
+                    <div class="caption flex items-start gap-[8px]">
+                        <div class="w-[28px] h-[28px]">
+                            <img src="https://s3-alpha-sig.figma.com/img/9dda/94a6/ca3776e357996d054af068657a8f36d5?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jyEPKyTMfqzX-xM6wa7FpLafsarLLNdGJp8x7WwAea1IHuBe~91cdXTeNrkl3iRAwWfFP9gzxqy4UBChAQSG3VGgF82JxhjpEeVUqG7m0FGpl9euppnMoH6DnHwI7x4xQ-C6GLBS9rPnWubGVCUEnOZ4pYAgT-ZDuqGt4QdRwMXAIP2Ik5SfJINPbNvKXyppT78YFadIok7PqpWvojFdgPyPTXNfcbZ4unfBbWDq4ixn4oa~ImmTPXdDABzq8EOe3AiJnmHS9GRVwcpd2ZLwtxWX-IW8U7OE4-GeDcb~lNPMwbiNpww0TlrDRbVjGGolFD6lHswmYDVr9tOAeCHykg__" 
+                            alt="" class="object-cover rounded-full w-full h-full">
+                        </div>
+                        <div class="w-full">
+                            <div class="flex justify-between">
+                                <h5 class="text-sm font-medium">Sameera</h5>
+                                <img src="./assets/icons/like.svg" alt="" class="w-[12px]">
+                            </div>
+                            <p class="text-sm font-normal">Lorem ipsum dolor sit amet, consectet adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="addcomment p-4 border-t">
+                    <input type="text" name="" id="" placeholder="Add Comments" class="border-none w-full outline-none">
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+    <script src="./app.js"></script>
+
 </body>
+
 </html>
