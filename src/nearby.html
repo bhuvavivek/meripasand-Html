@@ -65,7 +65,7 @@
 
         <!-- profile sidebar -->
         <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%]   rounded-lg  flex flex-col">
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] lg:w-[21%] xl:w-[18.4%]   rounded-lg  flex flex-col">
 
             <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
 
@@ -137,856 +137,886 @@
 
         <main class="flex w-full justify-end pb-[22px]">
             <div
-                class=" flex flex-col justify-start items-center w-[80%] rounded-lg border border-[#E4E4E4]  pt-[31px] px-[48px] overflow-y-scroll no-scrollbar scroll-smooth">
-                <!-- Filter Section -->
-                <div class="w-full flex justify-between items-center">
-                    <h5 class="font-medium text-xl text-[#00474D] leading-[24.18px]"> Members Nearby</h5>
-                    <div class="flex gap-[39px] items-center justify-end">
-                        <img id="detailFilter" src="assets/icons/detail-filter.svg" alt=""
-                            class="h-[15.46px] w-[20px] cursor-pointer">
-                        <img src="assets/icons/filter.svg" alt="" class="h-[15.46px] w-[20px] cursor-pointer">
+                class="flex flex-col lg:w-[76%] xl:w-[80%] rounded-lg border border-[#E4E4E4] pt-[31px] overflow-y-scroll no-scrollbar scroll-smooth gap-5">
+
+
+                <div class=" flex flex-col justify-start items-center lg:px-[24px] xl:px-[48px] ">
+                    <!-- Filter Section -->
+                    <div class="w-full flex justify-between items-center">
+                        <h5 class="font-medium text-xl text-[#00474D] leading-[24.18px]"> Members Nearby</h5>
+                        <div class="flex gap-[39px] items-center justify-end">
+                            <img id="detailFilter" src="assets/icons/detail-filter.svg" alt=""
+                                class="h-[15.46px] w-[20px] cursor-pointer">
+                            <img src="assets/icons/filter.svg" alt="" class="h-[15.46px] w-[20px] cursor-pointer">
+                        </div>
                     </div>
+
+
+                    <section class="w-full flex flex-col justify-start items-start mt-5 gap-[10px]">
+                        <!-- section 1 -->
+                        <div
+                            class=" nearbyContainer w-full grid gap-x-[10px] gap-y-[10px] grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+
+                            <!-- card -->
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div class="lg:col-span-4 xl:col-span-6 bg-red-50 mt-[10px] h-[176px] nearbyBannerImage">
+                                <img src='https://s3-alpha-sig.figma.com/img/2e70/6fe5/2b22c00c2bce00a9df04de940df054d6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S0aRXyoKxTlG52CFLUcnzJnE9mKKA8y8Qd~llGX6f8xjZk2tJdfHUoqryDQCRSohZK0g5IatrVO68yP9C3NzT8sFeAlL9J3gG6sur3DuEBYU1iAkI8jc4cv0sTIUxz4u57XW~91H9v5j5o2UZgxC0HSYxa5Ogb3TmrE4q1-GeuaVibsDh5KcVW1oUhLLhHcYNkqf1ZF0OoR01N35DHiAyybZk6dsgDbH-AwyGU9LqycQ-hfv5bcvXjtFnfpCib4JmZ52JNboSH2ZNedJI-KRw7mvYdOj7QcDy2HGfqUMTeuNzU0DGiWLSPWOcgGJ47hXutJeK3semJ2zigVxBaGfow__'
+                                    alt="" class="w-full h-full object-cover">
+                            </div>
+
+                        </div>
+                        <!-- section 1 -->
+                        <div
+                            class=" nearbyContainer w-full grid gap-x-[10px] gap-y-[10px] grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 xl:grid-cols-6">
+
+                            <!-- card -->
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/421a/e7c3/866fdf3277afe0ec21d68cb530f538fc?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qfqh4bIs~bc3Ka6wZLHiwWLZB81kI~LD2TfYNS8FBGcET5nFuICfHkzT8KNlniHXhd1-Ym-EPwGat3pPotayn6hiha14uTkWN-zWUGWXC7hO9oPhmamQcHiq8XhwnEF95dH9rI7~JwYDr69s84NjyrGF1nsMrsKlmg-PiFXToZXpHucl6j79qJaPoGrQjPb2JEw--02-FcQ~-vuv2wQYf2CfCmhHsdgb2BSGXslyysYFg5H2KYAGRcy7P~cYMsszcK2474PIaOJYgbFd1mMoIdlEF-NoAecKuz0zSZ6jXuo8xZoXKHiupQdSkgu6ZRBUKHJEyrmzAodEFx3qYg4hzw__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
+                                <!-- image div -->
+                                <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
+                                    <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
+                                        alt="" class="object-cover h-full w-full">
+                                </div>
+                                <!--text -->
+                                <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
+                                <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
+                                    <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">
+                                        Firstname
+                                    </h6>
+                                    <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
+                                        <p>26, 5’7” (1.71m)</p>
+                                        <p>BTech, Civil Engineer </p>
+                                        <p>Sri Lankan, Hindu</p>
+                                        <p>Sweden</p>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
                 </div>
 
-
-                <section class="w-full flex flex-col justify-start items-start mt-5 gap-[10px]">
-                    <!-- section 1 -->
-                    <div class=" nearbyContainer w-full grid gap-x-[10px] gap-y-[10px] grid-cols-6">
-
-                        <!-- card -->
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div class="col-span-6 bg-red-50 mt-[10px] h-[176px] nearbyBannerImage">
-                            <img src='https://s3-alpha-sig.figma.com/img/2e70/6fe5/2b22c00c2bce00a9df04de940df054d6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S0aRXyoKxTlG52CFLUcnzJnE9mKKA8y8Qd~llGX6f8xjZk2tJdfHUoqryDQCRSohZK0g5IatrVO68yP9C3NzT8sFeAlL9J3gG6sur3DuEBYU1iAkI8jc4cv0sTIUxz4u57XW~91H9v5j5o2UZgxC0HSYxa5Ogb3TmrE4q1-GeuaVibsDh5KcVW1oUhLLhHcYNkqf1ZF0OoR01N35DHiAyybZk6dsgDbH-AwyGU9LqycQ-hfv5bcvXjtFnfpCib4JmZ52JNboSH2ZNedJI-KRw7mvYdOj7QcDy2HGfqUMTeuNzU0DGiWLSPWOcgGJ47hXutJeK3semJ2zigVxBaGfow__'
-                                alt="" class="w-full h-full object-cover">
-                        </div>
-
-                    </div>
-                    <!-- section 1 -->
-                    <div class=" nearbyContainer w-full grid gap-x-[10px] gap-y-[10px] grid-cols-6">
-
-                        <!-- card -->
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/421a/e7c3/866fdf3277afe0ec21d68cb530f538fc?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qfqh4bIs~bc3Ka6wZLHiwWLZB81kI~LD2TfYNS8FBGcET5nFuICfHkzT8KNlniHXhd1-Ym-EPwGat3pPotayn6hiha14uTkWN-zWUGWXC7hO9oPhmamQcHiq8XhwnEF95dH9rI7~JwYDr69s84NjyrGF1nsMrsKlmg-PiFXToZXpHucl6j79qJaPoGrQjPb2JEw--02-FcQ~-vuv2wQYf2CfCmhHsdgb2BSGXslyysYFg5H2KYAGRcy7P~cYMsszcK2474PIaOJYgbFd1mMoIdlEF-NoAecKuz0zSZ6jXuo8xZoXKHiupQdSkgu6ZRBUKHJEyrmzAodEFx3qYg4hzw__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-
-                        <div
-                            class="h-[240px] border border-[#E4E4E4] filterCardShadow  flex flex-col justify-between items-start nearbyCard">
-                            <!-- image div -->
-                            <div class="w-full h-[176px] px-2 pt-2 nearbyImage">
-                                <img src="https://s3-alpha-sig.figma.com/img/219c/2156/06b96764f203cb4111c6db406947b7e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lVDkcTqWJy3RyZBZoQuK~HejyYYnv-Swy6Sz8~BcfQZufqDt1GED8QPeeYWsIP2xoY1Xn9slHqN6Q2Ajt6dsxMXb5FB6tYfRh5D8a9WzjPRvoCRmRX3fwyb7TDl9cO9wpRUTXWaSuigF-Q~TGYRopgmLpOvfH1AvbhyYLUrDElfZ3K54wt7TtWeHh1TPF4WAUoqfhmiza7HZqZxmVoBjwjlS1aRyBLP6BrHligXroFGLVj-Oamzapq-7Z68cYFocH-lOLZ~TbEYBKIjwAuTdSh4KJ4cwDWjHRiqECPzL4YJi5zKw9y5-Ok6eYFhyYJ5OMjWHBfPB6KFDHPE5yW0luQ__"
-                                    alt="" class="object-cover h-full w-full">
-                            </div>
-                            <!--text -->
-                            <h6 class="font-normal leading-[29.91px] text-[26px] px-3 pb-[15px] ">Laila</h6>
-                            <div class="detailContent flex flex-col items-start pr-4 pb-4 gap-2 hidden">
-                                <h6 class="text-[#313131] leading-[19px] text-[14px] font-semibold mt-[10px]">Firstname
-                                </h6>
-                                <h4 class="font-normal text-[14px] leading-[19px] gap-[1px] flex flex-col">
-                                    <p>26, 5’7” (1.71m)</p>
-                                    <p>BTech, Civil Engineer </p>
-                                    <p>Sri Lankan, Hindu</p>
-                                    <p>Sweden</p>
-                                </h4>
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-span-6 bg-red-50 mt-[10px] h-[176px] nearbyBannerImage">
-                            <img src='https://s3-alpha-sig.figma.com/img/2e70/6fe5/2b22c00c2bce00a9df04de940df054d6?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S0aRXyoKxTlG52CFLUcnzJnE9mKKA8y8Qd~llGX6f8xjZk2tJdfHUoqryDQCRSohZK0g5IatrVO68yP9C3NzT8sFeAlL9J3gG6sur3DuEBYU1iAkI8jc4cv0sTIUxz4u57XW~91H9v5j5o2UZgxC0HSYxa5Ogb3TmrE4q1-GeuaVibsDh5KcVW1oUhLLhHcYNkqf1ZF0OoR01N35DHiAyybZk6dsgDbH-AwyGU9LqycQ-hfv5bcvXjtFnfpCib4JmZ52JNboSH2ZNedJI-KRw7mvYdOj7QcDy2HGfqUMTeuNzU0DGiWLSPWOcgGJ47hXutJeK3semJ2zigVxBaGfow__'
-                                alt="" class="w-full h-full object-cover">
-                        </div>
-
-                    </div>
-
-
-
-                </section>
+                <div class="w-full  h-[176px] ">
+                    <img src="https://s3-alpha-sig.figma.com/img/18a5/9bd8/44210c62715dae97798bd33f84add60f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ad32jj4jmFzF9XhSmg-TmdO8wlrKjJE4qIuyw47e0Hmof7OSj3yAJ72zFY6wxJYZe7GmMIEJNzNGABL4JUsvd6STmVJvjDguh8moWHbBuvqcFM2f1uFSCeecJnK~YmcFWqQ0MZGYUfT4fZFVIcXejmoCKVCoqEVCCkTw5SJQYGcjmk~PMFCEx7TioqplK7OjIp9BX3M8ugs9hd9DrBndmPfhXHZXryGMNFwqbWg-tNzcTEmdBkStvcMsGUtHsEdzchsxt9VN4lJXppkqybgmvAzh42QZanYvYpzEqZSgHzJ-0Otne7DzlcxzpSySZYe-QRQgn7QzdmwN7lFV9rGI8g__" alt="" class="w-full h-full object-cover">
+                </div>
 
             </div>
         </main>
