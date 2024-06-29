@@ -105,57 +105,61 @@
     </header>
 
     <div class="px-8 flex h-full pt-[100px] relative gap-4">
-        <!-- Profile Sidebar -->
 
+        <!-- Profile Sidebar -->
         <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%] rounded-lg flex flex-col">
-            <div class="profileCover h-[100px] bg-cover bg-center w-full rounded-t-lg relative">
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] lg:w-[21%]  xl:w-[18.4%]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  min-h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
                 <!-- profile div -->
-                <div class="absolute w-full top-10 flex justify-center items-center">
-                    <div class="h-[135px] w-[113px] flex flex-col justify-between items-center">
-                        <div class="w-24 h-24 border-[3px] border-white rounded-full bg-center">
-                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
-                                alt="" class="h-full w-full object-cover rounded-full" />
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full  bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cuze3ufXup~VgVcL1Xbn~ehb3NnvM5jw1N~Z7nejBejbWzYQGG0hQs-nFk1-KlLC6wkp~LdKjK4CZJ4ucfFlUZyS5JKHNIN8hUDKKXAZgXCyd9mH6oPgxh2cMqNPeqnuOLZY4evGX93v9EdB5-E5dYAaXN8dDjkxsdL5G91NB1HQVJfW1qKCv6qWa2YyWYROX7VGprGyzJ5JpjBtax9Ih1L-MIdm365GswmOFk97IoUxexQGSpvFI2mkvXmerTfKNolalG0uEzpE8bb4h5PX~IXbza4~IAG3nqeJmIjR4IPpCWfxVeJcAy9-bmAElSTCN-eSYGuQAoFalnDffOrxvw__"
+                                alt="" class="h-full w-full  object-cover  rounded-full ">
                         </div>
-                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">
-                            Muhammed
-                        </h5>
                     </div>
                 </div>
+
+            </div>
+            <div class="pt-[60px] flex flex-col gap-4 items-center px-4">
+                <h5 class="text-[#00474D] text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                <div class="flex justify-center items-center gap-6">
+                    <!-- icon 1  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            278
+                        </h4>
+                    </div>
+                    <!-- icon 2  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            630
+                        </h4>
+                    </div>
+                    <!-- icon 3  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            495
+                        </h4>
+                    </div>
+                </div>
+                <div class="border border-[##E4E4E4] w-full"></div>
+                <h5 class="text-[#00474D] font-medium leading-7 text-[20px] w-full items-start ">
+                    Socials
+                </h5>
             </div>
 
-            <div class="pt-[110px] h-full w-full rounded-b-lg flex flex-col justify-between pb-[24px]">
-                <div class="flex flex-col items-center gap-6">
-                    <div class="flex justify-center items-center gap-6">
-                        <!-- icon 1  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px" />
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                278
-                            </h4>
-                        </div>
-                        <!-- icon 2  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px" />
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                630
-                            </h4>
-                        </div>
-                        <!-- icon 3  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px" />
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                495
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="border border-[#E4E4E4] w-[216px]"></div>
+            <div class=" h-full w-full   rounded-b-lg flex flex-col gap-6 justify-between pb-[24px] mt-[16px]">
+                <div
+                    class="flex flex-col h-[140px] xl:h-[200px] items-center gap-6 overflow-y-scroll overflow-x-hidden no-scrollbar  ">
                     <div class="mt-1 w-full flex flex-col items-start px-4">
-                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
-                            Socials
-                        </h5>
-                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
-                            <a href="/"
+                        <div class=" flex flex-col gap-2 w-full navLink">
+                            <a href="/account-you"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
                                 You
                             </a>
@@ -167,7 +171,7 @@
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
                                 Wallet
                             </a>
-                            <a href="shop"
+                            <a href="/shop"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
                                 Shop
                             </a>
@@ -175,19 +179,21 @@
                     </div>
                 </div>
 
-                <div class="w-full flex gap-6 justify-center items-center">
-                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6" />
-                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6" />
-                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6" />
-                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6" />
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
                 </div>
             </div>
+
         </aside>
+
 
         <main class="flex w-full justify-center pb-[22px]">
             <div
-                class="flex flex-col justify-start items-center bg-[#f5f5f5] w-[59.9%] rounded-lg border border-[#E4E4E4] overflow-y-scroll no-scrollbar scroll-smooth">
-                <div class="pt-[31px] px-12 w-full">
+                class="flex flex-col justify-start items-center bg-[#f5f5f5] w-[51%] xl:w-[59.9%] rounded-lg border border-[#E4E4E4] overflow-y-scroll no-scrollbar scroll-smooth">
+                <div class="pt-[31px] px-6 xl:px-12 w-full">
                     <div class="mb-7 flex justify-between items-center">
                         <h2 class="text-[20px] font-[500] text-[#00474D]">Fresh Faces</h2>
                         <a href="#" class="">
@@ -197,122 +203,148 @@
                             </div>
                         </a>
                     </div>
-                    <div class="mt-5 w-full relative">
-                        <div class="responsive w-full">
-                            <!-- Matches container   -->
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/084f/d592/b98f23db218d6fb136bd8b84c0ee5fa1?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Gif23~sWVc9-XpmmZMnmC7VMBjMbDOQn2HxHg0kHWLwNsbkkvqANV4Myfvi14egbvo9EqCJk0ktjN5S8Ofbqc6DC3pEK4I6W6BZXaFVhEEAf0m5F1UJezLooOpWmYhrT2WYW~uR-O4qp79FQ-Xv0sIzOwEpEQP85ItXzDkZXzaAvqFYbUCXfmZJcgOGLjXIWP3EQTw6PZ7lOCFQ5JYfCqVpcT-MdElSJtUWZ8p8cidbvwPHVdnhzV3xnNr-QLgLpFexdsrZs95l5ZhHvxHW5LqHZyoo1Z-d~ULqm2WP5DOou6low0cZ7Zoz4Lgy33P32iU~aQhOgDy48ldNkz9ya0g__"
-                                        alt="" class="h-full w-full object-cover" />
+                    <!-- Story Section -->
+                    <section class="w-full flex flex-col justify-start items-start ">
+
+                        <div class="w-full flex justify-between">
+                            <h5 class="text-[#00474D] font-medium text-[20px] leading-6">Best Matches</h5>
+                            <a href="#" class="">
+                                <div class="flex items-center gap-1 ">
+                                    <span class="text-[14px] font-[400] text-[#856A31]">View All</span>
+                                    <img class="h-[10px] mt-[2px]" src="assets/icons/right-arrow.svg" alt="">
                                 </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
+                            </a>
+                        </div>
+
+
+                        <!-- start of the story cotnainers -->
+                        <div class="mt-5  w-full relative ">
+                            <div class="w-full flex gap-2 overflow-x-scroll cursor-pointer no-scrollbar scroll-smooth">
+                                <!-- Matches container   -->
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+
+                                        <img src="https://s3-alpha-sig.figma.com/img/ee7d/65d8/2abfb346034fe7c93e7e79f1546fbd7b?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OKg3oY2UWmQrXfC-yfe8DPXi5jJisWMtF4lPhsBUnk3BqksOh-Ipqpy7NkuhAY1QRb2zQ0PDZW7HBPwqq04AA2mTzme95NTMtsr~etmSH3EzVYIANConiv-TK6OFw9FNd0USxzPDxIMKjkVgFirZ~VNfCfAjXPw4MqYx55UkeYJTLzqqZ4G4ZN76sysb9KAp3HLw65I2VU9sBevaTcwfqMB15yc82w6x~aqscrSc7un18bT9Pq9sMxBlzLjj9jHAdaGQRHEAk69PWvspeKspCt5BZ5tmG974zt8-OJlZfZSyN5Sj8MLxqM0ovU33QG7s6reaGu4t6h4U6D7iUSqZwA__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+
+
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src=" https://s3-alpha-sig.figma.com/img/186e/1e32/5e5e0742961a72e72bb1a610661bab44?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UHmTpma4QyhYTatbXbG1CfvZszsyCYRM4clHvu9RTiS5heuoAm7XbzIromjFLm6h5eua6mSs6T3kSIEwgWA8umWTMIAkNr1BRwwHvxPNWWLrnl5OkW7W-iO-WdaZMzqI7-SWPpL3FHQb6eHV5eiO~rR9lsn4uBSn4qiSuOw~2lmJg-IBGFV6ZvBVmXH2nT8cy3qu56WgkT0DrLOMwFsizACfbYY6Vdr7cwpB7rtpl~U-Jksuym3Fh4d8C0gI~GMZraEHj9ZtcJHgIJQ4eyHZqi-1-hI~~cJxGdaDne3aEo9ie3D4wIXaPcSfPbCnq9jsnGTwPDulHD47i9y51QCfGw__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XKYVo2Q1FszfzLURTuGBKV2i9lqd0r0vElN9Z2y9T~c8Qzhje87KJesh9RO6yUieKP40o~xNXYtMzRvVvDfSmY0tfUik4LydQylcLcgl-h3V~M7lJ1bluKFW9ddNyWqXMDGpg-rv~Li3khXI46dzB6YpNt1z0i-tRi9aw~ttZ6h09ebCmNcXd5dKJP9w3B51BftJAEnlOj9Q90HG6Isna9pNVi0fHNI68fK1u9dkkTSCWiY9mORJwhCw50msZWuwesh11h7RqDCtkjhPc8Y3fUtVVWqz6tpf2vmUhn3eHQtH92rwcqsRejro~ugRbrfSohoL2cyh7NCwNCw3HeK-Yw__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src="https://s3-alpha-sig.figma.com/img/ce8f/f6f4/3ed59c64f870a1df56a226fe746f19b4?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DF9sI-rQqszDZQC7j4C8HmHzOkijSOHc8nVIRTrCJzXrtBYyHKr9d7FMc9m~pOGceF8I4xXEqHb0ZUufahfhchvOsQSMnv1HwWbPyTkf2Z7Mr12ev76Wuybgv6ycIkqNtLuFaoK8a18hLSUIvwzPDj00AbXH4uby0-vDM5yDT8cIom2KX9u9mpOxMS0Tn1DcNGBswntIBZyF1t8wbwvq-qtfxRxFcM3CMvOCtIo9Ap3kw36U~efyPhogDmyMXv1nfLvOsAxae1VE1BaGrlHrrMS1NpEpAYqDBAvKw8NnT5EqkNofDy4HKhHvm3XaAEweHr~HE1TSJ25WDT1wkImFEg__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src="https://s3-alpha-sig.figma.com/img/dbbc/1c01/77d81df5fe98d1a7e93655a855a8a3ce?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANpKISnrSoYorcr6EFdi7A~WomW9Ese3jl2tjC35~pG7ORH7LTKIlUPsCHKh2dh~5kVA9~lZGLvXzVtOdmj682esxOuihC5X5tg9QPFEb2Pkct0OpdQNcV25Tbb7bE-xdmofl7ls9qKid9hckkhUFEPy8iOu3Is-nBmoftC4WP8ZnmHP6B8-~gAHSU1BBOfJ3Px32xk-sf6H~GCRv3qzpaKK0kUvzuXPicMv6T2vv~B6Dp1G6Mnrt1j1Rglz929WvX24mI6Qy~SyF-Jch-GAxRdwDlnyVkLhWqekmIteyI6Loa3CPBstIalGzCu4HL4eq1DxqN-F2Qey9F2Z9WDJFg__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src="https://s3-alpha-sig.figma.com/img/d7eb/ea3d/ba14c07dcf2e0c755388a29af25aa9de?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RikVy7SqIElx5tj32r3o0aeJa4wdh2ZuEXVvzuFmksZWMqzqm9H2iU0oo6P~1i3VWNHajWbnMSTo1mY0SPPfqu-q9DuPL44WG~crbOsh4No9cDRaS-aH1ADr0JfRC9IF0v8lQPjArPGENasAfqrQwLt4f6cEvacOOjXSgwjeZqaouGVejtck3N3jh4uTiII-3C-Oe0~LVKZspYc23KdXnxkWhPwupPibH6yB1jVV5EGgN~BIpCwe4WFvE3GJiF1S6EzZOm81eo4W2NjSbBcCVWgKuyjXr5etPlFsVWz~t0DCnTrUO7rMUXEDufxYjrDpt5pOl5jEHDdI9CPhpYI2Hw__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
+                                <div
+                                    class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                    <!-- image -->
+                                    <div class="h-[120px] w-[90px]">
+                                        <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                            alt="" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- text -->
+                                    <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                        Camigata
+                                    </h6>
+                                </div>
                             </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fsOAp2bK-eJQFh5iYhB7RG054FQcKl389GMo8y9t~rAWx4W8A6Tn81f4j8wvjdh7~lFpUdltIOG6aLAhVcwFKFXcQdiJsatSztvAtUFR53-8UH22LmJ~nWiqSVAiUI7vrV6W~y4-adrFYsHxFC87nxdhjm~EYi5XotJzqvpnCpi0Svshvc9E2ZfFVLBe-XMXbG4qfVuJJh-H8nwAxXSS8VHbJmQ8hBRFAjF45wBBKRe~GdzdJkEnr5kNQgN23Brl0XFxD69Dcg-aswWqxWvRV-t5yDHfdTuytmKfDK6G-wHn3H34pOCbr8aXGhNpvhg9cf7p7LKkd-Yso0ODrv8Tnw__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/396b/fb3b/910f5b7ed1085e9eef58edc006ce4446?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf-tYawj6~fBqn2TjjYNSyJduMV1CE6eMJs15iaSNxeOBQAC2wsWuFTMCOTgzSFpYedDWiNX3NNJuZlmEF~J3dcL-x4nWyydKuHFWi2qPKIuuVNlEufTnO3ymyXOy736OIVwkstfbeKqF5fz1oxX9B5IEYYFZWf2NNy52Uw0dLyr3XfZwfbbFh5x-F4WBfC-22AQz~QfNMkBJ0Th7wbaPT336Del7UTS8xNygWowqNZ54rbXB62Fm8YEN2MTNK~htGacm4A~J4NoHc1axcyt5O3P8NZpjpV-byz~23okEdUoEOoYA19Uw7BXuSGX~nnS0gMos3q17XVUJG-k9e2d9A__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/9182/903f/15f3de0ab774e1fdbfc71e79c4af7313?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hPlCtoQUlRionUqbaCJXJ5ebUPzT1iG7Emt7xJEQ~FLIXqfU1QpBYD4UaKR19~h2SziSNVc4BAaL7eBiAFXD-32y7~TFrezah3fmejJ2oxncOWhGQhUHQ2EBHZJxW6xj4jHp~qYXKzByj9k6uT2UhVmfAcePOUlhE6638emanYbwALO-ZCh6Q4ZicbMXW2ByNoQoigPrUzHkLWLAGfKqtGP57fp4206F709UGZKApJciN9NvUQ1mQM8xgoI502nGrGtfpxnlz6Pin6PW1f6OcaOEfonVLWSUVc3TGcGx4B5~N9tuktXQl0sX0XwaELPu4aG3uyKaHDIfM0quk3rqFA__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/360b/ec57/3401ddb254a8e179e7253b34f9701438?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WkgMQTymhO0nv5gXZFr9D3Htk~62RKSWozxlA0FnDCZIG1O8CoDWJctSlGF884PvGMp16ZX7BYa-Irdl~rJwH-wUGamV7icN-j5FpZUUlkibGWRX8emr5am2cSsM1fL1sM9C1jnmFjlS1WHhrYmY0PYghiKxqqTYXG9jMbr26hrX-d9FJgsJdFQDcr2X~paQzkEgm~87XUvg3DUGd4PtO95tUbUGBcYk88M6qxhzEbdYPbJB9sf~wfl86Wo-jqclcPZEG1g2ni3zmx5guYuB7VyXubE87ik6wreXNSdlyjt036tU6ClgHwtOP4queG8jgzW-rNQiUaDNLe5WdsuZ3w__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/ce8f/f6f4/3ed59c64f870a1df56a226fe746f19b4?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W2vTwF-sVw6BMTJTvltRe5khDut~FTXgsCA~KkUu3gKif-vyfnNqXxKaIOxXOrPadq0soIF4H4YoBjdfeFULW6aovzWNIf2TR4EcYg2hd6xF6WbNBdq4i5Nrub0Va6DDTBqt3BhzO37QLEW7jrb1toiVjblNr~tDNjk8YjjNliXSZN0cmZ3mbjjfbp6OUQjhLJ-yfEM7dGONC9bkvSOn2-fXqYpq0NWmzHd--Nvw-VIpk~cNYwE3USp~xx~2h9zoQ9doFtvwWt0H2OL6jDqtdyGyO32gIwGmrDH7u7MIdwFoUjdEsKtrKRM~OEjCYNSv~BUJHWYwCSUjhAVON1FOEA__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/7390/04a6/c1698b2e332548b54fea2a164622f316?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Km3ErNofc~~5ZjzpoElBnrcf~J-k2zz3WAiC2URyHvSiTZ7uiA0GMkzWfbKFEt7TqsP6E2y9IRGBBuffbO-ZLGJyJ8QqTDROgTPusEqfY2fvyRrdKHHrXf0Z3Iz3-6fdxJMYgF811Gm8h7Np5DNji2dmLumc0ugYZ~-zWXms6GikfA-a25ptpnbEQClLNhfOkUOgpEfZeQot8kfGG0VgTz0B82m8-4YFPOu5LXiJtfc1p0~HbbI8s8t1D43i7IWmI~QfPzvGSKsgvAdRzR2XPe11XYg2VXabbVSI2UwUhaviBfkVOV-tf6cp0J3HjvwROCb8uTwDAgyp8f7cXZSK9A__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fsOAp2bK-eJQFh5iYhB7RG054FQcKl389GMo8y9t~rAWx4W8A6Tn81f4j8wvjdh7~lFpUdltIOG6aLAhVcwFKFXcQdiJsatSztvAtUFR53-8UH22LmJ~nWiqSVAiUI7vrV6W~y4-adrFYsHxFC87nxdhjm~EYi5XotJzqvpnCpi0Svshvc9E2ZfFVLBe-XMXbG4qfVuJJh-H8nwAxXSS8VHbJmQ8hBRFAjF45wBBKRe~GdzdJkEnr5kNQgN23Brl0XFxD69Dcg-aswWqxWvRV-t5yDHfdTuytmKfDK6G-wHn3H34pOCbr8aXGhNpvhg9cf7p7LKkd-Yso0ODrv8Tnw__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/396b/fb3b/910f5b7ed1085e9eef58edc006ce4446?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf-tYawj6~fBqn2TjjYNSyJduMV1CE6eMJs15iaSNxeOBQAC2wsWuFTMCOTgzSFpYedDWiNX3NNJuZlmEF~J3dcL-x4nWyydKuHFWi2qPKIuuVNlEufTnO3ymyXOy736OIVwkstfbeKqF5fz1oxX9B5IEYYFZWf2NNy52Uw0dLyr3XfZwfbbFh5x-F4WBfC-22AQz~QfNMkBJ0Th7wbaPT336Del7UTS8xNygWowqNZ54rbXB62Fm8YEN2MTNK~htGacm4A~J4NoHc1axcyt5O3P8NZpjpV-byz~23okEdUoEOoYA19Uw7BXuSGX~nnS0gMos3q17XVUJG-k9e2d9A__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
+                            <!-- end of the story containers  -->
+                            <!-- Scroll Arrow Icon -->
+                            <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
+                                <img src="assets/icons/swipearrow.svg" alt="">
                             </div>
                         </div>
-                        <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
-                            <img class="" src="assets/icons/swipearrow.svg" alt="" />
-                        </div>
-                    </div>
+
+                        <div class="border border-[#f5f5f5] w-full mt-4"></div>
+                    </section>
+
+
                     <div>
                         <div class="flex justify-between items-center my-9">
                             <h2 class="text-[20px] font-[500] text-[#00474D]">Balance Trend</h2>
@@ -434,7 +466,8 @@
                             </div>
                         </div>
                         <div class="">
-                            <img src="https://s3-alpha-sig.figma.com/img/c380/dbf4/b6a8223bf9f8b2e515aedcbc74ac0d1a?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OPfNU337xcdhc8HpzqMm2ln7a7VVzoznaeAiBx8anx5j7Sbw80i-St8VgBBebcmk-75hl8JqPNemNLblnzCVdiUqH6GXVHpODYU1dBRxDw4N3lrKrFvWNG~9RoULG64lBYcCfDwca1Dc-77wZ9i5Oasp5kUngk3GRyLiQRSfK6oc34TAyUAcWwkHsFHyx-bc-TX2ymkzXFvIaxqgA8SChCbTlXpWBKvymYVqeeLxgB2k6CFoAbhWNJXznsYauizfXSRXVrA6EgjbXT9a0F1UvLVDK1ffiM36lS7-D6sy4VO7nbWvr8ssvpbcTKHWKEdjyUJ9ZftUHXbEQhJDguM7XA__" alt="" class="rounded-[8px] h-[228px] w-full">
+                            <img src="https://s3-alpha-sig.figma.com/img/c380/dbf4/b6a8223bf9f8b2e515aedcbc74ac0d1a?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OPfNU337xcdhc8HpzqMm2ln7a7VVzoznaeAiBx8anx5j7Sbw80i-St8VgBBebcmk-75hl8JqPNemNLblnzCVdiUqH6GXVHpODYU1dBRxDw4N3lrKrFvWNG~9RoULG64lBYcCfDwca1Dc-77wZ9i5Oasp5kUngk3GRyLiQRSfK6oc34TAyUAcWwkHsFHyx-bc-TX2ymkzXFvIaxqgA8SChCbTlXpWBKvymYVqeeLxgB2k6CFoAbhWNJXznsYauizfXSRXVrA6EgjbXT9a0F1UvLVDK1ffiM36lS7-D6sy4VO7nbWvr8ssvpbcTKHWKEdjyUJ9ZftUHXbEQhJDguM7XA__"
+                                alt="" class="rounded-[8px] h-[228px] w-full">
                         </div>
                         <div class="flex justify-between items-center my-9">
                             <h2 class="text-[20px] font-[500] text-[#00474D]">Referral Earnings</h2>
@@ -468,7 +501,8 @@
                         <div class="flex flex-col gap-3 my-5">
                             <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
                                 <div class="">
-                                    <img src="https://s3-alpha-sig.figma.com/img/1c9b/9e5c/9c2c0082539ae29088b3bc6c85f2ac04?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b-iQdXkN4sKEMlUl9tpLQbpfa3zADTYmWw6ubW2UASrfg34VfSk3wOOKUXiNPXXA~taGRh4JkQO3hrDBDnraXNd4y4SMsQZvvVWaAmTm4r8DU4neuEsRLbUgmfXQs5fEXVOHsSTj5ozGvY24y1nN5g6jpdIEYYMOSOPE0EgQfH7lmt78WK9FXixj-u~hsGbC9hSYhMiWtESd35rcFKdxq8xccxkunm9tiXHWi~3NMX0Z3nhIFiGfoh56jH6amSiSo516Ly2bHbIT2o8qIpKqp3g8CziloNW~O1lW7R8ixK3JjcK-RzlCobCT4uykF0b9ZM1CBw6I0ifqduuAr0Qbfg__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1c9b/9e5c/9c2c0082539ae29088b3bc6c85f2ac04?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b-iQdXkN4sKEMlUl9tpLQbpfa3zADTYmWw6ubW2UASrfg34VfSk3wOOKUXiNPXXA~taGRh4JkQO3hrDBDnraXNd4y4SMsQZvvVWaAmTm4r8DU4neuEsRLbUgmfXQs5fEXVOHsSTj5ozGvY24y1nN5g6jpdIEYYMOSOPE0EgQfH7lmt78WK9FXixj-u~hsGbC9hSYhMiWtESd35rcFKdxq8xccxkunm9tiXHWi~3NMX0Z3nhIFiGfoh56jH6amSiSo516Ly2bHbIT2o8qIpKqp3g8CziloNW~O1lW7R8ixK3JjcK-RzlCobCT4uykF0b9ZM1CBw6I0ifqduuAr0Qbfg__"
+                                        alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
                                 <div class="w-3/12">
                                     <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
@@ -488,7 +522,8 @@
                             </div>
                             <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
                                 <div class="">
-                                    <img src="https://s3-alpha-sig.figma.com/img/e6bd/7822/caa778713740fd383b4991a859eb4d92?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MmgiyGLwCmtwRPiAjcwdZriKRNnV76FJzo5j-PbeL37O5gJX9aIY5HJcQGXubIunPAmLFN4XlGrb9bt94iIE8f6ddSE9F58NcBz8L9AOkZGL98Kx0U0amjcXtXDf2Rb54-rsr36rwc~e0H7f9ErzTIqCIuyeN~7AVURJqC6mDACdVRVKMK~IJTg7ErzVMvyliNtLGCZSQkb-s9Qi4UiAv4cZJwwEk01yahWmQQOoFBxIiwQYk5qFtyelsnkDZKJQmcVVL5JLZA6IRSZ3eQxDpbk11N5X5eFpp8LlZAYuLgoDHKmNu0OyW3ASRMfTLM8Dub9jDFNJh-583gVkFL5EGA__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                    <img src="https://s3-alpha-sig.figma.com/img/e6bd/7822/caa778713740fd383b4991a859eb4d92?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MmgiyGLwCmtwRPiAjcwdZriKRNnV76FJzo5j-PbeL37O5gJX9aIY5HJcQGXubIunPAmLFN4XlGrb9bt94iIE8f6ddSE9F58NcBz8L9AOkZGL98Kx0U0amjcXtXDf2Rb54-rsr36rwc~e0H7f9ErzTIqCIuyeN~7AVURJqC6mDACdVRVKMK~IJTg7ErzVMvyliNtLGCZSQkb-s9Qi4UiAv4cZJwwEk01yahWmQQOoFBxIiwQYk5qFtyelsnkDZKJQmcVVL5JLZA6IRSZ3eQxDpbk11N5X5eFpp8LlZAYuLgoDHKmNu0OyW3ASRMfTLM8Dub9jDFNJh-583gVkFL5EGA__"
+                                        alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
                                 <div class="w-3/12">
                                     <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
@@ -508,7 +543,8 @@
                             </div>
                             <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
                                 <div class="">
-                                    <img src="https://s3-alpha-sig.figma.com/img/1247/9099/e4889cb156f78f1edce33b9138941eff?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DlxWSUf1p0JRjD3CV0KiKce6K-7q0IQXV~WYyyddcSZdDWCr-xQXWv1yV9H6YBHqfIsOYodlvmndsKxN5MflONFfG~RrFv2fNXEekPBS1aq4icBZLR0IpfA8hJzcWddeB4avD4j~wWZtuzMtFh3DaMQBUK9F3yEG9Zrt-Y4HF-Hq2OfdGD~IHLs~8wIRqOukr1pnjpeKSpXssk5lIRZHepzZcHC17PVplbX2Plwsq-3fdIu~E-mgmRLw8uPGJat~Bt3gGO0~cLWm5gtQ3eQ6ukcI~GPdk1g993LF0UgXwok3itX0dMgZPWdZJdEc~b9S3Q~QsXsBoEHORd7vDVbTew__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1247/9099/e4889cb156f78f1edce33b9138941eff?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DlxWSUf1p0JRjD3CV0KiKce6K-7q0IQXV~WYyyddcSZdDWCr-xQXWv1yV9H6YBHqfIsOYodlvmndsKxN5MflONFfG~RrFv2fNXEekPBS1aq4icBZLR0IpfA8hJzcWddeB4avD4j~wWZtuzMtFh3DaMQBUK9F3yEG9Zrt-Y4HF-Hq2OfdGD~IHLs~8wIRqOukr1pnjpeKSpXssk5lIRZHepzZcHC17PVplbX2Plwsq-3fdIu~E-mgmRLw8uPGJat~Bt3gGO0~cLWm5gtQ3eQ6ukcI~GPdk1g993LF0UgXwok3itX0dMgZPWdZJdEc~b9S3Q~QsXsBoEHORd7vDVbTew__"
+                                        alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
                                 <div class="w-3/12">
                                     <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
@@ -528,7 +564,8 @@
                             </div>
                             <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
                                 <div class="">
-                                    <img src="https://s3-alpha-sig.figma.com/img/1f48/867b/6ba9b7fb9ffaf2ce01955c93d587e908?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RRGW-Mf3w1gyBwu~h~EjBS5vVrwHbSpiKtsBTtVBveDgFLaIpcve9Hb0x8rm3zT95agpSSaWklxkanD2BfrYxe8q2Zteoje5bnEubqD5IXpvb9yC~w9mAU2JQtF90YBufUztnLatl36hllLzEcmo6xARcrgy9pWKrSIrsuMHwLlpCkfyekL64GcjGBV54y5WLAv-Sb7AKBNOmUv~ATmMrQMGWQ1n0oYvdDQh2zIH-~0JVjNMaHQdpq1Uu8qDSN3IN2vwtBhz-RwYMIdqSw3KGh2RYm04PvQjtVPNAlNnD~-~d5Xt5m35vovJUgwSsNFBr5KHderKB3uFFfnVShqetw__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                    <img src="https://s3-alpha-sig.figma.com/img/1f48/867b/6ba9b7fb9ffaf2ce01955c93d587e908?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RRGW-Mf3w1gyBwu~h~EjBS5vVrwHbSpiKtsBTtVBveDgFLaIpcve9Hb0x8rm3zT95agpSSaWklxkanD2BfrYxe8q2Zteoje5bnEubqD5IXpvb9yC~w9mAU2JQtF90YBufUztnLatl36hllLzEcmo6xARcrgy9pWKrSIrsuMHwLlpCkfyekL64GcjGBV54y5WLAv-Sb7AKBNOmUv~ATmMrQMGWQ1n0oYvdDQh2zIH-~0JVjNMaHQdpq1Uu8qDSN3IN2vwtBhz-RwYMIdqSw3KGh2RYm04PvQjtVPNAlNnD~-~d5Xt5m35vovJUgwSsNFBr5KHderKB3uFFfnVShqetw__"
+                                        alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
                                 <div class="w-3/12">
                                     <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
@@ -548,7 +585,8 @@
                             </div>
                             <div class="bg-[#F3F2ED] rounded-[8px] w-full flex items-center py-4 px-6 ">
                                 <div class="">
-                                    <img src="https://s3-alpha-sig.figma.com/img/85e3/19ff/7b795efeb5ba2f80324f3230abb1422e?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkd4NbE78Z0GuJp1g-ZDMEJA6J6sVKT79OktCn2VJhbl5y8~KPzzfWcN-lnKb6EkPN5CUC8JyVHwAMHiLSTQEqPNI9ZziH~5wa-aTU55roG7zqsHZyEstxOkkEKwIFg7milbSB0M9UN2Pf4a26lQtbGCkIttufTzGyKlMeOziNrWix4Zth2yqVazy5Re84vjukUif1sUrs733pFGc7q43ZyikwlglBvynOvE4nsyaVGc0s6jSyPXlJ9JJ2zenIdgeFvTOLicQRENxlAwk79QL4tlDphZqbP9~baabo5NWElXD5lrJ7P6StnDV6kRjET0ojAToc1u7KkCE1beUqGf6Q__" alt="" class="w-16 h-16 rounded-full me-4 object-cover">
+                                    <img src="https://s3-alpha-sig.figma.com/img/85e3/19ff/7b795efeb5ba2f80324f3230abb1422e?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkd4NbE78Z0GuJp1g-ZDMEJA6J6sVKT79OktCn2VJhbl5y8~KPzzfWcN-lnKb6EkPN5CUC8JyVHwAMHiLSTQEqPNI9ZziH~5wa-aTU55roG7zqsHZyEstxOkkEKwIFg7milbSB0M9UN2Pf4a26lQtbGCkIttufTzGyKlMeOziNrWix4Zth2yqVazy5Re84vjukUif1sUrs733pFGc7q43ZyikwlglBvynOvE4nsyaVGc0s6jSyPXlJ9JJ2zenIdgeFvTOLicQRENxlAwk79QL4tlDphZqbP9~baabo5NWElXD5lrJ7P6StnDV6kRjET0ojAToc1u7KkCE1beUqGf6Q__"
+                                        alt="" class="w-16 h-16 rounded-full me-4 object-cover">
                                 </div>
                                 <div class="w-3/12">
                                     <span class="text-[12px] font-[400] text-[#00474D]">12/03/2004</span>
@@ -570,13 +608,14 @@
                     </div>
                 </div>
                 <div class="w-full">
-                    <img src="https://s3-alpha-sig.figma.com/img/a62c/77c0/d246f4ea786b40db46fc6e734a8b64a0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ok2gABOGUnhj2egF5tU64z7INB~VoLNqToj0EzHIhZSJlIZHK~6j0k-TN51X1qCc5LXEvaBbgX9utLlX3xLfojPrPZL2-jSDLdXduDpjLezCYMNgAwmimlF~G9VYWk-gISxf9WSUPISppyRk0fMl0CiP04-SnVhmHJhf937zhOdoBuOwQpROXzdxshQgbikb-FuX~zxvpLEiXIzFntL8oALrkWOniv3wxOxJ0BAYo4NBOiJ69IxuIJmA4wmNY3sxhWHdQM2NtpGPaE-aolae6~zS1rpdIHMb9vxVunpHoJcvEKT3kxHn0SU~-~VOubqqgIlOfXj0xFi~IhxNHtwN8Q__" alt="" class="h-56 w-full object-cover">
+                    <img src="https://s3-alpha-sig.figma.com/img/a62c/77c0/d246f4ea786b40db46fc6e734a8b64a0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ok2gABOGUnhj2egF5tU64z7INB~VoLNqToj0EzHIhZSJlIZHK~6j0k-TN51X1qCc5LXEvaBbgX9utLlX3xLfojPrPZL2-jSDLdXduDpjLezCYMNgAwmimlF~G9VYWk-gISxf9WSUPISppyRk0fMl0CiP04-SnVhmHJhf937zhOdoBuOwQpROXzdxshQgbikb-FuX~zxvpLEiXIzFntL8oALrkWOniv3wxOxJ0BAYo4NBOiJ69IxuIJmA4wmNY3sxhWHdQM2NtpGPaE-aolae6~zS1rpdIHMb9vxVunpHoJcvEKT3kxHn0SU~-~VOubqqgIlOfXj0xFi~IhxNHtwN8Q__"
+                        alt="" class="h-56 w-full object-cover">
                 </div>
             </div>
         </main>
 
         <aside
-            class="fixed right-8 bg-[#F5F5F5] top-[100px] bottom-5 w-[18.4%] rounded-lg flex flex-col overflow-hidden">
+            class="fixed right-8 bg-[#F5F5F5] top-[100px] bottom-5 w-[21%] xl:w-[18.4%] rounded-lg flex flex-col overflow-hidden">
             <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden mb-2">
                 <h5
                     class="pt-[32px] pb-[20px] text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
@@ -587,16 +626,19 @@
                 <div class="flex flex-col justify-start items-start gap-1">
                     <ul class="px-5 py-6 w-full bg-[#fff]">
                         <li class="pb-[12px] border-b border-[#E4E4E4] w-full">
-                            <a href="account-wallet" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet Dashboard</a>
+                            <a href="account-wallet" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet
+                                Dashboard</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
-                            <a href="wallet-activity" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet Activity</a>
+                            <a href="wallet-activity" class="text-[14px] px-3 font-[400] text-[#856A31]">Wallet
+                                Activity</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
                             <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Add Money to Your Wallet</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
-                            <a href="accounts_and_cards" class="text-[14px] px-3 font-[400] text-[#856A31]">Linked Accounts and Cards</a>
+                            <a href="accounts_and_cards" class="text-[14px] px-3 font-[400] text-[#856A31]">Linked
+                                Accounts and Cards</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
                             <a href="" class="text-[14px] px-3 font-[400] text-[#856A31]">Link a New Bank Account</a>

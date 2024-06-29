@@ -105,57 +105,61 @@
     </header>
 
     <div class="px-8 flex h-full pt-[100px] relative gap-4">
-        <!-- Profile Sidebar -->
 
+        <!-- Profile Sidebar -->
         <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[18.4%] rounded-lg flex flex-col">
-            <div class="profileCover h-[100px] bg-cover bg-center w-full rounded-t-lg relative">
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] lg:w-[21%]  xl:w-[18.4%]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  min-h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+
                 <!-- profile div -->
-                <div class="absolute w-full top-10 flex justify-center items-center">
-                    <div class="h-[135px] w-[113px] flex flex-col justify-between items-center">
-                        <div class="w-24 h-24 border-[3px] border-white rounded-full bg-center">
-                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
-                                alt="" class="h-full w-full object-cover rounded-full" />
+                <div class=" absolute w-full top-10  flex justify-center items-center">
+                    <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
+                        <div class="w-24 h-24 border-[3px] border-white rounded-full  bg-center">
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cuze3ufXup~VgVcL1Xbn~ehb3NnvM5jw1N~Z7nejBejbWzYQGG0hQs-nFk1-KlLC6wkp~LdKjK4CZJ4ucfFlUZyS5JKHNIN8hUDKKXAZgXCyd9mH6oPgxh2cMqNPeqnuOLZY4evGX93v9EdB5-E5dYAaXN8dDjkxsdL5G91NB1HQVJfW1qKCv6qWa2YyWYROX7VGprGyzJ5JpjBtax9Ih1L-MIdm365GswmOFk97IoUxexQGSpvFI2mkvXmerTfKNolalG0uEzpE8bb4h5PX~IXbza4~IAG3nqeJmIjR4IPpCWfxVeJcAy9-bmAElSTCN-eSYGuQAoFalnDffOrxvw__"
+                                alt="" class="h-full w-full  object-cover  rounded-full ">
                         </div>
-                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">
-                            Muhammed
-                        </h5>
                     </div>
                 </div>
+
+            </div>
+            <div class="pt-[60px] flex flex-col gap-4 items-center px-4">
+                <h5 class="text-[#00474D] text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                <div class="flex justify-center items-center gap-6">
+                    <!-- icon 1  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            278
+                        </h4>
+                    </div>
+                    <!-- icon 2  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            630
+                        </h4>
+                    </div>
+                    <!-- icon 3  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            495
+                        </h4>
+                    </div>
+                </div>
+                <div class="border border-[##E4E4E4] w-full"></div>
+                <h5 class="text-[#00474D] font-medium leading-7 text-[20px] w-full items-start ">
+                    Socials
+                </h5>
             </div>
 
-            <div class="pt-[110px] h-full w-full rounded-b-lg flex flex-col justify-between pb-[24px]">
-                <div class="flex flex-col items-center gap-6">
-                    <div class="flex justify-center items-center gap-6">
-                        <!-- icon 1  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px" />
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                278
-                            </h4>
-                        </div>
-                        <!-- icon 2  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px" />
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                630
-                            </h4>
-                        </div>
-                        <!-- icon 3  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px" />
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                495
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="border border-[#E4E4E4] w-[216px]"></div>
+            <div class=" h-full w-full   rounded-b-lg flex flex-col gap-6 justify-between pb-[24px] mt-[16px]">
+                <div
+                    class="flex flex-col h-[140px] xl:h-[200px] items-center gap-6 overflow-y-scroll overflow-x-hidden no-scrollbar  ">
                     <div class="mt-1 w-full flex flex-col items-start px-4">
-                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
-                            Socials
-                        </h5>
-                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
-                            <a href="/"
+                        <div class=" flex flex-col gap-2 w-full navLink">
+                            <a href="/account-you"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
                                 You
                             </a>
@@ -175,19 +179,20 @@
                     </div>
                 </div>
 
-                <div class="w-full flex gap-6 justify-center items-center">
-                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6" />
-                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6" />
-                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6" />
-                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6" />
+                <div class="w-full flex gap-6 justify-center items-center ">
+                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
+                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
                 </div>
             </div>
+
         </aside>
 
         <main class="flex w-full justify-center pb-[22px]">
             <div
-                class="flex flex-col justify-start items-center w-[59.9%] rounded-lg border border-[#E4E4E4] overflow-y-scroll no-scrollbar scroll-smooth">
-                <div class="pt-[31px] px-12 w-full">
+                class="flex flex-col justify-start items-center w-[51%] xl:w-[59.9%] rounded-lg border border-[#E4E4E4] overflow-y-scroll no-scrollbar scroll-smooth">
+                <div class="pt-[31px] px-6 xl:px-12 w-full">
                     <div class="mb-7 flex justify-between items-center">
                         <h2 class="text-[20px] font-[500] text-[#00474D]">Fresh Faces</h2>
                         <a href="#" class="">
@@ -197,15 +202,31 @@
                             </div>
                         </a>
                     </div>
-                    <div class="mt-5 w-full relative">
-                        <div class="responsive w-full">
+                   
+                    <!-- start of the story cotnainers -->
+                    <div class="mt-5  w-full relative ">
+                        <div class="w-full flex gap-2 overflow-x-scroll cursor-pointer no-scrollbar scroll-smooth">
                             <!-- Matches container   -->
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                            <div class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/084f/d592/b98f23db218d6fb136bd8b84c0ee5fa1?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Gif23~sWVc9-XpmmZMnmC7VMBjMbDOQn2HxHg0kHWLwNsbkkvqANV4Myfvi14egbvo9EqCJk0ktjN5S8Ofbqc6DC3pEK4I6W6BZXaFVhEEAf0m5F1UJezLooOpWmYhrT2WYW~uR-O4qp79FQ-Xv0sIzOwEpEQP85ItXzDkZXzaAvqFYbUCXfmZJcgOGLjXIWP3EQTw6PZ7lOCFQ5JYfCqVpcT-MdElSJtUWZ8p8cidbvwPHVdnhzV3xnNr-QLgLpFexdsrZs95l5ZhHvxHW5LqHZyoo1Z-d~ULqm2WP5DOou6low0cZ7Zoz4Lgy33P32iU~aQhOgDy48ldNkz9ya0g__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    
+                                    <img src="https://s3-alpha-sig.figma.com/img/ee7d/65d8/2abfb346034fe7c93e7e79f1546fbd7b?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OKg3oY2UWmQrXfC-yfe8DPXi5jJisWMtF4lPhsBUnk3BqksOh-Ipqpy7NkuhAY1QRb2zQ0PDZW7HBPwqq04AA2mTzme95NTMtsr~etmSH3EzVYIANConiv-TK6OFw9FNd0USxzPDxIMKjkVgFirZ~VNfCfAjXPw4MqYx55UkeYJTLzqqZ4G4ZN76sysb9KAp3HLw65I2VU9sBevaTcwfqMB15yc82w6x~aqscrSc7un18bT9Pq9sMxBlzLjj9jHAdaGQRHEAk69PWvspeKspCt5BZ5tmG974zt8-OJlZfZSyN5Sj8MLxqM0ovU33QG7s6reaGu4t6h4U6D7iUSqZwA__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+
+
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src=" https://s3-alpha-sig.figma.com/img/186e/1e32/5e5e0742961a72e72bb1a610661bab44?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UHmTpma4QyhYTatbXbG1CfvZszsyCYRM4clHvu9RTiS5heuoAm7XbzIromjFLm6h5eua6mSs6T3kSIEwgWA8umWTMIAkNr1BRwwHvxPNWWLrnl5OkW7W-iO-WdaZMzqI7-SWPpL3FHQb6eHV5eiO~rR9lsn4uBSn4qiSuOw~2lmJg-IBGFV6ZvBVmXH2nT8cy3qu56WgkT0DrLOMwFsizACfbYY6Vdr7cwpB7rtpl~U-Jksuym3Fh4d8C0gI~GMZraEHj9ZtcJHgIJQ4eyHZqi-1-hI~~cJxGdaDne3aEo9ie3D4wIXaPcSfPbCnq9jsnGTwPDulHD47i9y51QCfGw__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -213,11 +234,11 @@
                                 </h6>
                             </div>
                             <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fsOAp2bK-eJQFh5iYhB7RG054FQcKl389GMo8y9t~rAWx4W8A6Tn81f4j8wvjdh7~lFpUdltIOG6aLAhVcwFKFXcQdiJsatSztvAtUFR53-8UH22LmJ~nWiqSVAiUI7vrV6W~y4-adrFYsHxFC87nxdhjm~EYi5XotJzqvpnCpi0Svshvc9E2ZfFVLBe-XMXbG4qfVuJJh-H8nwAxXSS8VHbJmQ8hBRFAjF45wBBKRe~GdzdJkEnr5kNQgN23Brl0XFxD69Dcg-aswWqxWvRV-t5yDHfdTuytmKfDK6G-wHn3H34pOCbr8aXGhNpvhg9cf7p7LKkd-Yso0ODrv8Tnw__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XKYVo2Q1FszfzLURTuGBKV2i9lqd0r0vElN9Z2y9T~c8Qzhje87KJesh9RO6yUieKP40o~xNXYtMzRvVvDfSmY0tfUik4LydQylcLcgl-h3V~M7lJ1bluKFW9ddNyWqXMDGpg-rv~Li3khXI46dzB6YpNt1z0i-tRi9aw~ttZ6h09ebCmNcXd5dKJP9w3B51BftJAEnlOj9Q90HG6Isna9pNVi0fHNI68fK1u9dkkTSCWiY9mORJwhCw50msZWuwesh11h7RqDCtkjhPc8Y3fUtVVWqz6tpf2vmUhn3eHQtH92rwcqsRejro~ugRbrfSohoL2cyh7NCwNCw3HeK-Yw__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -225,11 +246,11 @@
                                 </h6>
                             </div>
                             <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/396b/fb3b/910f5b7ed1085e9eef58edc006ce4446?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf-tYawj6~fBqn2TjjYNSyJduMV1CE6eMJs15iaSNxeOBQAC2wsWuFTMCOTgzSFpYedDWiNX3NNJuZlmEF~J3dcL-x4nWyydKuHFWi2qPKIuuVNlEufTnO3ymyXOy736OIVwkstfbeKqF5fz1oxX9B5IEYYFZWf2NNy52Uw0dLyr3XfZwfbbFh5x-F4WBfC-22AQz~QfNMkBJ0Th7wbaPT336Del7UTS8xNygWowqNZ54rbXB62Fm8YEN2MTNK~htGacm4A~J4NoHc1axcyt5O3P8NZpjpV-byz~23okEdUoEOoYA19Uw7BXuSGX~nnS0gMos3q17XVUJG-k9e2d9A__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    <img src="https://s3-alpha-sig.figma.com/img/ce8f/f6f4/3ed59c64f870a1df56a226fe746f19b4?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DF9sI-rQqszDZQC7j4C8HmHzOkijSOHc8nVIRTrCJzXrtBYyHKr9d7FMc9m~pOGceF8I4xXEqHb0ZUufahfhchvOsQSMnv1HwWbPyTkf2Z7Mr12ev76Wuybgv6ycIkqNtLuFaoK8a18hLSUIvwzPDj00AbXH4uby0-vDM5yDT8cIom2KX9u9mpOxMS0Tn1DcNGBswntIBZyF1t8wbwvq-qtfxRxFcM3CMvOCtIo9Ap3kw36U~efyPhogDmyMXv1nfLvOsAxae1VE1BaGrlHrrMS1NpEpAYqDBAvKw8NnT5EqkNofDy4HKhHvm3XaAEweHr~HE1TSJ25WDT1wkImFEg__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -237,11 +258,24 @@
                                 </h6>
                             </div>
                             <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/9182/903f/15f3de0ab774e1fdbfc71e79c4af7313?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hPlCtoQUlRionUqbaCJXJ5ebUPzT1iG7Emt7xJEQ~FLIXqfU1QpBYD4UaKR19~h2SziSNVc4BAaL7eBiAFXD-32y7~TFrezah3fmejJ2oxncOWhGQhUHQ2EBHZJxW6xj4jHp~qYXKzByj9k6uT2UhVmfAcePOUlhE6638emanYbwALO-ZCh6Q4ZicbMXW2ByNoQoigPrUzHkLWLAGfKqtGP57fp4206F709UGZKApJciN9NvUQ1mQM8xgoI502nGrGtfpxnlz6Pin6PW1f6OcaOEfonVLWSUVc3TGcGx4B5~N9tuktXQl0sX0XwaELPu4aG3uyKaHDIfM0quk3rqFA__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    <img src="https://s3-alpha-sig.figma.com/img/dbbc/1c01/77d81df5fe98d1a7e93655a855a8a3ce?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANpKISnrSoYorcr6EFdi7A~WomW9Ese3jl2tjC35~pG7ORH7LTKIlUPsCHKh2dh~5kVA9~lZGLvXzVtOdmj682esxOuihC5X5tg9QPFEb2Pkct0OpdQNcV25Tbb7bE-xdmofl7ls9qKid9hckkhUFEPy8iOu3Is-nBmoftC4WP8ZnmHP6B8-~gAHSU1BBOfJ3Px32xk-sf6H~GCRv3qzpaKK0kUvzuXPicMv6T2vv~B6Dp1G6Mnrt1j1Rglz929WvX24mI6Qy~SyF-Jch-GAxRdwDlnyVkLhWqekmIteyI6Loa3CPBstIalGzCu4HL4eq1DxqN-F2Qey9F2Z9WDJFg__"
+                                        alt="" class="h-full w-full object-cover">
+                                </div>
+                                <!-- text -->
+                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
+                                    Camigata
+                                </h6>
+                            </div>
+
+                            <div
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                <!-- image -->
+                                <div class="h-[120px] w-[90px]">
+                                    <img src="https://s3-alpha-sig.figma.com/img/d7eb/ea3d/ba14c07dcf2e0c755388a29af25aa9de?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RikVy7SqIElx5tj32r3o0aeJa4wdh2ZuEXVvzuFmksZWMqzqm9H2iU0oo6P~1i3VWNHajWbnMSTo1mY0SPPfqu-q9DuPL44WG~crbOsh4No9cDRaS-aH1ADr0JfRC9IF0v8lQPjArPGENasAfqrQwLt4f6cEvacOOjXSgwjeZqaouGVejtck3N3jh4uTiII-3C-Oe0~LVKZspYc23KdXnxkWhPwupPibH6yB1jVV5EGgN~BIpCwe4WFvE3GJiF1S6EzZOm81eo4W2NjSbBcCVWgKuyjXr5etPlFsVWz~t0DCnTrUO7rMUXEDufxYjrDpt5pOl5jEHDdI9CPhpYI2Hw__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -249,11 +283,11 @@
                                 </h6>
                             </div>
                             <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/360b/ec57/3401ddb254a8e179e7253b34f9701438?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WkgMQTymhO0nv5gXZFr9D3Htk~62RKSWozxlA0FnDCZIG1O8CoDWJctSlGF884PvGMp16ZX7BYa-Irdl~rJwH-wUGamV7icN-j5FpZUUlkibGWRX8emr5am2cSsM1fL1sM9C1jnmFjlS1WHhrYmY0PYghiKxqqTYXG9jMbr26hrX-d9FJgsJdFQDcr2X~paQzkEgm~87XUvg3DUGd4PtO95tUbUGBcYk88M6qxhzEbdYPbJB9sf~wfl86Wo-jqclcPZEG1g2ni3zmx5guYuB7VyXubE87ik6wreXNSdlyjt036tU6ClgHwtOP4queG8jgzW-rNQiUaDNLe5WdsuZ3w__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -261,11 +295,11 @@
                                 </h6>
                             </div>
                             <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/ce8f/f6f4/3ed59c64f870a1df56a226fe746f19b4?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W2vTwF-sVw6BMTJTvltRe5khDut~FTXgsCA~KkUu3gKif-vyfnNqXxKaIOxXOrPadq0soIF4H4YoBjdfeFULW6aovzWNIf2TR4EcYg2hd6xF6WbNBdq4i5Nrub0Va6DDTBqt3BhzO37QLEW7jrb1toiVjblNr~tDNjk8YjjNliXSZN0cmZ3mbjjfbp6OUQjhLJ-yfEM7dGONC9bkvSOn2-fXqYpq0NWmzHd--Nvw-VIpk~cNYwE3USp~xx~2h9zoQ9doFtvwWt0H2OL6jDqtdyGyO32gIwGmrDH7u7MIdwFoUjdEsKtrKRM~OEjCYNSv~BUJHWYwCSUjhAVON1FOEA__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -273,35 +307,11 @@
                                 </h6>
                             </div>
                             <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
+                                class=" h-full  min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
                                 <!-- image -->
                                 <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/7390/04a6/c1698b2e332548b54fea2a164622f316?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Km3ErNofc~~5ZjzpoElBnrcf~J-k2zz3WAiC2URyHvSiTZ7uiA0GMkzWfbKFEt7TqsP6E2y9IRGBBuffbO-ZLGJyJ8QqTDROgTPusEqfY2fvyRrdKHHrXf0Z3Iz3-6fdxJMYgF811Gm8h7Np5DNji2dmLumc0ugYZ~-zWXms6GikfA-a25ptpnbEQClLNhfOkUOgpEfZeQot8kfGG0VgTz0B82m8-4YFPOu5LXiJtfc1p0~HbbI8s8t1D43i7IWmI~QfPzvGSKsgvAdRzR2XPe11XYg2VXabbVSI2UwUhaviBfkVOV-tf6cp0J3HjvwROCb8uTwDAgyp8f7cXZSK9A__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/2258/7e77/a4ab024ff791a7684cd8d2c0ba2e2b59?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fsOAp2bK-eJQFh5iYhB7RG054FQcKl389GMo8y9t~rAWx4W8A6Tn81f4j8wvjdh7~lFpUdltIOG6aLAhVcwFKFXcQdiJsatSztvAtUFR53-8UH22LmJ~nWiqSVAiUI7vrV6W~y4-adrFYsHxFC87nxdhjm~EYi5XotJzqvpnCpi0Svshvc9E2ZfFVLBe-XMXbG4qfVuJJh-H8nwAxXSS8VHbJmQ8hBRFAjF45wBBKRe~GdzdJkEnr5kNQgN23Brl0XFxD69Dcg-aswWqxWvRV-t5yDHfdTuytmKfDK6G-wHn3H34pOCbr8aXGhNpvhg9cf7p7LKkd-Yso0ODrv8Tnw__"
-                                        alt="" class="h-full w-full object-cover" />
-                                </div>
-                                <!-- text -->
-                                <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
-                                    Camigata
-                                </h6>
-                            </div>
-                            <div
-                                class="h-full min-w-[106px] flex flex-col border border-[#E4E4E4] px-2 py-3 gap-[10px] items-start justify-start matchFilterCard">
-                                <!-- image -->
-                                <div class="h-[120px] w-[90px]">
-                                    <img src="https://s3-alpha-sig.figma.com/img/396b/fb3b/910f5b7ed1085e9eef58edc006ce4446?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf-tYawj6~fBqn2TjjYNSyJduMV1CE6eMJs15iaSNxeOBQAC2wsWuFTMCOTgzSFpYedDWiNX3NNJuZlmEF~J3dcL-x4nWyydKuHFWi2qPKIuuVNlEufTnO3ymyXOy736OIVwkstfbeKqF5fz1oxX9B5IEYYFZWf2NNy52Uw0dLyr3XfZwfbbFh5x-F4WBfC-22AQz~QfNMkBJ0Th7wbaPT336Del7UTS8xNygWowqNZ54rbXB62Fm8YEN2MTNK~htGacm4A~J4NoHc1axcyt5O3P8NZpjpV-byz~23okEdUoEOoYA19Uw7BXuSGX~nnS0gMos3q17XVUJG-k9e2d9A__"
-                                        alt="" class="h-full w-full object-cover" />
+                                    <img src=" https://s3-alpha-sig.figma.com/img/6f8d/f4c5/ac29b646cc02f323b9e7defa273ead2e?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bB6eWDPpqJNYclPnckevIff-azSsMzA9xp6clAylWmnMphZlOYdL4BODh9bCTtVnOhSOyq4dKypDHlOJH79Tb5T8UKE~4Pabonk~eI6u49GkqInLxLhkq4pACuj2bVQzeRaV-Os6Rx9nytS6rMtFARZ7dgPWm1~UuKM3aIDGPiGE5jaRUoiRf5vtlHsSF7PIPbTdrXgzL9i8WU-EG0iMD3jmm5xF3e2fx7EjZMXxKkjArsmvGkTuhsVTbQEXLNu83YZJ8OIDbY2SdDzQhTlqKc9joscKGPYp~yRbVpFZ-5YtedoQUaeKRBSU9v1O8mJDA5DrF3q-b4RPJRFc9vdn2A__"
+                                        alt="" class="h-full w-full object-cover">
                                 </div>
                                 <!-- text -->
                                 <h6 class="text-[#313131] font-normal text-[19px] leading-[27.61px] text-start">
@@ -309,10 +319,13 @@
                                 </h6>
                             </div>
                         </div>
+                        <!-- end of the story containers  -->
+                        <!-- Scroll Arrow Icon -->
                         <div class="absolute h-11 w-11 top-1/2 right-[-19px] transform -translate-y-1/2">
-                            <img class="" src="assets/icons/swipearrow.svg" alt="" />
+                            <img src="assets/icons/swipearrow.svg" alt="">
                         </div>
                     </div>
+
                     <div>
                         <div class="flex justify-between items-center my-9">
                             <h2 class="text-[20px] font-[500] text-[#00474D]">Active Boosts</h2>
@@ -323,11 +336,12 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid grid-cols-4 gap-3 mb-3">
+                        <div class="grid grid-cols-2 xl:grid-cols-4 gap-3 mb-3">
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -336,16 +350,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -360,14 +377,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -376,16 +398,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -400,14 +425,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -416,16 +446,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -440,14 +473,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -456,16 +494,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -480,14 +521,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -496,16 +542,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -520,14 +569,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -536,16 +590,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -560,14 +617,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -576,16 +638,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -600,14 +665,19 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -616,16 +686,19 @@
                                         </defs>
                                         <circle class="text-gray-300" stroke-width="5" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
-                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)" stroke-dasharray="100, 100"
-                                            stroke-dashoffset="75" stroke="currentColor"
+                                        <circle class="" stroke-width="5" stroke="url(#purpleGradient)"
+                                            stroke-dasharray="100, 100" stroke-dashoffset="75" stroke="currentColor"
                                             fill="transparent" r="16" cx="18" cy="18" />
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -640,13 +713,18 @@
 
                                 <!-- Date Info -->
                                 <div class="text-sm text-gray-600">
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
-                                    <div><span class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px] mb-3"><b>Start:</b></span><span
+                                            class="text-[11px] font-[400]">09:15am, 04/05/2024</span></div>
+                                    <div><span
+                                            class="text-[11px] font-[400] inline-block w-[30px]"><b>End:</b></span><span
+                                            class="text-[11px] font-[400]">09:14am, 05/05/2024</span></div>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-5">
-                            <img src="https://s3-alpha-sig.figma.com/img/6d37/7588/f7e86d9e84674828a5789d2ec1297178?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=em9egQsOpJrIqHiwLsnc7xSi8JycJ6g-smRYH4fV4oLwCzEF5-YAwkQufjLYvPb4cUh5q-30ITd4V9wyDTq8rxtJBwgUWS5~90Mf7fIhhn8e35hdBbXiUqtmZXZ4WCurNU96USCsJRA874E8y7VdGrfn2gD4rCV6qEQdxBX8ukg~KYHI~8etn6omwMPSdrE7kSDUi-ZlLsqebV6g8hyMKjqCHqKfT7HWsDWDNmEZv~hvejykMobPeYrH0uIBplsSJLZcSceT6xyIBtL-lZjcVUNKLazM0SacO~VAq11A-lrcxH3K5v8rt8NOc6On2b0jLL3Mnh8CAIoB5ol4Hgua7w__" alt="" class="rounded-[8px] h-[228px] w-full">
+                            <img src="https://s3-alpha-sig.figma.com/img/6d37/7588/f7e86d9e84674828a5789d2ec1297178?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=em9egQsOpJrIqHiwLsnc7xSi8JycJ6g-smRYH4fV4oLwCzEF5-YAwkQufjLYvPb4cUh5q-30ITd4V9wyDTq8rxtJBwgUWS5~90Mf7fIhhn8e35hdBbXiUqtmZXZ4WCurNU96USCsJRA874E8y7VdGrfn2gD4rCV6qEQdxBX8ukg~KYHI~8etn6omwMPSdrE7kSDUi-ZlLsqebV6g8hyMKjqCHqKfT7HWsDWDNmEZv~hvejykMobPeYrH0uIBplsSJLZcSceT6xyIBtL-lZjcVUNKLazM0SacO~VAq11A-lrcxH3K5v8rt8NOc6On2b0jLL3Mnh8CAIoB5ol4Hgua7w__"
+                                alt="" class="rounded-[8px] h-[228px] w-full">
                         </div>
                         <div class="flex justify-between items-center my-9">
                             <h2 class="text-[20px] font-[500] text-[#00474D]">Popular Boosts</h2>
@@ -657,16 +735,19 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid grid-cols-6 gap-3 mb-3">
+                        <div class="grid grid-cols-2 xl:grid-cols-6 gap-3 mb-3">
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
                                     <img src="assets/icons/rocket.svg" alt="">
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Call Info -->
                                 <div class="text-center pb-3 border-b border-[#E4E4E4] border-dashed">
@@ -675,17 +756,22 @@
                                 </div>
 
                                 <!-- Rate Info -->
-                                <p class="text-[16px] font-[590] text-center pt-3"><span class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50</p>
+                                <p class="text-[16px] font-[590] text-center pt-3"><span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
                                     <img src="assets/icons/rocket.svg" alt="">
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Call Info -->
                                 <div class="text-center pb-3 border-b border-[#E4E4E4] border-dashed">
@@ -694,17 +780,22 @@
                                 </div>
 
                                 <!-- Rate Info -->
-                                <p class="text-[16px] font-[590] text-center pt-3"><span class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50</p>
+                                <p class="text-[16px] font-[590] text-center pt-3"><span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
                                     <img src="assets/icons/rocket.svg" alt="">
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Call Info -->
                                 <div class="text-center pb-3 border-b border-[#E4E4E4] border-dashed">
@@ -713,17 +804,22 @@
                                 </div>
 
                                 <!-- Rate Info -->
-                                <p class="text-[16px] font-[590] text-center pt-3"><span class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50</p>
+                                <p class="text-[16px] font-[590] text-center pt-3"><span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
                                     <img src="assets/icons/rocket.svg" alt="">
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Call Info -->
                                 <div class="text-center pb-3 border-b border-[#E4E4E4] border-dashed">
@@ -732,17 +828,22 @@
                                 </div>
 
                                 <!-- Rate Info -->
-                                <p class="text-[16px] font-[590] text-center pt-3"><span class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50</p>
+                                <p class="text-[16px] font-[590] text-center pt-3"><span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
                                     <img src="assets/icons/rocket.svg" alt="">
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Call Info -->
                                 <div class="text-center pb-3 border-b border-[#E4E4E4] border-dashed">
@@ -751,17 +852,22 @@
                                 </div>
 
                                 <!-- Rate Info -->
-                                <p class="text-[16px] font-[590] text-center pt-3"><span class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50</p>
+                                <p class="text-[16px] font-[590] text-center pt-3"><span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
                                     <img src="assets/icons/rocket.svg" alt="">
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Call Info -->
                                 <div class="text-center pb-3 border-b border-[#E4E4E4] border-dashed">
@@ -770,7 +876,9 @@
                                 </div>
 
                                 <!-- Rate Info -->
-                                <p class="text-[16px] font-[590] text-center pt-3"><span class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50</p>
+                                <p class="text-[16px] font-[590] text-center pt-3"><span
+                                        class="inline-block text-start w-8 font-[#919191] text-[12px] font-[400]">USD</span>1.50
+                                </p>
                             </div>
                         </div>
                         <div class="flex justify-between items-center my-9">
@@ -782,11 +890,12 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid grid-cols-4 gap-3 mb-3">
+                        <div class="grid grid-cols-3 xl:grid-cols-4 gap-3 mb-3">
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -798,10 +907,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -815,14 +927,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -834,10 +948,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -851,14 +968,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -870,10 +989,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -887,14 +1009,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -906,10 +1030,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -923,14 +1050,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -942,10 +1071,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -959,14 +1091,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -978,10 +1112,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -995,14 +1132,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -1014,10 +1153,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -1031,14 +1173,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -1050,10 +1194,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -1067,14 +1214,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -1086,10 +1235,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -1103,14 +1255,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -1122,10 +1276,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -1139,14 +1296,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -1158,10 +1317,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -1175,14 +1337,16 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
                             <div class="border border-[#E4E4E4] rounded-lg px-4 py-7 relative">
                                 <!-- Progress Circle -->
                                 <div class="flex justify-center items-center mb-4 relative">
-                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80" viewBox="-2 -2 40 40">
+                                    <svg class="w-20 h-20 transform -rotate-90" width="80" height="80"
+                                        viewBox="-2 -2 40 40">
                                         <defs>
                                             <linearGradient id="purpleGradient">
                                                 <stop offset="0%" start-color="#781853" />
@@ -1194,10 +1358,13 @@
                                     </svg>
                                     <div class="absolute text-xl font-bold text-gray-700">25%</div>
                                 </div>
-                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
-                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45" style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-r border-b border-[#E4E4E4] rounded-full absolute top-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
+                                <div class="h-6 w-6 border-l border-t border-[#E4E4E4] rounded-full absolute bottom-[-12px] bg-white rotate-45"
+                                    style="left: calc(50% - 12px);"></div>
                                 <div class="h-1 w-8 absolute top-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
-                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);"></div>
+                                <div class="h-1 w-8 absolute bottom-[-5px] bg-white" style="left: calc(50% - 16px);">
+                                </div>
 
                                 <!-- Ticket Info -->
                                 <div class="text-center mb-2 border-[#E4E4E4]">
@@ -1211,7 +1378,8 @@
                                 </div>
 
                                 <!-- Renew Button -->
-                                <button class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
+                                <button
+                                    class="text-[14px] text-white font-[590] w-full text-center bg-gradient-to-r from-[#80133A] to-[#BB7392] py-3 rounded-full">
                                     RENEW
                                 </button>
                             </div>
@@ -1225,8 +1393,8 @@
             </div>
         </main>
 
-        <aside class="fixed right-8 bg-[#fff] top-[100px] bottom-5 w-[18.4%] rounded-lg flex flex-col overflow-hidden">
-            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden mb-2">
+        <aside class="fixed right-8 bg-[#fff] top-[100px] bottom-5 w-[21%] xl:w-[18.4%] rounded-lg flex flex-col overflow-hidden">
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden mb-2 overflow-y-scroll no-scrollbar">
                 <h5
                     class="pt-[32px] pb-[20px] text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
                     Shop Menu
@@ -1242,15 +1410,17 @@
                             <a href="buy_boost" class="text-[14px] px-3 font-[400] text-[#856A31]">Buy Boosts</a>
                         </li>
                         <li class="py-[12px] border-b border-[#E4E4E4] w-full">
-                            <a href="popular_boosts" class="text-[14px] px-3 font-[400] text-[#856A31]">Popular Boosts</a>
+                            <a href="popular_boosts" class="text-[14px] px-3 font-[400] text-[#856A31]">Popular
+                                Boosts</a>
                         </li>
                         <li class="py-[12px] w-full">
-                            <a href="previous_purchase" class="text-[14px] px-3 font-[400] text-[#856A31]">Previously Purchased Boosts</a>
+                            <a href="previous_purchase" class="text-[14px] px-3 font-[400] text-[#856A31]">Previously
+                                Purchased Boosts</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-hidden">
+            <div class="border border-solid border-[#ECECEC] rounded-lg overflow-y-scroll no-scrollbar">
                 <h5 class="py-6 text-[20px] leading-[24.18px] text-center font-medium text-[#00474D] bg-[#f5f5f5]">
                     Add Money
                 </h5>
