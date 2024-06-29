@@ -738,16 +738,6 @@ video {
   margin-bottom: 2.25rem;
 }
 
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
-}
-
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -914,10 +904,6 @@ video {
 
 .mt-\[9px\] {
   margin-top: 9px;
-}
-
-.mt-\[\] {
-  margin-top: ;
 }
 
 .line-clamp-2 {
@@ -1440,14 +1426,6 @@ video {
   width: ;
 }
 
-.w-\[51\] {
-  width: 51;
-}
-
-.w-auto {
-  width: auto;
-}
-
 .min-w-11 {
   min-width: 2.75rem;
 }
@@ -1758,10 +1736,6 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-y-auto {
-  overflow-y: auto;
 }
 
 .overflow-x-hidden {
@@ -2098,10 +2072,6 @@ video {
   padding: 6px;
 }
 
-.p-\[24px\] {
-  padding: 24px;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2242,14 +2212,9 @@ video {
   padding-bottom: 2px;
 }
 
-.px-\[\] {
-  padding-left: ;
-  padding-right: ;
-}
-
-.py-\[24px\] {
-  padding-top: 24px;
-  padding-bottom: 24px;
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .pb-10 {
@@ -2883,22 +2848,6 @@ video {
     height: 100%;
   }
 
-  .xl\:h-\[230px\] {
-    height: 230px;
-  }
-
-  .xl\:h-auto {
-    height: auto;
-  }
-
-  .xl\:h-\[220px\] {
-    height: 220px;
-  }
-
-  .xl\:h-\[213px\] {
-    height: 213px;
-  }
-
   .xl\:w-\[18\.4\%\] {
     width: 18.4%;
   }
@@ -2939,14 +2888,14 @@ video {
     gap: 1rem;
   }
 
-  .xl\:px-\[48px\] {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-
   .xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .xl\:px-\[48px\] {
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .xl\:pl-6 {
