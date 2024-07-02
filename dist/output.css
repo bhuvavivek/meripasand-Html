@@ -1422,10 +1422,6 @@ video {
   width: 100%;
 }
 
-.w-\[\] {
-  width: ;
-}
-
 .min-w-11 {
   min-width: 2.75rem;
 }
@@ -2212,11 +2208,6 @@ video {
   padding-bottom: 2px;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2846,6 +2837,18 @@ video {
 
   .xl\:h-full {
     height: 100%;
+  }
+
+  .xl\:h-\[183px\] {
+    height: 183px;
+  }
+
+  .xl\:max-h-\[183px\] {
+    max-height: 183px;
+  }
+
+  .xl\:min-h-\[183px\] {
+    min-height: 183px;
   }
 
   .xl\:w-\[18\.4\%\] {
