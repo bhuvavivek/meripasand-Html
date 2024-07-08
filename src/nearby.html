@@ -63,56 +63,69 @@
 
     <div class="px-8  flex h-full  pt-[100px] relative gap-4">
 
-        <!-- profile sidebar -->
-        <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] lg:w-[21%] xl:w-[18.4%]   rounded-lg  flex flex-col">
 
-            <div class="profileCover  h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
+        <!-- Profile Sidebar -->
+        <aside
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[21%] xl:w-[18.4%]   rounded-lg  flex flex-col">
+
+            <div class="profileCover  min-h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
 
                 <!-- profile div -->
                 <div class=" absolute w-full top-10  flex justify-center items-center">
                     <div class=" h-[135px] w-[113px] flex flex-col justify-between items-center">
                         <div class="w-24 h-24 border-[3px] border-white rounded-full  bg-center">
-                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VXdVVxPAEeZXoP2bCXRW8eLhmBRCWWrIT3xOmIkYBNlUhpa9NsvtmU9KFZrPUOH2GVbC~15nZRUgHEjNVZ5TAEva4D9QQfdxP6YiIyp1evTxjdDBuc6WPLnf826Ew35icipHcqIW6KgTEW1enTKzwwETUqfpPFI6KAlWGV06o37U9X9ioGvHPDlk5ioA9mXi3OA8eaat8alKmfwckieWTfNfwdK9GwVUPUHbEq1YXV74R7WAFMlLWuNe8qIFPMgiMpVmx32YN~EA4SOX23A-3hv-GB9IUyuYc5KvmBIta88cMN8c23nMONTrhhXPyPYjIEgl2Cl9c9NQL9AV2MBT1A__"
+                            <img src="https://s3-alpha-sig.figma.com/img/b741/e1b9/5475dfb7337e28a6538214c58c72ba9c?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cuze3ufXup~VgVcL1Xbn~ehb3NnvM5jw1N~Z7nejBejbWzYQGG0hQs-nFk1-KlLC6wkp~LdKjK4CZJ4ucfFlUZyS5JKHNIN8hUDKKXAZgXCyd9mH6oPgxh2cMqNPeqnuOLZY4evGX93v9EdB5-E5dYAaXN8dDjkxsdL5G91NB1HQVJfW1qKCv6qWa2YyWYROX7VGprGyzJ5JpjBtax9Ih1L-MIdm365GswmOFk97IoUxexQGSpvFI2mkvXmerTfKNolalG0uEzpE8bb4h5PX~IXbza4~IAG3nqeJmIjR4IPpCWfxVeJcAy9-bmAElSTCN-eSYGuQAoFalnDffOrxvw__"
                                 alt="" class="h-full w-full  object-cover  rounded-full ">
                         </div>
-                        <h5 class="text-#00474D text-center leading-6 text-[20px] font-medium">Muhammed</h5>
                     </div>
                 </div>
 
             </div>
-
-            <div class="pt-[110px] h-full w-full   rounded-b-lg flex flex-col justify-between pb-[24px]">
-                <div class="flex flex-col items-center gap-6">
-                    <div class="flex justify-center items-center gap-6">
-                        <!-- icon 1  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                278
-                            </h4>
+            <div class="pt-[60px] flex flex-col gap-3 items-center">
+                <h5 class="text-[#00474D] text-center leading-6 text-[20px] font-medium">Muhammed</h5>
+                <div class="flex justify-center items-center gap-6 xl:mb-2">
+                    <!-- icon 1  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <div class="img w-5 h-5">
+                            <img src="assets/icons/fire.svg" alt="" class="w-full h-full">
                         </div>
-                        <!-- icon 2  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                630
-                            </h4>
-                        </div>
-                        <!-- icon 3  -->
-                        <div class="flex flex-col gap-3 items-center">
-                            <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
-                            <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
-                                495
-                            </h4>
-                        </div>
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            278
+                        </h4>
                     </div>
-                    <div class="border border-[##E4E4E4] w-[216px] "></div>
+                    
+                    <!-- icon 2  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <div class="img w-5 h-5">
+                            <img src="assets/icons/heart.svg" alt="" class="w-full h-full">
+                        </div>
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            630
+                        </h4>
+                    </div>
+                    <!-- icon 3  -->
+                    <div class="flex flex-col gap-3 items-center">
+                        <div class="img w-5 h-5">
+                            <img src="assets/icons/flower.svg" alt="" class="w-full h-full">
+                        </div>
+                        <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
+                            495
+                        </h4>
+                    </div>
+                </div>
+                <div class="div w-full px-4">
+                    <div class="border border-[##E4E4E4] lg:w-[181px] xl:w-full"></div>
+                    <h5 class="text-[#00474D] font-medium leading-7 text-[20px] w-full items-start xl:pt-7 pt-4  md:pb-2 xl:pb-2">
+                        Search
+                    </h5>
+                </div>
+            </div>
+
+            <div class=" h-full w-full gap-6  rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col h-[140px] xl:h-[183px] items-center gap-6 overflow-y-scroll overflow-x-hidden no-scrollbar  ">                    
                     <div class="mt-1 w-full flex flex-col items-start px-4">
-                        <h5 class="text-[#00474D] font-medium leading-7 text-[20px]">
-                            Search
-                        </h5>
-                        <div class="mt-[16px] flex flex-col gap-2 w-full navLink">
+
+                        <div class=" flex flex-col gap-2 w-full navLink">
                             <a href='/nearby'
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
                                 Nearby
@@ -1015,7 +1028,8 @@
                 </div>
 
                 <div class="w-full  h-[176px] ">
-                    <img src="https://s3-alpha-sig.figma.com/img/18a5/9bd8/44210c62715dae97798bd33f84add60f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ad32jj4jmFzF9XhSmg-TmdO8wlrKjJE4qIuyw47e0Hmof7OSj3yAJ72zFY6wxJYZe7GmMIEJNzNGABL4JUsvd6STmVJvjDguh8moWHbBuvqcFM2f1uFSCeecJnK~YmcFWqQ0MZGYUfT4fZFVIcXejmoCKVCoqEVCCkTw5SJQYGcjmk~PMFCEx7TioqplK7OjIp9BX3M8ugs9hd9DrBndmPfhXHZXryGMNFwqbWg-tNzcTEmdBkStvcMsGUtHsEdzchsxt9VN4lJXppkqybgmvAzh42QZanYvYpzEqZSgHzJ-0Otne7DzlcxzpSySZYe-QRQgn7QzdmwN7lFV9rGI8g__" alt="" class="w-full h-full object-cover">
+                    <img src="https://s3-alpha-sig.figma.com/img/18a5/9bd8/44210c62715dae97798bd33f84add60f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ad32jj4jmFzF9XhSmg-TmdO8wlrKjJE4qIuyw47e0Hmof7OSj3yAJ72zFY6wxJYZe7GmMIEJNzNGABL4JUsvd6STmVJvjDguh8moWHbBuvqcFM2f1uFSCeecJnK~YmcFWqQ0MZGYUfT4fZFVIcXejmoCKVCoqEVCCkTw5SJQYGcjmk~PMFCEx7TioqplK7OjIp9BX3M8ugs9hd9DrBndmPfhXHZXryGMNFwqbWg-tNzcTEmdBkStvcMsGUtHsEdzchsxt9VN4lJXppkqybgmvAzh42QZanYvYpzEqZSgHzJ-0Otne7DzlcxzpSySZYe-QRQgn7QzdmwN7lFV9rGI8g__"
+                        alt="" class="w-full h-full object-cover">
                 </div>
 
             </div>

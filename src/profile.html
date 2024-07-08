@@ -65,7 +65,7 @@
 
         <!-- Profile Sidebar -->
         <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] lg:w-[21%]  xl:w-[18.4%]   rounded-lg  flex flex-col">
+            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[21%] xl:w-[18.4%]   rounded-lg  flex flex-col">
 
             <div class="profileCover  min-h-[100px] bg-cover bg-center  w-full  rounded-t-lg relative">
 
@@ -80,57 +80,58 @@
                 </div>
 
             </div>
-            <div class="pt-[60px] flex flex-col gap-4 items-center px-4">
+            <div class="pt-[60px] flex flex-col gap-3 items-center">
                 <h5 class="text-[#00474D] text-center leading-6 text-[20px] font-medium">Muhammed</h5>
-                <div class="flex justify-center items-center gap-6">
+                <div class="flex justify-center items-center gap-6 xl:mb-2">
                     <!-- icon 1  -->
                     <div class="flex flex-col gap-3 items-center">
-                        <img src="assets/icons/fire.svg" alt="" height="20px" width="20px">
+                        <div class="img w-5 h-5">
+                            <img src="assets/icons/fire.svg" alt="" class="w-full h-full">
+                        </div>
                         <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
                             278
                         </h4>
                     </div>
+                    
                     <!-- icon 2  -->
                     <div class="flex flex-col gap-3 items-center">
-                        <img src="assets/icons/heart.svg" alt="" height="20px" width="20px">
+                        <div class="img w-5 h-5">
+                            <img src="assets/icons/heart.svg" alt="" class="w-full h-full">
+                        </div>
                         <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
                             630
                         </h4>
                     </div>
                     <!-- icon 3  -->
                     <div class="flex flex-col gap-3 items-center">
-                        <img src="assets/icons/flower.svg" alt="" height="20px" width="20px">
+                        <div class="img w-5 h-5">
+                            <img src="assets/icons/flower.svg" alt="" class="w-full h-full">
+                        </div>
                         <h4 class="font-normal text-[15px] leading-[21px] text-center text-[#313131]">
                             495
                         </h4>
                     </div>
                 </div>
-                <div class="border border-[##E4E4E4] w-full"></div>
-                <h5 class="text-[#00474D] font-medium leading-7 text-[20px] w-full items-start ">
-                    Socials
-                </h5>
+                <div class="div w-full px-4">
+                    <div class="border border-[##E4E4E4] lg:w-[181px] xl:w-full"></div>
+                    <h5 class="text-[#00474D] font-medium leading-7 text-[20px] w-full items-start xl:pt-7 pt-4  md:pb-2 xl:pb-2">
+                        Search
+                    </h5>
+                </div>
             </div>
 
-            <div class=" h-full w-full   rounded-b-lg flex flex-col gap-6 justify-between pb-[24px] mt-[16px]">
-                <div
-                    class="flex flex-col h-[140px] xl:h-[200px] items-center gap-6 overflow-y-scroll overflow-x-hidden no-scrollbar  ">
+            <div class=" h-full w-full gap-6  rounded-b-lg flex flex-col justify-between pb-[24px]">
+                <div class="flex flex-col h-[140px] xl:h-[183px] items-center gap-6 overflow-y-scroll overflow-x-hidden no-scrollbar  ">                    
                     <div class="mt-1 w-full flex flex-col items-start px-4">
+
                         <div class=" flex flex-col gap-2 w-full navLink">
-                            <a href="/account-you"
-                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
-                                You
+                            <a href='/nearby'
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
+                                Nearby
                             </a>
-                            <a href="/profile"
-                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
-                                Profile
-                            </a>
-                            <a href="/account-wallet"
-                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
-                                Wallet
-                            </a>
-                            <a href="/shop"
-                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center">
-                                Shop
+                            <a href='/partnersearch'
+                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
+                                Partner Search
                             </a>
                         </div>
                     </div>

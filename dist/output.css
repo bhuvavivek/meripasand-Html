@@ -738,6 +738,16 @@ video {
   margin-bottom: 2.25rem;
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -904,6 +914,14 @@ video {
 
 .mt-\[9px\] {
   margin-top: 9px;
+}
+
+.mt-\[60px\] {
+  margin-top: 60px;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .line-clamp-2 {
@@ -2068,6 +2086,10 @@ video {
   padding: 6px;
 }
 
+.p-\[60px\] {
+  padding: 60px;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2206,6 +2228,11 @@ video {
 .py-\[2px\] {
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pb-10 {
@@ -2370,6 +2397,22 @@ video {
 
 .pt-\[60px\] {
   padding-top: 60px;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-center {
@@ -2787,6 +2830,12 @@ video {
   }
 }
 
+@media (min-width: 768px) {
+  .md\:pb-2 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:col-span-4 {
     grid-column: span 4 / span 4;
@@ -2831,6 +2880,14 @@ video {
     margin-left: 0.25rem;
   }
 
+  .xl\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .xl\:h-\[183px\] {
+    height: 183px;
+  }
+
   .xl\:h-\[200px\] {
     height: 200px;
   }
@@ -2839,16 +2896,8 @@ video {
     height: 100%;
   }
 
-  .xl\:h-\[183px\] {
-    height: 183px;
-  }
-
   .xl\:max-h-\[183px\] {
     max-height: 183px;
-  }
-
-  .xl\:min-h-\[183px\] {
-    min-height: 183px;
   }
 
   .xl\:w-\[18\.4\%\] {
@@ -2865,6 +2914,26 @@ video {
 
   .xl\:w-\[80\%\] {
     width: 80%;
+  }
+
+  .xl\:w-full {
+    width: 100%;
+  }
+
+  .xl\:w-10 {
+    width: 2.5rem;
+  }
+
+  .xl\:w-1 {
+    width: 0.25rem;
+  }
+
+  .xl\:w-80 {
+    width: 20rem;
+  }
+
+  .xl\:w-8 {
+    width: 2rem;
   }
 
   .xl\:grid-cols-3 {
@@ -2907,6 +2976,18 @@ video {
 
   .xl\:pr-\[32\.17px\] {
     padding-right: 32.17px;
+  }
+
+  .xl\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .xl\:pt-7 {
+    padding-top: 1.75rem;
+  }
+
+  .xl\:pb-2 {
+    padding-bottom: 0.5rem;
   }
 
   .xl\:text-\[20px\] {
