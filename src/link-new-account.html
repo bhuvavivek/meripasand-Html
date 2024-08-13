@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bcr8AJuudXW2lYHeV01F7LOz7B0DzTQwOuIDUNYP11ShRqhjxgmbi63HLvWiKNlEvMxcKF21JwR~u-Yo0~jxZh9lAOUyN99-5ZQE4JmivgAbEDQZixx-KP5Flc4EFoTvB-QLE7fy5STDr~FUG-YRNVRiQvmQ0F~hRAc0Ka9NE8NiJHiRjUZpIEe4FV8vbInyqlpN5Ezb4dFtwjiLvG49mkEMwQZOCARnz3R0EAqzMVqtOnC5fb1VNUINdGmoHR~XG1-scwoEQV8YkGv5DUJ1hvvVHmTV86pixHv8taQkFvyMqE7RQ4MGLbkeD7eRibCwhIs1Fb-GuTaWr3vfXFClRA__");
+            background-size: cover;
+        }
+
+        .custombutton {
+            box-shadow: 0px 3px 6px 0px #00000029;
+            background: linear-gradient(93.53deg, #EFB75E 2.78%, #856A31 87.93%);
+        }
+
+        .customModal {
+            width: 348px;
+            background: #FFFFFF;
+            border: 1px solid #E4E4E4;
+            box-shadow: 0px 3px 6px 0px #00000029;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -10px !important;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 2px solid #C2C2C2 !important;
+        }
+
+        .ui-slider-horizontal {
+            height: 4px !important;
+        }
+
+
+        .ui-slider .ui-slider-handle {
+            border-radius: 100%;
+            background-color: #027884 !important;
+        }
+
+        .ui-slider .ui-slider-range {
+            background-color: #014d55 !important;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-white  flex flex-col">
+    <!-- Header -->
+    <div class="w-[776px] h-[670px] shadow-lg shadow-black px-8 pt-8">
+        <div class="border-solid border-b pb-4 border-#E4E4E4">
+            <h6 class="text-xl text-center">Link Your Bank Account</h6>
+        </div>
+        <div class="w-[712px] h-[394px]  mt-6">
+            <div class="grid grid-cols-2 gap-3">
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Name of the Account Holder</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="Type the account holder’s full name" id="account-holder-name">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">currency</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5" placeholder="Select currency"
+                            id="currency">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Bank Name</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="Type the the branch name" id="bank-name">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Bank Branch</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="Type the the branch name" id="bank-branch">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Bank City</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="Type the city of this bank branch" id="bank-city">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Branch Sort Code</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5" placeholder="00-00-00"
+                            id="branch-sort-code">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Bank Address</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="Type the first line of address here" id="bank-address">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">IBAN Number</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="AA-0000-0000-0000-0000-0" id="iban-number">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Bank Country</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5"
+                            placeholder="Type the country of this bank" id="bank-country">
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <span class="text-sm mb-2">Account Number</span>
+                    <div class="w-[100%]">
+                        <input type="text" name="" class="bg-[#F5F5F5] rounded w-[100%]
+                                 h-[48px] focus:outline-none focus:border-none ps-5" placeholder="00000000"
+                            id="account-number">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center py-8 items-center">
+                <div class="justify-center w-1/2">
+                    <input type="checkbox" name="" id="">
+                    Make this my default payment option
+                </div>
+                <div class="w-1/2 text-center">
+                    <button class="bg-[#EFB75E] w-[240px] text-xl text-white rounded-3xl h-12">Link Bank
+                        Account</button>
+                </div>
+            </div>
+            <p class="text-xs">By clicking 'Link Bank Account', you confirm you have read and accept our Terms of Use
+                and our Privacy
+                Policy.</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
