@@ -98,8 +98,17 @@ app.get("/previous_purchase", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "previous_purchase.html"));
 });
 
-app.get("/input-new-account", (req, res) => {
+app.get("/link-new-account", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "link-new-account.html"));
+});
+app.get("/delete-bank-card", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "delete-bank-card.html"));
+});
+app.get("/edit-bank-card", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "edit-bank-card.html"));
+});
+app.get("/help", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "help.html"));
 });
 
 app.listen(PORT, () => {
