@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pasand HTML</title>
+    <link rel="stylesheet" href="/output.css">
+
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .content {
+            height: calc(100vh-100px);
+        }
+
+        .profileCover {
+            background: url("https://s3-alpha-sig.figma.com/img/0bbe/0848/2cda3521cc3cfdd0307390c6cf8fb2fb?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bcr8AJuudXW2lYHeV01F7LOz7B0DzTQwOuIDUNYP11ShRqhjxgmbi63HLvWiKNlEvMxcKF21JwR~u-Yo0~jxZh9lAOUyN99-5ZQE4JmivgAbEDQZixx-KP5Flc4EFoTvB-QLE7fy5STDr~FUG-YRNVRiQvmQ0F~hRAc0Ka9NE8NiJHiRjUZpIEe4FV8vbInyqlpN5Ezb4dFtwjiLvG49mkEMwQZOCARnz3R0EAqzMVqtOnC5fb1VNUINdGmoHR~XG1-scwoEQV8YkGv5DUJ1hvvVHmTV86pixHv8taQkFvyMqE7RQ4MGLbkeD7eRibCwhIs1Fb-GuTaWr3vfXFClRA__");
+            background-size: cover;
+        }
+
+        .addStory {
+            background: url("assets/images/group-story-1.svg");
+        }
+
+        #Story_1 {
+            background: url("https://s3-alpha-sig.figma.com/img/268f/0cb8/0f4d8cef363e2f31f8959f41d759b4a4?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E5nGYHaKxdAeMEvOo-kTtv90ttVZ9UVp~D-KurxPkZLWpxuz5xtp5cgsW1dIdQCrR1gnsnWvuJiZeIbb-K77SmezIoSfysCi8Ny7LA0uSTU10fCNh8mWPJNkMzcIWfpBXjJApTxI9VgMrxoZuM~AFnQf8DenNy2M8f3ygJ6IG-tsVUhDc3ooLJ58s1uBkFNpGgirHWVRwm1Jmdx8BbNrv7KLD5db227tLzYixxWrWkFZ0Pu5uebS53Gqit-nNTUO9jK4iQPgB5iGIM~j8qa3kDxj2aIhA2rFa4LKJNllEBg68sszOsDiQRwdKzdBZ3NI3z~4jo7saQycmx~x2BYlQw__");
+            background-size: cover;
+        }
+
+        #Story_2 {
+            background: url("https://s3-alpha-sig.figma.com/img/3230/8959/5c37dbd36d6c6a3fd5c5253d953bb3e0?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g1DxMk4uKCG7MmAQjpbDVs-quWaiJOvP2QZ93ODiGjnyKSueMN3Xs7q8-g7dzgsVn-YkJspTga2Q5BUAJXgV9YGmNu2YfXnrZxEPndftIEg0Yue0gVeo58en063Y~ovqIFLAUss5J11nQfBq23QVeJyBbX6zymwlY71pMLA5TZT8587YQ272gTQDKtcC4bsbP62voiAIJ4VDn5rBW-rak9uFA6S~VbRrdYyra7ZzUAlp5zVJ2PJ6lEtiCHFvUfiTwqj-kGf2xHO~8ZVP8KP~PCAeas5ayvsf~sdV~XkHfXbqQbm5i8DjT9m6wq~kyMdrFK2-Uw-pPpoAcAfap9UmrQ__");
+            background-size: cover;
+        }
+
+
+        #Story_3 {
+            background: url("https://s3-alpha-sig.figma.com/img/3230/8959/5c37dbd36d6c6a3fd5c5253d953bb3e0?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g1DxMk4uKCG7MmAQjpbDVs-quWaiJOvP2QZ93ODiGjnyKSueMN3Xs7q8-g7dzgsVn-YkJspTga2Q5BUAJXgV9YGmNu2YfXnrZxEPndftIEg0Yue0gVeo58en063Y~ovqIFLAUss5J11nQfBq23QVeJyBbX6zymwlY71pMLA5TZT8587YQ272gTQDKtcC4bsbP62voiAIJ4VDn5rBW-rak9uFA6S~VbRrdYyra7ZzUAlp5zVJ2PJ6lEtiCHFvUfiTwqj-kGf2xHO~8ZVP8KP~PCAeas5ayvsf~sdV~XkHfXbqQbm5i8DjT9m6wq~kyMdrFK2-Uw-pPpoAcAfap9UmrQ__");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <div class="w-[360px] h-[299px] flex border-2 flex-col px-5">
+        <h5 class="text-xl text-[#00474D] font-medium text-center pt-10 pb-4 border-b boeder-[#E4E4E4]">Sign Out</h5>
+        <span class="text-lg text-[#313131] pt-6 px-10 pb-10 text-center">Do you want to sign out of this device?</span>
+        <div class="text-center">
+            <button class="py-3 px-16 bg-[#856A31] text-xl rounded-3xl text-white font-medium">Sign Out</button>
+        </div>
+        <button class="py-3 px-14">Cancle</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

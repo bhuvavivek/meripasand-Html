@@ -110,6 +110,12 @@ app.get("/edit-bank-card", (req, res) => {
 app.get("/help", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "help.html"));
 });
+app.get("/terms-Conditions", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "Terms-Conditions-popup.html"));
+});
+app.get("/sign-out", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "sign-out-popup.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

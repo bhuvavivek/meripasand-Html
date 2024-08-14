@@ -43,57 +43,14 @@
     </style>
 </head>
 
-<body class="bg-white flex flex-col">
-
-    <!-- Header -->
-    <header class="bg-white  flex justify-between items-center fixed top-0 left-0 right-0 z-10 px-10 h-[100px] ">
-
-        <div class="flex items-center h-12 w-[224px]">
-            <img src="assets/logo.png" alt="Meri Pasand Logo" class="h-full w-full">
-        </div>
-
-        <!-- Notification imaege icon div  -->
-        <div
-            class="flex space-x-12 justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-            <a href="/" class="#027884 ">
-                <img src="assets/icons/home.svg" alt="home" class=" h-6 w-[26.4px]">
-            </a>
-            <a href="/nearby" class="text-[#313131]">
-                <img src="assets/icons/search.svg" alt="search" class=" h-5 w-5">
-            </a>
-            <a href="/connect-everyone" class="text-[#313131]">
-                <img src="assets/icons/blog.svg" alt="home" class=" h-5 w-5">
-            </a>
-            <a href="/circle-activity" class="text-[#313131]">
-                <img src="assets/icons/circle.svg" alt="home" class=" h-5 w-5">
-            </a>
-            <a href="/account-you" class="text-[#313131]">
-                <img src="assets/icons/contact.svg" alt="home" class=" h-5 w-5">
-            </a>
-        </div>
-
-        <!-- notification icon -->
-        <div>
-            <a href="#" class="">
-                <img src="assets/icons/notification.svg" alt="notification" class=" h-5 w-[19px]">
-            </a>
-        </div>
-    </header>
-
-    <div class="px-8  flex h-full  pt-[100px] relative gap-4">
-
-
-
-
-        <!-- Profile Sidebar -->
+<body class="bg-white">
+    <main class="w-[1040px] flex justify-center gap-4 h-[640px] border-2  p-4">
         <aside
-            class="fixed bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[21%] xl:w-[18.4%]   rounded-lg  flex flex-col">
+            class=" bg-[#F3F2ED] top-[100px] bottom-5 border border-solid border-[#ECECEC] w-[248px] rounded-lg  flex flex-col">
 
-
-
-            <div class=" h-full w-full gap-6  rounded-b-lg flex flex-col pb-[24px] justify-between">
-                <div class="px-4 text-xl pt-8">
-                    Help Center
+            <div class=" h-full w-full gap-6   flex flex-col pb-[24px] justify-between">
+                <div class="px-4  pt-8 text-[#00474D] text-xl flex flex-col">
+                    <span>Meri Pasand®</span><span> Terms and Conditions</span>
                 </div>
                 <div
                     class="flex flex-col h-[140px] xl:h-full items-center gap-6 overflow-y-scroll overflow-x-hidden no-scrollbar  ">
@@ -101,11 +58,11 @@
                         <div class=" flex flex-col gap-2 w-full navLink">
                             <a href="#"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px] flex items-center  ">
-                                Getting Started
+                                Terms of Use
                             </a>
                             <a href="#"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
-                                Registration and Sign Up
+                                Privacy Policy
                             </a>
                             <a href="#"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
@@ -113,48 +70,39 @@
                             </a>
                             <a href="#"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
-                                Search
+                                Community Guidelines
                             </a>
                             <a href="#"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
-                                Circle
+                                Safety Advice 
                             </a>
                             <a href="#"
                                 class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
-                                Account and Profile
-                            </a>
-                            <a href="#"
-                                class="bg-transparent h-12 border border-[#E4E4E4] rounded-lg pl-[20px] text-[16px] text-black leading-[22px]  flex items-center">
-                                Billing and Payments
+                                eWallet User Agreement
                             </a>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="w-full flex gap-6 justify-center items-center ">
-                    <img src="assets/icons/power.svg" alt="" class="h-6 w-6">
-                    <img src="assets/icons/about.svg" alt="" class="h-6 w-6">
-                    <img src="assets/icons/menu.svg" alt="" class="h-6 w-6">
-                    <img src="assets/icons/setting.svg" alt="" class="h-6 w-6">
-                </div>
+               
             </div>
 
         </aside>
-
-
-
-        <main class="flex w-full justify-center pb-[22px]">
-            <div
-                class=" flex flex-col justify-start items-start lg:w-[52%] xl:w-[59.9%] rounded-lg border border-[#E4E4E4] px-12  pt-[36px] pb-[18px] overflow-y-scroll no-scrollbar scroll-smooth">
-                <!-- question -->
-
+        <div
+            class=" flex flex-col justify-start items-start w-[744px] rounded-lg border border-[#E4E4E4] px-12  pt-[36px] pb-[18px]  relative">
+            <!-- question -->
+             <div class="absolute  top-8 right-8">
+                 <img src="./assets/icons/close.svg" class=" " alt="">
+             </div>
+            <div class="overflow-y-scroll no-scrollbar scroll-smooth"
+            >
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6">What is Meri Pasand®?</h5>
 
                 <p class="pt-4 ">Meri Pasand® is a premier matchmaking and matrimonial portal that specialises in
                     connecting individuals from the Pakistani and Indian subcontinent communities worldwide, as well as
                     those seeking a life partner from these communities.</p>
-                
+
                 <p class="pt-4 ">
                     Meri Pasand® is the result of years of research into how to best fulfil the demands of a diverse
                     range of age groups, changing cultural and community norms and expectations that come with living or
@@ -189,7 +137,7 @@
 
                 <p class="pt-4">Meri Pasand® is easily accessible for your comfort on all desktop personal computers,
                     laptops, and Apple and Android mobile devices, including tablets and phones.</p>
-                 
+
                 <!-- question -->
 
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">How do I use Meri Pasand® on a mobile
@@ -215,10 +163,11 @@
                     How do I use Meri Pasand® on a PC, laptop, or tablet?
                 </h5>
                 <p class="pt-4">
-                    To use Meri Pasand® from any personal computer or laptop, open your preferred browser, navigate to www.meripasand.app, open Meri Pasand® Web, and sign up for free.
+                    To use Meri Pasand® from any personal computer or laptop, open your preferred browser, navigate to
+                    www.meripasand.app, open Meri Pasand® Web, and sign up for free.
                 </p>
 
-                
+
                 <!-- question -->
 
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">How do I use Meri Pasand®?</h5>
@@ -291,109 +240,132 @@
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">Who Can Use Meri Pasand®?</h5>
 
                 <p class="pt-4">
-                    Meri Pasand® is an all-inclusive platform, so we make every effort to provide a safe and empowering environment for everyone looking for a life companion irrespective of your gender or preference.
+                    Meri Pasand® is an all-inclusive platform, so we make every effort to provide a safe and empowering
+                    environment for everyone looking for a life companion irrespective of your gender or preference.
                 </p>
 
 
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">Who Can Use Meri Pasand®?</h5>
-                
+
                 <p class="pt-4">
-                    Meri Pasand® is an all-inclusive platform, so we make every effort to provide a safe and empowering environment for everyone looking for a life companion irrespective of your gender or preference.
+                    Meri Pasand® is an all-inclusive platform, so we make every effort to provide a safe and empowering
+                    environment for everyone looking for a life companion irrespective of your gender or preference.
                 </p>
-                
-                
+
+
                 <!-- question -->
-                
-                
-                <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">How old do you have to be to use Meri Pasand®?</h5>
-                <p class="pt-4">To become a member, you must be 16 years of age or older. During the sign-up process, we will ask you to confirm your age. </p>
-                <p class="pt-4">If you are 16 years old or older and your account has been blocked due to being underage, please contact our support staff at help@meripasand.app.</p>
-                
+
+
+                <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">How old do you have to be to use Meri
+                    Pasand®?</h5>
+                <p class="pt-4">To become a member, you must be 16 years of age or older. During the sign-up process, we
+                    will ask you to confirm your age. </p>
+                <p class="pt-4">If you are 16 years old or older and your account has been blocked due to being
+                    underage, please contact our support staff at help@meripasand.app.</p>
+
                 <!-- question -->
-                
-                <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">What are the rules for using Meri Pasand®?</h5> 
-                <p class="pt-4">The Terms and Conditions section of Meri Pasand® Web, along with the Meri Pasand® iOS and Android applications, contain all our rules. Please read through and familiarise yourself with the Meri Pasand® Terms of Use, Privacy Policy, Wallet User Agreement, Community Guidelines, and Safety Advice. </p>
-                <p class="pt-4">If you have any questions or need help understanding any of these, please contact us at help@meripasand.app.</p>
-                
+
+                <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">What are the rules for using Meri
+                    Pasand®?</h5>
+                <p class="pt-4">The Terms and Conditions section of Meri Pasand® Web, along with the Meri Pasand® iOS
+                    and Android applications, contain all our rules. Please read through and familiarise yourself with
+                    the Meri Pasand® Terms of Use, Privacy Policy, Wallet User Agreement, Community Guidelines, and
+                    Safety Advice. </p>
+                <p class="pt-4">If you have any questions or need help understanding any of these, please contact us at
+                    help@meripasand.app.</p>
+
                 <!-- question -->
 
 
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">Are Meri Pasand® members verified?</h5>
-                <p class="pt-4">For your safety and to provide the greatest Meri Pasand® experience, all our members must go through an extensive sign-up process, which includes an optional personality test, to make sure that everyone who uses Meri Pasand® is truly searching for a life companion. </p>
-                <p class="pt-4">Additionally, our team requires all members to provide at least two social media accounts, produce valid legal documents (such as a national ID card, driver's license, passport, or national voting card), and may request a selfie and photo verification. Our team carefully reviews each application before approving it and granting access to Meri Pasand®.</p>
-                
+                <p class="pt-4">For your safety and to provide the greatest Meri Pasand® experience, all our members
+                    must go through an extensive sign-up process, which includes an optional personality test, to make
+                    sure that everyone who uses Meri Pasand® is truly searching for a life companion. </p>
+                <p class="pt-4">Additionally, our team requires all members to provide at least two social media
+                    accounts, produce valid legal documents (such as a national ID card, driver's license, passport, or
+                    national voting card), and may request a selfie and photo verification. Our team carefully reviews
+                    each application before approving it and granting access to Meri Pasand®.</p>
+
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     Do I need to pay to use Meri Pasand®?
                 </h5>
                 <p class="pt-4">
-                    No. All of Meri Pasand® Web, as well as the Meri Pasand® Apple and Android apps, are free to download and use. We've added some optional premium features (Meri Pasand® Extras) that are available for purchase separately.
+                    No. All of Meri Pasand® Web, as well as the Meri Pasand® Apple and Android apps, are free to
+                    download and use. We've added some optional premium features (Meri Pasand® Extras) that are
+                    available for purchase separately.
                 </p>
 
 
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     What does the lock icon mean?
                 </h5>
                 <p class="pt-4">
                     If you see the icon anywhere, it means this is a premium function in Meri Pasand®.
                 </p>
-                
-                
+
+
                 <!-- question -->
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     How do I access a premium feature?
                 </h5>
                 <p class="pt-4">
-                    To enable a premium feature, go to the Shop in the Accounts section of Meri Pasand® Web or the Meri Pasand® iOS and Android apps and buy a Meri Pasand® Extra that grants you access to that feature.
+                    To enable a premium feature, go to the Shop in the Accounts section of Meri Pasand® Web or the Meri
+                    Pasand® iOS and Android apps and buy a Meri Pasand® Extra that grants you access to that feature.
                 </p>
 
 
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     What are Meri Pasand® Extras?
                 </h5>
                 <p class="pt-4">
-                    Meri Pasand® Extras are a collection of add-ons that allow you to access any or all our premium services.
+                    Meri Pasand® Extras are a collection of add-ons that allow you to access any or all our premium
+                    services.
                 </p>
                 <p class="pt-4">
                     You can buy an infinite amount of Meri Pasand® Extras.
                 </p>
-                
+
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     How do I pay for Meri Pasand® Extras?
                 </h5>
                 <p class="pt-4">
-                    To unlock any or all premium features, you must buy Meri Pasand® Extras using the built-in digital wallet called Meri Pasand® SafePay.
+                    To unlock any or all premium features, you must buy Meri Pasand® Extras using the built-in digital
+                    wallet called Meri Pasand® SafePay.
                 </p>
 
 
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     What is Meri Pasand® SafePay?
                 </h5>
                 <p class="pt-4">
-                    You can access any or all premium services by buying Meri Pasand® Extras using Meri Pasand® SafePay, a digital wallet feature. SafePay can be loaded from your linked bank accounts, credit, and debit cards.
+                    You can access any or all premium services by buying Meri Pasand® Extras using Meri Pasand® SafePay,
+                    a digital wallet feature. SafePay can be loaded from your linked bank accounts, credit, and debit
+                    cards.
                 </p>
-                
+
 
                 <!-- question -->
-                
+
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     Can I use Meri Pasand® without showing my location?
                 </h5>
                 <p class="pt-4">
-                    Yes. It is possible to use Meri Pasand® without showing your location. Please be aware, however, that this will limit parts of our platform's functionality.
+                    Yes. It is possible to use Meri Pasand® without showing your location. Please be aware, however,
+                    that this will limit parts of our platform's functionality.
                 </p>
-                
+
                 <!-- question -->
                 <h5 class="text-[#313131] text-[20px] font-bold leading-6 pt-4">
                     How can I contact Meri Pasand®?
@@ -401,100 +373,12 @@
                 <p class="pt-4">
                     To contact the Meri Pasand® team, please send an email to help@meripasand.app.
                 </p>
-                
+
             </div>
-        </main>
-
-        <aside
-            class="fixed right-8 bg-[#FFFFFF] top-[100px] bottom-5 border  border-solid border-[#ECECEC] lg:w-[21%] xl:w-[18.4%]   rounded-lg  flex flex-col gap-4 ">
-
-            <div
-                class="h-16 pt-[32px] pb-[19px] w-full flex justify-center items-center bg-[#f5f5f5] border-b border-[#E4E4E4]">
-                <h5 class="text-[20px] leading-[24.18px] text-center font-medium text-[#00474D]">FAQs</h5>
-            </div>
+        </div>
+    </main>
 
 
-            <div class="flex flex-col justify-start items-start gap-3 overflow-y-scroll no-scrollbar  scroll-smooth">
-
-                <!-- Today -->
-                <div class="px-4">
-
-                    <!-- main question -->
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#00474D] font-normal">What is Meri Pasand®?</p>
-                    </div>
-
-                    <!-- sub question -->
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal"> Where can I use Meri Pasand®?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How do I use Meri Pasand® on a mobile device? </p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How do I use the Meri Pasand® On a PC, laptop or
-                            tablet? </p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How do I use Meri Pasand®? </p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">Do I need to register again to use Meri Pasand®
-                            Web? </p>
-                    </div>
-
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal"> Does Meri Pasand® Web have all the app's
-                            features?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal"> Will my app's activities appear on Meri Pasand®
-                            Web?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">Who Can Use Meri Pasand®?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How old do you have to be to use Meri Pasand®?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">What are the rules for using Meri Pasand®?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">Are Meri Pasand® members verified? </p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">Do I need to pay to use Meri Pasand®?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">What does the lock icon mean?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How do I access a premium feature?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">What are Meri Pasand® Extras?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How do I pay for Meri Pasand® Extras?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">What is Meri Pasand® SafePay?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">Can I use Meri Pasand® without showing my
-                            location?</p>
-                    </div>
-                    <div class=" flex flex-col justify-start  border-b border-solid border-[#ECECEC] items-start py-5">
-                        <p class="text-sm text-[#856A31] font-normal">How can I contact a Meri Pasand®?</p>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-        </aside>
 
     </div>
 
